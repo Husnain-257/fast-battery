@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FAST BATTERY — Editable Website</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#f5f6f8;color:#17202a}
+header{background:#111820;color:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:24px;font-weight:800}.logo span{color:#f5b400}
+nav button{background:none;border:0;color:white;margin-left:12px;font-weight:bold;cursor:pointer}
+.hero{background:#111820;color:#fff;padding:75px 7%;text-align:center}
+.hero h1{font-size:48px;margin:10px 0}.hero p{font-size:19px;color:#d8dde2}
+.btn{display:inline-block;padding:14px 22px;border-radius:8px;text-decoration:none;font-weight:bold;margin:8px}
+.call{background:#f5b400;color:#111}.wa{background:#25d366;color:white}
+section{padding:55px 7%}.title{text-align:center;margin-bottom:30px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:white;padding:25px;border-radius:14px;box-shadow:0 3px 15px #0001}.card h3{margin-top:0}
+.editor{background:#fff;border-top:4px solid #f5b400;padding:30px 7%}
+input,textarea{width:100%;padding:12px;margin:6px 0 15px;border:1px solid #ccd2d8;border-radius:7px;font:inherit}
+label{font-weight:bold}.save{background:#111820;color:#fff;border:0;padding:13px 22px;border-radius:8px;font-weight:bold;cursor:pointer}
+footer{background:#0b1116;color:#fff;text-align:center;padding:25px}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.hero h1{font-size:36px}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo" id="siteName">FAST <span>BATTERY</span></div>
+<nav><button onclick="document.getElementById('services').scrollIntoView()">Services</button><button onclick="document.getElementById('contact').scrollIntoView()">Contact</button></nav>
+</header>
+
+<section class="hero">
+<h1 id="heroTitle">On-Site Car Battery Replacement</h1>
+<p id="heroText">Fast mobile battery replacement and roadside battery assistance across Dubai.</p>
+<a class="btn call" id="callBtn" href="tel:+971524040699">📞 Call Now</a>
+<a class="btn wa" id="waBtn" href="https://wa.me/971524040699">💬 WhatsApp</a>
+</section>
+
+<section id="services">
+<div class="title"><h2>Our Services</h2><p>Professional mobile battery assistance at your location.</p></div>
+<div class="grid" id="serviceGrid">
+<div class="card"><h3 id="s1t">🔋 Battery Replacement</h3><p id="s1p">Battery testing, replacement and professional installation.</p></div>
+<div class="card"><h3 id="s2t">🚗 Roadside Assistance</h3><p id="s2p">Mobile battery help when your vehicle will not start.</p></div>
+<div class="card"><h3 id="s3t">⚡ Battery Diagnosis</h3><p id="s3p">Check battery condition and starting-system symptoms.</p></div>
+</div>
+</section>
+
+<section style="background:#111820;color:white">
+<div class="title"><h2>Vehicles We Service</h2><p id="areasDisplay" style="color:#ccd2d8">Dubai • Al Quoz • Bur Dubai • Deira • Jumeirah</p></div>
+</section>
+
+<section id="contact">
+<div class="title"><h2>Contact FAST BATTERY</h2><p>Dubai On-Site Battery Service</p></div>
+<div class="card" style="text-align:center">
+<p id="phoneDisplay">+971 52 404 0699</p>
+<a class="btn call" id="contactCall" href="tel:+971524040699">Call</a>
+<a class="btn wa" id="contactWa" href="https://wa.me/971524040699">WhatsApp</a>
+</div>
+</section>
+
+<div class="editor">
+<h2>✏️ Edit Website</h2>
+<p>Ye section sirf aapke liye hai. Neeche details change karke <b>Save Changes</b> dabayein.</p>
+<label>Business Name</label><input id="editName" value="FAST BATTERY">
+<label>Main Heading</label><input id="editTitle" value="On-Site Car Battery Replacement">
+<label>Short Description</label><textarea id="editText">Fast mobile battery replacement and roadside battery assistance across Dubai.</textarea>
+<label>Phone / WhatsApp Number</label><input id="editPhone" value="+971 52 404 0699">
+<label>Service 1 Name</label><input id="e1t" value="🔋 Battery Replacement">
+<label>Service 1 Description</label><textarea id="e1p">Battery testing, replacement and professional installation.</textarea>
+<label>Service 2 Name</label><input id="e2t" value="🚗 Roadside Assistance">
+<label>Service 2 Description</label><textarea id="e2p">Mobile battery help when your vehicle will not start.</textarea>
+<label>Service 3 Name</label><input id="e3t" value="⚡ Battery Diagnosis">
+<label>Service 3 Description</label><textarea id="e3p">Check battery condition and starting-system symptoms.</textarea>
+<label>Service Areas</label><input id="editAreas" value="Dubai • Al Quoz • Bur Dubai • Deira • Jumeirah">
+<label>Website Photo</label><input type="file" id="photoInput" accept="image/*">
+<button class="save" onclick="saveChanges()">Save Changes</button>
+<p id="saved" style="color:green;font-weight:bold"></p>
+</div>
+
+<footer>© 2026 FAST BATTERY — Dubai On-Site Car Battery Replacement</footer>
+
+<script>
+function digits(s){return s.replace(/[^0-9]/g,'')}
+function saveChanges(){
+ const name=document.getElementById('editName').value.trim()||'FAST BATTERY';
+ const title=document.getElementById('editTitle').value.trim();
+ const text=document.getElementById('editText').value.trim();
+ const phone=document.getElementById('editPhone').value.trim();
+ const num=digits(phone);
+ document.getElementById('siteName').innerHTML=name.replace(' ',' <span>')+'</span>';
+ document.getElementById('heroTitle').textContent=title;
+ document.getElementById('heroText').textContent=text;
+ document.getElementById('phoneDisplay').textContent=phone;
+ document.getElementById('s1t').textContent=document.getElementById('e1t').value;
+ document.getElementById('s1p').textContent=document.getElementById('e1p').value;
+ document.getElementById('s2t').textContent=document.getElementById('e2t').value;
+ document.getElementById('s2p').textContent=document.getElementById('e2p').value;
+ document.getElementById('s3t').textContent=document.getElementById('e3t').value;
+ document.getElementById('s3p').textContent=document.getElementById('e3p').value;
+ document.getElementById('areasDisplay').textContent=document.getElementById('editAreas').value;
+ ['callBtn','contactCall'].forEach(id=>document.getElementById(id).href='tel:+'+num);
+ ['waBtn','contactWa'].forEach(id=>document.getElementById(id).href='https://wa.me/'+num);
+ localStorage.setItem('fastBatteryEdit',JSON.stringify({
+ name,title,text,phone,
+ s1t:e1t.value,s1p:e1p.value,s2t:e2t.value,s2p:e2p.value,s3t:e3t.value,s3p:e3p.value,areas:editAreas.value
+ }));
+ document.getElementById('saved').textContent='Saved on this device ✓';
+}
+window.onload=()=>{
+ try{
+ const x=JSON.parse(localStorage.getItem('fastBatteryEdit'));
+ if(x){
+ editName.value=x.name;editTitle.value=x.title;editText.value=x.text;editPhone.value=x.phone;
+ if(x.s1t)e1t.value=x.s1t;if(x.s1p)e1p.value=x.s1p;if(x.s2t)e2t.value=x.s2t;if(x.s2p)e2p.value=x.s2p;
+ if(x.s3t)e3t.value=x.s3t;if(x.s3p)e3p.value=x.s3p;if(x.areas)editAreas.value=x.areas;
+ saveChanges();document.getElementById('saved').textContent='Your saved details loaded ✓'}
+ }catch(e){}
+}
+</script>
+</body>
+</html>
