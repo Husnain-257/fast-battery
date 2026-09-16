@@ -1,33 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Jump Start Service</title>
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f7fa;
-    color: #222;
-}
-</style>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jump Start Service | Fast Battery</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 18px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            color: white;
+            background: #2563eb;
+            padding: 10px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .service-box {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+        }
+
+        .icon {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #111827;
+        }
+
+        .description {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 22px;
+            color: #111827;
+            margin-bottom: 15px;
+        }
+
+        .details {
+            list-style: none;
+            padding: 0;
+        }
+
+        .details li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eeeeee;
+            font-size: 16px;
+        }
+
+        .price-box {
+            margin-top: 30px;
+            padding: 22px;
+            text-align: center;
+            background: #eff6ff;
+            border: 2px solid #2563eb;
+            border-radius: 14px;
+        }
+
+        .price-title {
+            color: #555;
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .price {
+            color: #2563eb;
+            font-size: 34px;
+            font-weight: bold;
+        }
+
+        .book-btn {
+            display: block;
+            width: 100%;
+            margin-top: 25px;
+            padding: 16px;
+            text-align: center;
+            background: #16a34a;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 19px;
+            font-weight: bold;
+            border: none;
+        }
+
+        .book-btn:hover {
+            background: #15803d;
+        }
+
+        .phone-text {
+            text-align: center;
+            margin-top: 12px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+
+            .container {
+                margin: 20px auto;
+                padding: 15px;
+            }
+
+            .service-box {
+                padding: 25px 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .description {
+                font-size: 16px;
+            }
+
+            .price {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
+
 <body>
-<header>
-<h2>Fast Battery</h2>
-<a href="index.html">← Back</a>
-</header>
-<main>
-<h1>⚡ Jump Start Service</h1>
-<p>Our professional Jump Start service is available 24/7.</p>
-<h2>Jump Start Details</h2>
-<p>We provide professional car jump start assistance at your location.</p>
-<p>✔ 24/7 Emergency Service</p>
-<p>✔ Safe Battery Boost</p>
-<p>✔ Mobile Service</p>
-<h2>AED 100</h2>
-</main>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            Fast Battery
+        </div>
+
+        <a href="index.html" class="back-btn">
+            ← Back
+        </a>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="container">
+
+        <div class="service-box">
+
+
+            <!-- SERVICE ICON -->
+
+            <div class="icon">
+                ⚡
+            </div>
+
+
+            <!-- SERVICE TITLE -->
+
+            <h1>
+                Jump Start Service
+            </h1>
+
+
+            <!-- SERVICE DESCRIPTION -->
+
+            <p class="description">
+                Our professional Jump Start service is available
+                24/7 to help you start your vehicle when the battery
+                is weak or completely discharged.
+            </p>
+
+
+            <!-- DETAILS -->
+
+            <h2>
+                Jump Start Details
+            </h2>
+
+
+            <ul class="details">
+
+                <li>
+                    ⚡ Professional Car Jump Start
+                </li>
+
+                <li>
+                    🚗 Service for Cars and Vehicles
+                </li>
+
+                <li>
+                    🕐 24/7 Emergency Service
+                </li>
+
+                <li>
+                    🔋 Safe Battery Boost
+                </li>
+
+                <li>
+                    📍 Mobile Service at Your Location
+                </li>
+
+                <li>
+                    👨‍🔧 Professional Assistance
+                </li>
+
+            </ul>
+
+
+            <!-- PRICE -->
+
+            <div class="price-box">
+
+                <div class="price-title">
+                    Service Price
+                </div>
+
+                <div class="price">
+                    AED 100
+                </div>
+
+            </div>
+
+
+            <!-- BOOK NOW BUTTON -->
+
+            <a
+                href="tel:+971524040699"
+                class="book-btn"
+            >
+                📞 Book Now
+            </a>
+
+
+            <!-- PHONE TEXT -->
+
+            <p class="phone-text">
+                Tap "Book Now" to call us directly
+            </p>
+
+
+        </div>
+
+    </main>
+
+
 </body>
+
 </html>
