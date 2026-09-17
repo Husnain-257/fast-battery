@@ -102,88 +102,203 @@ footer{background:#0b1116;color:#fff;text-align:center;padding:25px}
 
 <div class="grid">
 
-<div class="brands-grid">
+<style>
+  .country-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 15px 30px;
+  }
+  .country-title {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 25px 0 15px;
+    border-bottom: 2px solid #334155;
+    padding-bottom: 8px;
+  }
+  .brands-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 12px;
+  }
+  .brand-card {
+    background: #1e293b;
+    color: #ffffff;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 14px 8px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+  .brand-card:hover {
+    background: #2563eb;
+    border-color: #3b82f6;
+    transform: translateY(-2px);
+  }
+</style>
 
-   <div class="brands-grid">
+<div class="country-section">
 
-    <div class="brand-card">RAM</div>
-    <div class="brand-card">Renault</div>
+  <!-- German Brands -->
+  <div class="country-title">🇩🇪 German Brands</div>
+  <div class="brands-grid">
+    <div class="brand-card">Audi</div>
+    <div class="brand-card">BMW</div>
+    <div class="brand-card">Mercedes-Benz</div>
+    <div class="brand-card">Porsche</div>
+    <div class="brand-card">Volkswagen</div>
+    <div class="brand-card">Opel</div>
+    <div class="brand-card">Maybach</div>
+    <div class="brand-card">Smart</div>
+    <div class="brand-card">MINI</div>
+  </div>
 
-    <div class="brand-card">Rolls-Royce</div>
-    <div class="brand-card">Saab</div>
-
-    <div class="brand-card">SEAT</div>
-    <div class="brand-card">Škoda</div>
-
+  <!-- Japanese Brands -->
+  <div class="country-title">🇯🇵 Japanese Brands</div>
+  <div class="brands-grid">
+    <div class="brand-card">Toyota</div>
+    <div class="brand-card">Lexus</div>
+    <div class="brand-card">Nissan</div>
+    <div class="brand-card">Infiniti</div>
+    <div class="brand-card">Honda</div>
+    <div class="brand-card">Acura</div>
+    <div class="brand-card">Mazda</div>
+    <div class="brand-card">Mitsubishi</div>
     <div class="brand-card">Subaru</div>
     <div class="brand-card">Suzuki</div>
-
-    <div class="brand-card">Tesla</div>
-    <div class="brand-card">Toyota</div>
-
-    <div class="brand-card">Volkswagen</div>
-    <div class="brand-card">Volvo</div>
-
-    <div class="brand-card">Maserati</div>
-    <div class="brand-card">Mazda</div>
-
-    <div class="brand-card">McLaren</div>
-    <div class="brand-card">Mercedes-Benz</div>
-
-    <div class="brand-card">MG</div>
-    <div class="brand-card">Mini</div>
-
-    <div class="brand-card">Mitsubishi</div>
-    <div class="brand-card">Nissan</div>
-
-    <div class="brand-card">Opel</div>
-    <div class="brand-card">Peugeot</div>
-
-    <div class="brand-card">Porsche</div>
-    <div class="brand-card">Dacia</div>
-
+    <div class="brand-card">Isuzu</div>
     <div class="brand-card">Daihatsu</div>
-    <div class="brand-card">Dodge</div>
+  </div>
 
-    <div class="brand-card">Ferrari</div>
-    <div class="brand-card">Fiat</div>
-
+  <!-- American Brands -->
+  <div class="country-title">🇺🇸 American Brands</div>
+  <div class="brands-grid">
     <div class="brand-card">Ford</div>
-    <div class="brand-card">Genesis</div>
-
-    <div class="brand-card">GMC</div>
-    <div class="brand-card">Honda</div>
-
-    <div class="brand-card">Hummer</div>
-    <div class="brand-card">Hyundai</div>
-
-    <div class="brand-card">Abarth</div>
-    <div class="brand-card">Acura</div>
-
-    <div class="brand-card">Alfa Romeo</div>
-    <div class="brand-card">Aston Martin</div>
-
-    <div class="brand-card">Audi</div>
-    <div class="brand-card">Bentley</div>
-
-    <div class="brand-card">BMW</div>
-    <div class="brand-card">Bugatti</div>
-
-    <div class="brand-card">Buick</div>
-    <div class="brand-card">BYD</div>
-
-    <div class="brand-card">Cadillac</div>
     <div class="brand-card">Chevrolet</div>
-
+    <div class="brand-card">Cadillac</div>
+    <div class="brand-card">GMC</div>
+    <div class="brand-card">Jeep</div>
+    <div class="brand-card">Dodge</div>
     <div class="brand-card">Chrysler</div>
+    <div class="brand-card">Lincoln</div>
+    <div class="brand-card">Tesla</div>
+    <div class="brand-card">RAM</div>
+    <div class="brand-card">Buick</div>
+    <div class="brand-card">Hummer</div>
+    <div class="brand-card">Rivian</div>
+    <div class="brand-card">Lucid</div>
+  </div>
+
+  <!-- British Brands -->
+  <div class="country-title">🇬🇧 British Brands</div>
+  <div class="brands-grid">
+    <div class="brand-card">Range Rover</div>
+    <div class="brand-card">Land Rover</div>
+    <div class="brand-card">Bentley</div>
+    <div class="brand-card">Rolls-Royce</div>
+    <div class="brand-card">Aston Martin</div>
+    <div class="brand-card">McLaren</div>
+    <div class="brand-card">Lotus</div>
+    <div class="brand-card">Jaguar</div>
+    <div class="brand-card">Mini</div>
+    <div class="brand-card">MG</div>
+  </div>
+
+  <!-- Italian Brands -->
+  <div class="country-title">🇮🇹 Italian Brands</div>
+  <div class="brands-grid">
+    <div class="brand-card">Ferrari</div>
+    <div class="brand-card">Lamborghini</div>
+    <div class="brand-card">Maserati</div>
+    <div class="brand-card">Alfa Romeo</div>
+    <div class="brand-card">Fiat</div>
+    <div class="brand-card">Abarth</div>
+    <div class="brand-card">Pagani</div>
+  </div>
+
+  <!-- French Brands -->
+  <div class="country-title">🇫🇷 French Brands</div>
+  <div class="brands-grid">
+    <div class="brand-card">Peugeot</div>
+    <div class="brand-card">Renault</div>
     <div class="brand-card">Citroën</div>
+    <div class="brand-card">DS</div>
+    <div class="brand-card">Bugatti</div>
+    <div class="brand-card">Alpine</div>
+  </div>
 
-    <div class="brand-card">Cupra</div>
+  <!-- Korean Brands -->
+  <div class="country-title">🇰🇷 Korean Brands</div>
+  <div class="brands-grid">
+    <div class="brand-card">Hyundai</div>
+    <div class="brand-card">Kia</div>
+    <div class="brand-card">Genesis</div>
+    <div class="brand-card">SsangYong / KGM</div>
+    <div class="brand-card">Daewoo</div>
+  </div>
+
+  <!-- Chinese Brands -->
+  <div class="country-title">🇨🇳 Chinese Brands</div>
+  <div class="brands-grid">
+    <div class="brand-card">BYD</div>
+    <div class="brand-card">Geely</div>
+    <div class="brand-card">Chery</div>
+    <div class="brand-card">MG</div>
+    <div class="brand-card">GAC</div>
+    <div class="brand-card">Changan</div>
+    <div class="brand-card">Haval</div>
+    <div class="brand-card">Great Wall</div>
+    <div class="brand-card">Tank</div>
+    <div class="brand-card">JAC</div>
     <div class="brand-card">Jetour</div>
+    <div class="brand-card">Exeed</div>
+    <div class="brand-card">Lynk & Co</div>
+    <div class="brand-card">NIO</div>
+    <div class="brand-card">XPeng</div>
+    <div class="brand-card">Li Auto</div>
+    <div class="brand-card">Zeekr</div>
+    <div class="brand-card">Hongqi</div>
+    <div class="brand-card">BAIC</div>
+    <div class="brand-card">Bestune</div>
+    <div class="brand-card">Dongfeng</div>
+    <div class="brand-card">Foton</div>
+    <div class="brand-card">Leapmotor</div>
+    <div class="brand-card">Omoda</div>
+    <div class="brand-card">Jaecoo</div>
+  </div>
 
-   </div> 
+  <!-- Swedish Brands -->
+  <div class="country-title">🇸🇪 Swedish Brands</div>
+  <div class="brands-grid">
+    <div class="brand-card">Volvo</div>
+    <div class="brand-card">Polestar</div>
+    <div class="brand-card">Koenigsegg</div>
+    <div class="brand-card">Saab</div>
+  </div>
 
- </div>
+  <!-- Indian Brands -->
+  <div class="country-title">🇮🇳 Indian Brands</div>
+  <div class="brands-grid">
+    <div class="brand-card">Tata</div>
+    <div class="brand-card">Mahindra</div>
+    <div class="brand-card">Force Motors</div>
+  </div>
+
+  <!-- Middle East & Others -->
+  <div class="country-title">🇦🇪 Middle East & Others</div>
+  <div class="brands-grid">
+    <div class="brand-card">W Motors</div>
+    <div class="brand-card">Devel</div>
+    <div class="brand-card">Zarooq</div>
+  </div>
+
+</div>
+
 
 
 </section>
