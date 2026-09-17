@@ -103,37 +103,41 @@ footer{background:#0b1116;color:#fff;text-align:center;padding:25px}
 <div class="grid">
 
 <style>
-  /* Main Container Dark Navy Blue Theme */
+  /* Base section styling with white background */
   .country-section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 30px 15px;
-    background-color: #0f172a; /* Rich Dark Navy Background */
+    padding: 30px 20px;
+    background-color: #ffffff;
     border-radius: 12px;
   }
   
-  /* Headings with Vibrant Accent Line */
+  /* Heading styling */
   .country-title {
-    color: #f8fafc;
+    color: #0f172a;
     font-size: 20px;
     font-weight: 700;
     margin: 25px 0 15px;
-    border-bottom: 2px solid #3b82f6;
+    border-bottom: 2px solid #e2e8f0;
     padding-bottom: 8px;
   }
   
-  /* Responsive Grid Layout */
+  .country-title:first-child {
+    margin-top: 0;
+  }
+  
+  /* Grid Layout */
   .brands-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     gap: 12px;
   }
   
-  /* Premium Dark Glassmorphism Cards */
+  /* Individual Brand Cards */
   .brand-card {
-    background: #1e293b;
-    color: #e2e8f0;
-    border: 1px solid #334155;
+    background: #f8fafc;
+    color: #1e293b;
+    border: 1px solid #e2e8f0;
     border-radius: 8px;
     padding: 14px 8px;
     text-align: center;
@@ -142,17 +146,16 @@ footer{background:#0b1116;color:#fff;text-align:center;padding:25px}
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
     transition: all 0.2s ease;
   }
   
-  /* Modern Hover Effect */
+  /* Hover Effect */
   .brand-card:hover {
     background: #2563eb;
     color: #ffffff;
-    border-color: #60a5fa;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 15px -3px rgba(37, 99, 235, 0.4);
+    border-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
   }
 </style>
 
@@ -312,6 +315,7 @@ footer{background:#0b1116;color:#fff;text-align:center;padding:25px}
   </div>
 
 </div>
+
 
 
 </div>
