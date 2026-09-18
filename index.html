@@ -1,28 +1,28 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="FAST CAR BATTERY provides 24/7 mobile car battery replacement, battery diagnosis, jump start and roadside battery assistance across Dubai, UAE.">
+<meta name="description" content="800PowerBat provides 24/7 mobile car battery replacement, battery diagnosis, jump start and roadside battery assistance across Dubai, UAE.">
 
-<title>FAST CAR BATTERY | 24/7 Mobile Car Battery Service Dubai</title>
+<title>800PowerBat | 24/7 Mobile Car Battery Service Dubai</title>
 
 <style>
 :root{
-    --navy:#0b1220;
-    --navy2:#111827;
-    --gold:#f5b400;
-    --gold-light:#ffc928;
+    --black:#070b12;
+    --navy:#0d1422;
+    --navy2:#151e2e;
+    --yellow:#f5b400;
+    --yellow2:#ffc928;
     --white:#ffffff;
-    --light:#f5f7fa;
+    --light:#f6f7f9;
     --text:#172033;
-    --muted:#667085;
-    --border:#e5e7eb;
-    --green:#25d366;
-    --blue:#2563eb;
-    --shadow:0 8px 25px rgba(15,23,42,.08);
+    --muted:#687386;
+    --border:#e5e8ed;
+    --green:#20c86b;
+    --blue:#2463eb;
+    --shadow:0 15px 40px rgba(15,23,42,.08);
 }
 
 *{
@@ -48,172 +48,296 @@ a{
 }
 
 /* HEADER */
+
 header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(11,18,32,.98);
-    color:white;
-    min-height:68px;
-    padding:12px 5%;
+    min-height:76px;
+    padding:0 5%;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    box-shadow:0 4px 18px rgba(0,0,0,.18);
+    background:rgba(7,11,18,.97);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    box-shadow:0 5px 25px rgba(0,0,0,.18);
+    backdrop-filter:blur(12px);
 }
 
 .logo{
-    font-size:22px;
+    display:flex;
+    align-items:center;
+    gap:11px;
+    color:white;
+    font-size:21px;
     font-weight:900;
-    letter-spacing:.4px;
+    letter-spacing:.5px;
     white-space:nowrap;
 }
 
-.logo span{
-    color:var(--gold);
+.logo-mark{
+    width:40px;
+    height:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:10px;
+    background:var(--yellow);
+    color:#101722;
+    font-size:22px;
+}
+
+.logo-text span{
+    color:var(--yellow);
 }
 
 nav{
     display:flex;
-    gap:6px;
+    align-items:center;
+    gap:5px;
 }
 
 nav a{
-    padding:8px 12px;
-    border-radius:7px;
-    color:white;
-    font-weight:700;
-    font-size:14px;
+    color:#e8edf4;
+    padding:9px 13px;
+    border-radius:8px;
+    font-size:13px;
+    font-weight:800;
+    transition:.2s ease;
 }
 
 nav a:hover{
-    color:var(--gold);
-    background:rgba(255,255,255,.08);
+    color:var(--yellow);
+    background:rgba(255,255,255,.06);
 }
 
 /* HERO */
+
 .hero{
-    background:
-    radial-gradient(circle at top right,rgba(245,180,0,.14),transparent 30%),
-    linear-gradient(135deg,#080e1a,#111827 65%,#1e293b);
+    position:relative;
+    overflow:hidden;
     color:white;
     text-align:center;
-    padding:82px 6% 75px;
+    padding:105px 6% 95px;
+    background:
+        radial-gradient(circle at 80% 20%,rgba(245,180,0,.16),transparent 28%),
+        radial-gradient(circle at 15% 90%,rgba(37,99,235,.12),transparent 28%),
+        linear-gradient(135deg,#060a11,#0d1422 60%,#172234);
+}
+
+.hero-inner{
+    position:relative;
+    z-index:2;
+    max-width:1000px;
+    margin:auto;
 }
 
 .badge{
-    display:inline-block;
-    padding:7px 15px;
-    border:1px solid rgba(245,180,0,.45);
-    background:rgba(245,180,0,.10);
-    color:#ffd966;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 16px;
     border-radius:50px;
-    font-size:12px;
+    background:rgba(245,180,0,.09);
+    border:1px solid rgba(245,180,0,.35);
+    color:#ffd75c;
+    font-size:11px;
     font-weight:900;
-    letter-spacing:.5px;
+    letter-spacing:1px;
 }
 
 .hero h1{
-    max-width:950px;
-    margin:20px auto 15px;
-    font-size:clamp(34px,6vw,58px);
-    line-height:1.08;
+    margin:23px auto 17px;
+    max-width:1000px;
+    font-size:clamp(38px,6vw,65px);
+    line-height:1.03;
     font-weight:900;
+    letter-spacing:-1.5px;
 }
 
-.hero h1 span{
-    color:var(--gold);
+.hero h1 .yellow{
+    color:var(--yellow);
 }
 
-.hero p{
-    max-width:780px;
-    margin:0 auto 25px;
-    color:#d7dee8;
+.hero-subtitle{
+    max-width:760px;
+    margin:0 auto 30px;
+    color:#cbd5e1;
     font-size:18px;
+}
+
+.hero-actions{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px;
 }
 
 .btn{
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    gap:8px;
-    padding:13px 21px;
-    margin:5px;
+    gap:9px;
+    min-height:48px;
+    padding:0 22px;
     border-radius:9px;
+    font-size:14px;
     font-weight:900;
-    transition:.2s ease;
+    transition:.22s ease;
 }
 
 .btn:hover{
-    transform:translateY(-2px);
+    transform:translateY(-3px);
 }
 
-.call{
-    background:var(--gold);
-    color:#111827;
+.btn-yellow{
+    background:var(--yellow);
+    color:#101722;
 }
 
-.wa{
+.btn-green{
     background:var(--green);
     color:white;
 }
 
-/* IMAGE SECTION */
+.hero-note{
+    margin-top:25px;
+    color:#9ca9bb;
+    font-size:12px;
+    font-weight:700;
+}
+
+/* QUICK INFO */
+
+.quick-info{
+    position:relative;
+    z-index:5;
+    max-width:1080px;
+    margin:-38px auto 0;
+    padding:0 20px;
+}
+
+.quick-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    background:white;
+    border:1px solid var(--border);
+    border-radius:17px;
+    box-shadow:var(--shadow);
+    overflow:hidden;
+}
+
+.quick-item{
+    padding:23px 20px;
+    text-align:center;
+    border-right:1px solid var(--border);
+}
+
+.quick-item:last-child{
+    border-right:0;
+}
+
+.quick-icon{
+    font-size:25px;
+    margin-bottom:5px;
+}
+
+.quick-item strong{
+    display:block;
+    font-size:14px;
+}
+
+.quick-item span{
+    display:block;
+    color:var(--muted);
+    font-size:12px;
+}
+
+/* IMAGES */
+
 .image-section{
     max-width:1200px;
-    margin:28px auto 0;
-    padding:0 18px;
+    margin:50px auto 0;
+    padding:0 20px;
 }
 
 .image-grid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:20px;
+    gap:22px;
 }
 
 .image-card{
-    background:white;
-    border-radius:16px;
     overflow:hidden;
+    background:white;
+    border-radius:17px;
     border:1px solid var(--border);
     box-shadow:var(--shadow);
 }
 
 .image-card img{
     width:100%;
-    height:270px;
-    object-fit:cover;
+    height:285px;
     display:block;
+    object-fit:cover;
+    transition:.4s ease;
 }
 
-.image-card p{
-    text-align:center;
-    padding:13px;
-    font-weight:800;
+.image-card:hover img{
+    transform:scale(1.03);
 }
 
-/* GENERAL SECTIONS */
+.image-caption{
+    padding:17px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.image-caption strong{
+    font-size:15px;
+}
+
+.image-caption span{
+    color:var(--yellow);
+    font-size:20px;
+}
+
+/* GENERAL */
+
 section{
-    padding:65px 6%;
+    padding:80px 6%;
 }
 
 .section-title{
+    max-width:760px;
+    margin:0 auto 42px;
     text-align:center;
-    margin-bottom:35px;
+}
+
+.section-label{
+    color:#b68400;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:1.8px;
+    text-transform:uppercase;
+    margin-bottom:7px;
 }
 
 .section-title h2{
-    font-size:32px;
-    line-height:1.2;
     color:var(--navy);
-    margin-bottom:9px;
+    font-size:36px;
+    line-height:1.15;
+    margin-bottom:11px;
 }
 
 .section-title p{
     color:var(--muted);
+    font-size:15px;
 }
 
 /* SERVICES */
+
 .services{
     background:white;
 }
@@ -227,41 +351,81 @@ section{
 }
 
 .service-card{
+    position:relative;
+    overflow:hidden;
     background:white;
     border:1px solid var(--border);
-    border-top:4px solid var(--gold);
     border-radius:15px;
-    padding:25px 20px;
-    box-shadow:var(--shadow);
-    transition:.2s ease;
-    cursor:pointer;
+    padding:28px 22px;
+    box-shadow:0 7px 25px rgba(15,23,42,.045);
+    transition:.25s ease;
+}
+
+.service-card:before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:3px;
+    background:var(--yellow);
 }
 
 .service-card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 14px 30px rgba(15,23,42,.12);
-    border-color:var(--gold);
+    transform:translateY(-6px);
+    border-color:#e9c65c;
+    box-shadow:var(--shadow);
+}
+
+.service-number{
+    position:absolute;
+    right:16px;
+    top:14px;
+    color:#e9edf2;
+    font-size:30px;
+    font-weight:900;
 }
 
 .service-icon{
-    font-size:31px;
-    margin-bottom:8px;
+    width:52px;
+    height:52px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:13px;
+    background:#fff7d9;
+    font-size:25px;
+    margin-bottom:18px;
 }
 
 .service-card h3{
-    margin-bottom:7px;
-    font-size:19px;
+    font-size:18px;
+    margin-bottom:8px;
 }
 
 .service-card p{
     color:var(--muted);
-    font-size:14px;
+    font-size:13px;
+    line-height:1.7;
+}
+
+.service-link{
+    display:inline-block;
+    margin-top:17px;
+    color:#a57600;
+    font-size:12px;
+    font-weight:900;
 }
 
 /* BRANDS */
+
 .brands{
     background:var(--navy);
     color:white;
+}
+
+.brands .section-label{
+    color:var(--yellow);
 }
 
 .brands .section-title h2{
@@ -269,154 +433,208 @@ section{
 }
 
 .brands .section-title p{
-    color:#cbd5e1;
+    color:#aeb9c9;
 }
 
 .brand-container{
     max-width:1200px;
     margin:auto;
-    background:var(--navy2);
-    border:1px solid #263244;
-    border-radius:18px;
-    padding:25px;
+    padding:30px;
+    background:#111a29;
+    border:1px solid #273348;
+    border-radius:19px;
 }
 
 .brand-country{
-    margin-bottom:28px;
+    padding-bottom:30px;
+    margin-bottom:30px;
+    border-bottom:1px solid #273348;
 }
 
 .brand-country:last-child{
+    padding-bottom:0;
     margin-bottom:0;
+    border-bottom:0;
 }
 
 .country-title{
-    color:var(--gold);
-    font-size:19px;
+    color:var(--yellow);
+    font-size:16px;
     font-weight:900;
-    margin-bottom:13px;
-    padding-bottom:8px;
-    border-bottom:1px solid #334155;
+    margin-bottom:15px;
 }
 
 .brand-list{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(5,1fr);
     gap:8px;
 }
 
 .brand-box{
-    background:white;
-    color:#172033;
-    border-radius:8px;
-    padding:9px 7px;
-    text-align:center;
-    font-size:13px;
-    font-weight:700;
-    border:1px solid #e5e7eb;
-    min-height:42px;
+    min-height:43px;
     display:flex;
     align-items:center;
     justify-content:center;
-    transition:.15s ease;
+    padding:8px;
+    border:1px solid #e2e6eb;
+    border-radius:8px;
+    background:#fff;
+    color:#1b2432;
+    font-size:12px;
+    font-weight:800;
+    text-align:center;
+    transition:.18s ease;
 }
 
 .brand-box:hover{
-    background:var(--gold);
+    background:var(--yellow);
+    border-color:var(--yellow);
     color:#111827;
     transform:translateY(-2px);
 }
 
+/* WHY US */
+
+.why-us{
+    background:#f8f9fb;
+}
+
+.why-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.why-card{
+    background:white;
+    padding:27px 23px;
+    border:1px solid var(--border);
+    border-radius:15px;
+    box-shadow:0 6px 22px rgba(15,23,42,.045);
+}
+
+.why-card-icon{
+    font-size:27px;
+    margin-bottom:12px;
+}
+
+.why-card h3{
+    font-size:17px;
+    margin-bottom:6px;
+}
+
+.why-card p{
+    color:var(--muted);
+    font-size:13px;
+}
+
 /* CONTACT */
+
 .contact{
-    background:#f5f7fa;
+    background:white;
 }
 
 .contact-card{
-    max-width:850px;
+    max-width:950px;
     margin:auto;
-    background:white;
-    border:1px solid var(--border);
-    border-radius:18px;
-    padding:35px 25px;
+    padding:50px 35px;
+    border-radius:20px;
+    background:
+        radial-gradient(circle at 90% 20%,rgba(245,180,0,.13),transparent 30%),
+        linear-gradient(135deg,#0a101b,#151f30);
+    color:white;
     text-align:center;
-    box-shadow:var(--shadow);
+    box-shadow:0 20px 50px rgba(0,0,0,.22);
 }
 
-.contact-card h3{
-    font-size:25px;
-    margin-bottom:8px;
+.contact-card h2{
+    font-size:32px;
+    margin-bottom:9px;
 }
 
-.contact-card p{
-    color:var(--muted);
+.contact-card > p{
+    color:#c4cfdd;
+    max-width:650px;
+    margin:0 auto;
+    font-size:14px;
 }
 
-.phone{
-    margin:15px 0 4px;
-    font-size:24px;
+.contact-number{
+    margin:22px 0 3px;
+    color:var(--yellow);
+    font-size:28px;
     font-weight:900;
 }
 
-.email{
-    color:var(--muted);
-    font-weight:700;
+.contact-email{
+    color:#b8c4d2;
+    font-size:13px;
+}
+
+.contact-actions{
+    margin-top:22px;
 }
 
 /* FOUNDER */
+
 .founder{
-    background:white;
+    background:#f5f7fa;
 }
 
 .founder-card{
-    max-width:950px;
+    max-width:1000px;
     margin:auto;
-    padding:35px;
+    padding:34px;
     display:flex;
     align-items:center;
     gap:25px;
-    background:linear-gradient(135deg,#0b1220,#1e293b);
-    border-radius:20px;
-    color:white;
-    box-shadow:0 12px 30px rgba(0,0,0,.15);
+    background:white;
+    border:1px solid var(--border);
+    border-radius:19px;
+    box-shadow:var(--shadow);
 }
 
 .founder-icon{
-    min-width:78px;
+    flex:0 0 78px;
     width:78px;
     height:78px;
     display:flex;
     align-items:center;
     justify-content:center;
-    border-radius:50%;
-    background:rgba(245,180,0,.12);
-    border:1px solid rgba(245,180,0,.4);
-    font-size:36px;
+    border-radius:17px;
+    background:var(--navy);
+    color:var(--yellow);
+    font-size:34px;
 }
 
 .founder-label{
-    color:#ffd966;
-    font-size:12px;
+    color:#a57600;
+    font-size:10px;
     font-weight:900;
     letter-spacing:2px;
-    margin-bottom:5px;
+    margin-bottom:4px;
 }
 
 .founder-card h2{
-    font-size:30px;
-    margin-bottom:7px;
+    color:var(--navy);
+    font-size:27px;
+    margin-bottom:5px;
 }
 
 .founder-text{
-    color:#d5dde7;
-    font-size:15px;
+    color:var(--muted);
+    font-size:14px;
 }
 
 /* FOOTER */
+
 footer{
-    background:#050a12;
+    background:#050910;
     color:white;
-    border-top:3px solid var(--gold);
-    padding:42px 6% 0;
+    border-top:3px solid var(--yellow);
+    padding:55px 6% 0;
 }
 
 .footer-grid{
@@ -424,7 +642,7 @@ footer{
     margin:auto;
     display:grid;
     grid-template-columns:1.5fr 1fr 1fr;
-    gap:40px;
+    gap:50px;
 }
 
 .footer-brand h2{
@@ -432,27 +650,28 @@ footer{
 }
 
 .footer-brand h2 span{
-    color:var(--gold);
+    color:var(--yellow);
 }
 
 .footer-tagline{
-    color:var(--gold);
-    font-size:11px;
+    color:var(--yellow);
+    font-size:10px;
     font-weight:900;
-    letter-spacing:1px;
-    margin-top:3px;
+    letter-spacing:1.5px;
+    margin-top:4px;
 }
 
 .footer-brand p{
-    color:#cbd5e1;
-    margin-top:12px;
-    max-width:550px;
-    font-size:14px;
+    max-width:530px;
+    margin-top:14px;
+    color:#9eabbc;
+    font-size:13px;
 }
 
 .footer-col h3{
-    color:var(--gold);
-    margin-bottom:13px;
+    color:var(--yellow);
+    font-size:14px;
+    margin-bottom:14px;
 }
 
 .footer-col ul{
@@ -460,52 +679,57 @@ footer{
 }
 
 .footer-col li{
-    margin:8px 0;
+    margin:9px 0;
+    color:#aab5c4;
+    font-size:13px;
 }
 
 .footer-col a{
-    color:white;
-    font-size:14px;
+    color:#e5eaf0;
     font-weight:700;
 }
 
 .footer-col a:hover{
-    color:var(--gold);
+    color:var(--yellow);
 }
 
 .footer-actions{
     max-width:1200px;
-    margin:30px auto 0;
+    margin:38px auto 0;
     display:flex;
-    border-top:1px solid #263244;
+    border-top:1px solid #222d3d;
+    border-bottom:1px solid #222d3d;
 }
 
 .footer-actions a{
     flex:1;
+    padding:15px;
     text-align:center;
-    padding:14px;
+    font-size:13px;
     font-weight:900;
 }
 
 .footer-call{
-    border-right:1px solid #263244;
+    color:white;
+    border-right:1px solid #222d3d;
 }
 
 .footer-wa{
-    background:var(--green);
+    color:white;
+    background:rgba(32,200,107,.13);
 }
 
 .footer-bottom{
     max-width:1200px;
-    margin:0 auto;
-    padding:18px 0;
-    border-top:1px solid #263244;
+    margin:auto;
+    padding:19px 0;
     text-align:center;
-    color:#94a3b8;
-    font-size:12px;
+    color:#718096;
+    font-size:11px;
 }
 
 /* FLOATING BUTTONS */
+
 .floating{
     position:fixed;
     right:18px;
@@ -519,13 +743,13 @@ footer{
 .float-btn{
     width:52px;
     height:52px;
-    border-radius:50%;
     display:flex;
     align-items:center;
     justify-content:center;
+    border-radius:50%;
     color:white;
-    font-size:21px;
-    box-shadow:0 5px 18px rgba(0,0,0,.25);
+    font-size:20px;
+    box-shadow:0 7px 22px rgba(0,0,0,.25);
 }
 
 .float-call{
@@ -537,10 +761,15 @@ footer{
 }
 
 /* MOBILE */
-@media(max-width:950px){
+
+@media(max-width:1000px){
 
     .service-grid{
         grid-template-columns:repeat(2,1fr);
+    }
+
+    .brand-list{
+        grid-template-columns:repeat(4,1fr);
     }
 
     .footer-grid{
@@ -551,28 +780,62 @@ footer{
 @media(max-width:700px){
 
     header{
-        padding:12px 4%;
+        min-height:68px;
+        padding:0 4%;
     }
 
     .logo{
+        font-size:16px;
+    }
+
+    .logo-mark{
+        width:34px;
+        height:34px;
         font-size:18px;
     }
 
+    nav{
+        gap:2px;
+    }
+
     nav a{
-        font-size:12px;
-        padding:7px 7px;
+        padding:7px 6px;
+        font-size:10px;
     }
 
     .hero{
-        padding:62px 5% 60px;
+        padding:75px 5% 70px;
     }
 
     .hero h1{
-        font-size:37px;
+        font-size:39px;
     }
 
-    .hero p{
-        font-size:16px;
+    .hero-subtitle{
+        font-size:15px;
+    }
+
+    .quick-info{
+        margin:-25px auto 0;
+        padding:0 12px;
+    }
+
+    .quick-grid{
+        grid-template-columns:1fr;
+    }
+
+    .quick-item{
+        border-right:0;
+        border-bottom:1px solid var(--border);
+        padding:15px;
+    }
+
+    .quick-item:last-child{
+        border-bottom:0;
+    }
+
+    .image-section{
+        margin-top:35px;
     }
 
     .image-grid{
@@ -580,15 +843,15 @@ footer{
     }
 
     .image-card img{
-        height:230px;
+        height:235px;
     }
 
     section{
-        padding:50px 5%;
+        padding:58px 5%;
     }
 
     .section-title h2{
-        font-size:28px;
+        font-size:29px;
     }
 
     .service-grid{
@@ -596,7 +859,7 @@ footer{
     }
 
     .brand-container{
-        padding:17px;
+        padding:19px;
     }
 
     .brand-list{
@@ -605,24 +868,40 @@ footer{
     }
 
     .brand-box{
-        font-size:11px;
-        padding:8px 4px;
         min-height:38px;
+        padding:6px 4px;
+        font-size:10px;
     }
 
     .country-title{
-        font-size:17px;
+        font-size:15px;
+    }
+
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-card{
+        padding:38px 20px;
+    }
+
+    .contact-card h2{
+        font-size:27px;
+    }
+
+    .contact-number{
+        font-size:23px;
     }
 
     .founder-card{
         flex-direction:column;
         text-align:center;
-        padding:28px 20px;
+        padding:30px 20px;
     }
 
     .footer-grid{
         grid-template-columns:1fr;
-        gap:25px;
+        gap:30px;
     }
 
     .footer-actions{
@@ -631,8 +910,8 @@ footer{
     }
 
     .floating{
-        right:13px;
-        bottom:13px;
+        right:12px;
+        bottom:12px;
     }
 
     .float-btn{
@@ -640,16 +919,43 @@ footer{
         height:48px;
     }
 }
+
+@media(max-width:380px){
+
+    .logo{
+        font-size:14px;
+    }
+
+    nav a{
+        font-size:9px;
+        padding:6px 4px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .brand-list{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
 
     <a href="index.html" class="logo">
-        FAST <span>CAR BATTERY</span>
+
+        <div class="logo-mark">
+            ⚡
+        </div>
+
+        <div class="logo-text">
+            800<span>PowerBat</span>
+        </div>
+
     </a>
 
     <nav>
@@ -661,53 +967,70 @@ footer{
 </header>
 
 
-<!-- HERO -->
 <section class="hero">
 
-    <div class="badge">
-        24/7 MOBILE CAR BATTERY SERVICE • DUBAI
+    <div class="hero-inner">
+
+        <div class="badge">
+            ⚡ 24/7 MOBILE CAR BATTERY SERVICE • DUBAI
+        </div>
+
+        <h1>
+            <span class="yellow">800PowerBat</span><br>
+            Mobile Battery Service
+        </h1>
+
+        <p class="hero-subtitle">
+            Professional on-site car battery replacement,
+            battery diagnosis, jump start and roadside battery
+            assistance at your location across Dubai.
+        </p>
+
+        <div class="hero-actions">
+
+            <a class="btn btn-yellow"
+               href="tel:+971524040699">
+                📞 Call 800PowerBat
+            </a>
+
+            <a class="btn btn-green"
+               href="https://wa.me/971524040699"
+               target="_blank"
+               rel="noopener">
+                💬 WhatsApp Us
+            </a>
+
+        </div>
+
+        <div class="hero-note">
+            Fast response • Professional service • On-site assistance
+        </div>
+
     </div>
-
-    <h1>
-        <span>FAST CAR BATTERY</span><br>
-        On-Site Car Battery Replacement
-    </h1>
-
-    <p>
-        Fast and professional mobile car battery replacement,
-        battery diagnosis, jump start and roadside battery assistance
-        at your location across Dubai.
-    </p>
-
-    <a class="btn call" href="tel:+971524040699">
-        📞 Call Now
-    </a>
-
-    <a class="btn wa"
-       href="https://wa.me/971524040699"
-       target="_blank"
-       rel="noopener">
-        💬 WhatsApp
-    </a>
 
 </section>
 
 
-<!-- IMAGES -->
-<div class="image-section">
+<div class="quick-info">
 
-    <div class="image-grid">
+    <div class="quick-grid">
 
-        <div class="image-card">
-            <img src="Screenshot_20260917_235543_ChatGPT.jpg"
-                 alt="FAST CAR BATTERY mobile battery replacement">
-            <p>Emergency On-Site Battery Assistance</p>
+        <div class="quick-item">
+            <div class="quick-icon">⏱️</div>
+            <strong>24/7 Availability</strong>
+            <span>Mobile battery assistance</span>
         </div>
 
-        <div class="image-card">
-            <img src="Screenshot_20260917_235655_ChatGPT.jpg"
-                 alt="FAST CAR BATTERY jump start service">
-            <p>24/7 Car Jump Start Service</p>
+        <div class="quick-item">
+            <div class="quick-icon">📍</div>
+            <strong>On-Site Service</strong>
+            <span>We come to your location</span>
+        </div>
+
+        <div class="quick-item">
+            <div class="quick-icon">🔋</div>
+            <strong>Battery Solutions</strong>
+            <span>Replacement & diagnosis</span>
         </div>
 
     </div>
@@ -715,54 +1038,141 @@ footer{
 </div>
 
 
-<!-- SERVICES -->
+<div class="image-section">
+
+    <div class="image-grid">
+
+        <div class="image-card">
+
+            <img src="Screenshot_20260917_235543_ChatGPT.jpg"
+                 alt="800PowerBat mobile battery service">
+
+            <div class="image-caption">
+                <strong>Emergency On-Site Battery Assistance</strong>
+                <span>→</span>
+            </div>
+
+        </div>
+
+
+        <div class="image-card">
+
+            <img src="Screenshot_20260917_235655_ChatGPT.jpg"
+                 alt="800PowerBat jump start service">
+
+            <div class="image-caption">
+                <strong>24/7 Car Jump Start Service</strong>
+                <span>→</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
 <section class="services" id="services">
 
     <div class="section-title">
-        <h2>Our Services</h2>
-        <p>Professional battery assistance at your location.</p>
+
+        <div class="section-label">
+            What We Do
+        </div>
+
+        <h2>Professional Battery Services</h2>
+
+        <p>
+            Reliable mobile battery solutions for everyday
+            vehicles, premium cars and emergency situations.
+        </p>
+
     </div>
+
 
     <div class="service-grid">
 
-        <!-- BATTERY REPLACEMENT -->
-        <a href="battery-replacement.html" class="service-card">
+        <a href="battery-replacement.html"
+           class="service-card">
+
+            <div class="service-number">01</div>
+
             <div class="service-icon">🔋</div>
+
             <h3>Battery Replacement</h3>
+
             <p>
-                Professional car battery testing,
-                replacement and installation at your location.
+                Professional battery testing, replacement
+                and installation directly at your location.
             </p>
+
+            <span class="service-link">
+                View Service →
+            </span>
+
         </a>
 
-        <!-- ROADSIDE ASSISTANCE -->
-        <a href="roadside-assistance.html" class="service-card">
+
+        <a href="roadside-assistance.html"
+           class="service-card">
+
+            <div class="service-number">02</div>
+
             <div class="service-icon">🚗</div>
+
             <h3>Roadside Assistance</h3>
+
             <p>
-                Fast mobile roadside battery assistance
-                when your vehicle needs help.
+                Mobile roadside battery assistance when
+                your vehicle needs immediate support.
             </p>
+
+            <span class="service-link">
+                View Service →
+            </span>
+
         </a>
 
-        <!-- BATTERY DIAGNOSIS -->
-        <a href="battery-diagnosis.html" class="service-card">
+
+        <a href="battery-diagnosis.html"
+           class="service-card">
+
+            <div class="service-number">03</div>
+
             <div class="service-icon">⚡</div>
+
             <h3>Battery Diagnosis</h3>
+
             <p>
-                Battery and starting-system checks
-                to identify battery-related problems.
+                Battery and starting-system checks to help
+                identify battery-related problems.
             </p>
+
+            <span class="service-link">
+                View Service →
+            </span>
+
         </a>
 
-        <!-- JUMP START -->
-        <a href="jumpstart.html" class="service-card">
+
+        <a href="jumpstart.html"
+           class="service-card">
+
+            <div class="service-number">04</div>
+
             <div class="service-icon">🔌</div>
+
             <h3>Jump Start</h3>
+
             <p>
-                24/7 mobile jump start service
-                at your location.
+                24/7 mobile jump start assistance for
+                vehicles with a discharged battery.
             </p>
+
+            <span class="service-link">
+                View Service →
+            </span>
+
         </a>
 
     </div>
@@ -770,22 +1180,35 @@ footer{
 </section>
 
 
-<!-- CAR BRANDS -->
 <section class="brands" id="brands">
 
     <div class="section-title">
-        <h2>🚗 Car Brands We Service</h2>
+
+        <div class="section-label">
+            Vehicle Coverage
+        </div>
+
+        <h2>Car Brands We Service</h2>
+
         <p>
             Battery replacement and roadside battery assistance
-            for major car brands in Dubai.
+            for major vehicle brands in Dubai.
         </p>
+
     </div>
+
 
     <div class="brand-container">
 
+
         <div class="brand-country">
-            <div class="country-title">🇩🇪 German Cars</div>
+
+            <div class="country-title">
+                🇩🇪 German Cars
+            </div>
+
             <div class="brand-list">
+
                 <div class="brand-box">Audi</div>
                 <div class="brand-box">BMW</div>
                 <div class="brand-box">Mercedes-Benz</div>
@@ -794,12 +1217,20 @@ footer{
                 <div class="brand-box">Opel</div>
                 <div class="brand-box">Maybach</div>
                 <div class="brand-box">Smart</div>
+
             </div>
+
         </div>
 
+
         <div class="brand-country">
-            <div class="country-title">🇯🇵 Japanese Cars</div>
+
+            <div class="country-title">
+                🇯🇵 Japanese Cars
+            </div>
+
             <div class="brand-list">
+
                 <div class="brand-box">Toyota</div>
                 <div class="brand-box">Lexus</div>
                 <div class="brand-box">Nissan</div>
@@ -812,12 +1243,20 @@ footer{
                 <div class="brand-box">Subaru</div>
                 <div class="brand-box">Isuzu</div>
                 <div class="brand-box">Daihatsu</div>
+
             </div>
+
         </div>
 
+
         <div class="brand-country">
-            <div class="country-title">🇺🇸 American Cars</div>
+
+            <div class="country-title">
+                🇺🇸 American Cars
+            </div>
+
             <div class="brand-list">
+
                 <div class="brand-box">Ford</div>
                 <div class="brand-box">Chevrolet</div>
                 <div class="brand-box">GMC</div>
@@ -830,12 +1269,20 @@ footer{
                 <div class="brand-box">Hummer</div>
                 <div class="brand-box">Buick</div>
                 <div class="brand-box">Ram</div>
+
             </div>
+
         </div>
 
+
         <div class="brand-country">
-            <div class="country-title">🇬🇧 British Cars</div>
+
+            <div class="country-title">
+                🇬🇧 British Cars
+            </div>
+
             <div class="brand-list">
+
                 <div class="brand-box">Land Rover</div>
                 <div class="brand-box">Range Rover</div>
                 <div class="brand-box">Bentley</div>
@@ -845,12 +1292,20 @@ footer{
                 <div class="brand-box">Lotus</div>
                 <div class="brand-box">Mini</div>
                 <div class="brand-box">Jaguar</div>
+
             </div>
+
         </div>
 
+
         <div class="brand-country">
-            <div class="country-title">🇮🇹 Italian Cars</div>
+
+            <div class="country-title">
+                🇮🇹 Italian Cars
+            </div>
+
             <div class="brand-list">
+
                 <div class="brand-box">Ferrari</div>
                 <div class="brand-box">Lamborghini</div>
                 <div class="brand-box">Maserati</div>
@@ -858,34 +1313,58 @@ footer{
                 <div class="brand-box">Fiat</div>
                 <div class="brand-box">Abarth</div>
                 <div class="brand-box">Pagani</div>
+
             </div>
+
         </div>
 
+
         <div class="brand-country">
-            <div class="country-title">🇫🇷 French Cars</div>
+
+            <div class="country-title">
+                🇫🇷 French Cars
+            </div>
+
             <div class="brand-list">
+
                 <div class="brand-box">Peugeot</div>
                 <div class="brand-box">Renault</div>
                 <div class="brand-box">Citroën</div>
                 <div class="brand-box">DS Automobiles</div>
                 <div class="brand-box">Bugatti</div>
                 <div class="brand-box">Alpine</div>
+
             </div>
+
         </div>
 
+
         <div class="brand-country">
-            <div class="country-title">🇰🇷 Korean Cars</div>
+
+            <div class="country-title">
+                🇰🇷 Korean Cars
+            </div>
+
             <div class="brand-list">
+
                 <div class="brand-box">Hyundai</div>
                 <div class="brand-box">Kia</div>
                 <div class="brand-box">Genesis</div>
                 <div class="brand-box">SsangYong</div>
+
             </div>
+
         </div>
 
+
         <div class="brand-country">
-            <div class="country-title">🇨🇳 Chinese Cars</div>
+
+            <div class="country-title">
+                🇨🇳 Chinese Cars
+            </div>
+
             <div class="brand-list">
+
                 <div class="brand-box">MG</div>
                 <div class="brand-box">Geely</div>
                 <div class="brand-box">Changan</div>
@@ -902,32 +1381,56 @@ footer{
                 <div class="brand-box">Great Wall</div>
                 <div class="brand-box">Foton</div>
                 <div class="brand-box">Zeekr</div>
+
             </div>
+
         </div>
 
+
         <div class="brand-country">
-            <div class="country-title">🇸🇪 Swedish Cars</div>
+
+            <div class="country-title">
+                🇸🇪 Swedish Cars
+            </div>
+
             <div class="brand-list">
+
                 <div class="brand-box">Volvo</div>
                 <div class="brand-box">Polestar</div>
                 <div class="brand-box">Koenigsegg</div>
                 <div class="brand-box">Saab</div>
+
             </div>
+
         </div>
 
+
         <div class="brand-country">
-            <div class="country-title">🇮🇳 Indian Cars</div>
+
+            <div class="country-title">
+                🇮🇳 Indian Cars
+            </div>
+
             <div class="brand-list">
+
                 <div class="brand-box">Tata</div>
                 <div class="brand-box">Mahindra</div>
                 <div class="brand-box">Maruti Suzuki</div>
                 <div class="brand-box">Force Motors</div>
+
             </div>
+
         </div>
 
+
         <div class="brand-country">
-            <div class="country-title">🌍 Middle East & Others</div>
+
+            <div class="country-title">
+                🌍 Middle East & Others
+            </div>
+
             <div class="brand-list">
+
                 <div class="brand-box">W Motors</div>
                 <div class="brand-box">Nissan Patrol</div>
                 <div class="brand-box">Toyota Land Cruiser</div>
@@ -936,7 +1439,9 @@ footer{
                 <div class="brand-box">Chevrolet Tahoe</div>
                 <div class="brand-box">Ford Expedition</div>
                 <div class="brand-box">Cadillac Escalade</div>
+
             </div>
+
         </div>
 
     </div>
@@ -944,38 +1449,121 @@ footer{
 </section>
 
 
-<!-- CONTACT -->
+<section class="why-us">
+
+    <div class="section-title">
+
+        <div class="section-label">
+            Why 800PowerBat
+        </div>
+
+        <h2>Built Around Convenience</h2>
+
+        <p>
+            Professional mobile battery assistance designed
+            to make roadside battery problems simpler.
+        </p>
+
+    </div>
+
+
+    <div class="why-grid">
+
+        <div class="why-card">
+
+            <div class="why-card-icon">
+                📍
+            </div>
+
+            <h3>On-Site Service</h3>
+
+            <p>
+                Battery assistance is provided at your
+                location instead of requiring a workshop visit.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-card-icon">
+                ⚡
+            </div>
+
+            <h3>Fast Response</h3>
+
+            <p>
+                Mobile assistance for battery replacement,
+                diagnosis and jump start requirements.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-card-icon">
+                🛠️
+            </div>
+
+            <h3>Professional Approach</h3>
+
+            <p>
+                Clear service process with attention to
+                battery compatibility and installation.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
 <section class="contact" id="contact">
 
     <div class="section-title">
-        <h2>Contact FAST CAR BATTERY</h2>
-        <p>24/7 Mobile Car Battery Service in Dubai</p>
+
+        <div class="section-label">
+            Get In Touch
+        </div>
+
+        <h2>Need Battery Assistance?</h2>
+
+        <p>
+            Contact 800PowerBat for mobile battery service
+            in Dubai.
+        </p>
+
     </div>
+
 
     <div class="contact-card">
 
-        <h3>Need a Battery?</h3>
+        <h2>We're Ready To Help</h2>
 
         <p>
-            Call or WhatsApp us and get professional
-            mobile battery assistance at your location.
+            Call or WhatsApp us for professional mobile
+            car battery assistance at your location.
         </p>
 
-        <div class="phone">
-            📞 +971 52 404 0699
+        <div class="contact-number">
+            +971 52 404 0699
         </div>
 
-        <div class="email">
+        <div class="contact-email">
             info@fastcarbattery.ae
         </div>
 
-        <div style="margin-top:18px;">
+        <div class="contact-actions">
 
-            <a class="btn call" href="tel:+971524040699">
+            <a class="btn btn-yellow"
+               href="tel:+971524040699">
                 📞 Call Now
             </a>
 
-            <a class="btn wa"
+            <a class="btn btn-green"
                href="https://wa.me/971524040699"
                target="_blank"
                rel="noopener">
@@ -989,7 +1577,6 @@ footer{
 </section>
 
 
-<!-- FOUNDER -->
 <section class="founder">
 
     <div class="founder-card">
@@ -1007,9 +1594,9 @@ footer{
             <h2>Husnain Ali</h2>
 
             <p class="founder-text">
-                Leading FAST CAR BATTERY with a commitment to
-                professional, reliable and fast mobile car battery
-                assistance across Dubai.
+                Leading 800PowerBat with a commitment to
+                professional, reliable and convenient mobile
+                car battery assistance across Dubai.
             </p>
 
         </div>
@@ -1019,15 +1606,15 @@ footer{
 </section>
 
 
-<!-- FOOTER -->
 <footer>
 
     <div class="footer-grid">
 
+
         <div class="footer-brand">
 
             <h2>
-                FAST <span>CAR BATTERY</span>
+                800<span>PowerBat</span>
             </h2>
 
             <div class="footer-tagline">
@@ -1035,10 +1622,10 @@ footer{
             </div>
 
             <p>
-                FAST CAR BATTERY provides fast, reliable and
-                professional mobile car battery replacement,
-                jump start and roadside battery assistance
-                across Dubai and the UAE.
+                800PowerBat provides mobile car battery
+                replacement, battery diagnosis, jump start
+                and roadside battery assistance across Dubai
+                and the UAE.
             </p>
 
         </div>
@@ -1051,19 +1638,27 @@ footer{
             <ul>
 
                 <li>
-                    <a href="about.html">About Us</a>
+                    <a href="about.html">
+                        About Us
+                    </a>
                 </li>
 
                 <li>
-                    <a href="reviews.html">Reviews</a>
+                    <a href="reviews.html">
+                        Reviews
+                    </a>
                 </li>
 
                 <li>
-                    <a href="faqs.html">FAQs</a>
+                    <a href="faqs.html">
+                        FAQs
+                    </a>
                 </li>
 
                 <li>
-                    <a href="index.html#contact">Contact</a>
+                    <a href="index.html#contact">
+                        Contact
+                    </a>
                 </li>
 
             </ul>
@@ -1073,7 +1668,7 @@ footer{
 
         <div class="footer-col">
 
-            <h3>Reach Us</h3>
+            <h3>Contact</h3>
 
             <ul>
 
@@ -1089,9 +1684,13 @@ footer{
                     </a>
                 </li>
 
-                <li>Dubai, UAE</li>
+                <li>
+                    Dubai, UAE
+                </li>
 
-                <li>24/7 Mobile Service</li>
+                <li>
+                    24/7 Mobile Service
+                </li>
 
             </ul>
 
@@ -1104,7 +1703,7 @@ footer{
 
         <a class="footer-call"
            href="tel:+971524040699">
-            📞 Call Us
+            📞 Call 800PowerBat
         </a>
 
         <a class="footer-wa"
@@ -1118,19 +1717,18 @@ footer{
 
 
     <div class="footer-bottom">
-        © 2026 FAST CAR BATTERY — Dubai On-Site Car Battery Replacement
+        © 2026 800PowerBat — Mobile Car Battery Service Dubai, UAE
     </div>
 
 </footer>
 
 
-<!-- FLOATING BUTTONS -->
 <div class="floating">
 
     <a href="tel:+971524040699"
        class="float-btn float-call"
-       aria-label="Call FAST CAR BATTERY"
-       title="Call FAST CAR BATTERY">
+       aria-label="Call 800PowerBat"
+       title="Call 800PowerBat">
         📞
     </a>
 
@@ -1138,8 +1736,8 @@ footer{
        target="_blank"
        rel="noopener"
        class="float-btn float-wa"
-       aria-label="WhatsApp FAST CAR BATTERY"
-       title="WhatsApp FAST CAR BATTERY">
+       aria-label="WhatsApp 800PowerBat"
+       title="WhatsApp 800PowerBat">
         💬
     </a>
 
