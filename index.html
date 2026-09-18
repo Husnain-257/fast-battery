@@ -1,4 +1,5 @@
- <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -233,11 +234,13 @@ section{
     padding:25px 20px;
     box-shadow:var(--shadow);
     transition:.2s ease;
+    cursor:pointer;
 }
 
 .service-card:hover{
     transform:translateY(-4px);
     box-shadow:0 14px 30px rgba(15,23,42,.12);
+    border-color:var(--gold);
 }
 
 .service-icon{
@@ -295,7 +298,6 @@ section{
     border-bottom:1px solid #334155;
 }
 
-/* 4 BRAND BOXES PER ROW */
 .brand-list{
     display:grid;
     grid-template-columns:repeat(4,1fr);
@@ -597,7 +599,6 @@ footer{
         padding:17px;
     }
 
-    /* 3 BOXES PER ROW ON MOBILE */
     .brand-list{
         grid-template-columns:repeat(3,1fr);
         gap:6px;
@@ -724,7 +725,8 @@ footer{
 
     <div class="service-grid">
 
-        <a href="#contact" class="service-card">
+        <!-- BATTERY REPLACEMENT -->
+        <a href="battery-replacement.html" class="service-card">
             <div class="service-icon">🔋</div>
             <h3>Battery Replacement</h3>
             <p>
@@ -733,15 +735,17 @@ footer{
             </p>
         </a>
 
-        <a href="#contact" class="service-card">
+        <!-- ROADSIDE ASSISTANCE -->
+        <a href="roadside-assistance.html" class="service-card">
             <div class="service-icon">🚗</div>
             <h3>Roadside Assistance</h3>
             <p>
-                Mobile battery assistance when your vehicle
-                will not start.
+                Fast mobile roadside battery assistance
+                when your vehicle needs help.
             </p>
         </a>
 
+        <!-- BATTERY DIAGNOSIS -->
         <a href="battery-diagnosis.html" class="service-card">
             <div class="service-icon">⚡</div>
             <h3>Battery Diagnosis</h3>
@@ -751,6 +755,7 @@ footer{
             </p>
         </a>
 
+        <!-- JUMP START -->
         <a href="jumpstart.html" class="service-card">
             <div class="service-icon">🔌</div>
             <h3>Jump Start</h3>
@@ -778,16 +783,9 @@ footer{
 
     <div class="brand-container">
 
-
-        <!-- GERMAN -->
         <div class="brand-country">
-
-            <div class="country-title">
-                🇩🇪 German Cars
-            </div>
-
+            <div class="country-title">🇩🇪 German Cars</div>
             <div class="brand-list">
-
                 <div class="brand-box">Audi</div>
                 <div class="brand-box">BMW</div>
                 <div class="brand-box">Mercedes-Benz</div>
@@ -796,21 +794,12 @@ footer{
                 <div class="brand-box">Opel</div>
                 <div class="brand-box">Maybach</div>
                 <div class="brand-box">Smart</div>
-
             </div>
-
         </div>
 
-
-        <!-- JAPANESE -->
         <div class="brand-country">
-
-            <div class="country-title">
-                🇯🇵 Japanese Cars
-            </div>
-
+            <div class="country-title">🇯🇵 Japanese Cars</div>
             <div class="brand-list">
-
                 <div class="brand-box">Toyota</div>
                 <div class="brand-box">Lexus</div>
                 <div class="brand-box">Nissan</div>
@@ -823,21 +812,12 @@ footer{
                 <div class="brand-box">Subaru</div>
                 <div class="brand-box">Isuzu</div>
                 <div class="brand-box">Daihatsu</div>
-
             </div>
-
         </div>
 
-
-        <!-- AMERICAN -->
         <div class="brand-country">
-
-            <div class="country-title">
-                🇺🇸 American Cars
-            </div>
-
+            <div class="country-title">🇺🇸 American Cars</div>
             <div class="brand-list">
-
                 <div class="brand-box">Ford</div>
                 <div class="brand-box">Chevrolet</div>
                 <div class="brand-box">GMC</div>
@@ -850,21 +830,12 @@ footer{
                 <div class="brand-box">Hummer</div>
                 <div class="brand-box">Buick</div>
                 <div class="brand-box">Ram</div>
-
             </div>
-
         </div>
 
-
-        <!-- BRITISH -->
         <div class="brand-country">
-
-            <div class="country-title">
-                🇬🇧 British Cars
-            </div>
-
+            <div class="country-title">🇬🇧 British Cars</div>
             <div class="brand-list">
-
                 <div class="brand-box">Land Rover</div>
                 <div class="brand-box">Range Rover</div>
                 <div class="brand-box">Bentley</div>
@@ -874,21 +845,12 @@ footer{
                 <div class="brand-box">Lotus</div>
                 <div class="brand-box">Mini</div>
                 <div class="brand-box">Jaguar</div>
-
             </div>
-
         </div>
 
-
-        <!-- ITALIAN -->
         <div class="brand-country">
-
-            <div class="country-title">
-                🇮🇹 Italian Cars
-            </div>
-
+            <div class="country-title">🇮🇹 Italian Cars</div>
             <div class="brand-list">
-
                 <div class="brand-box">Ferrari</div>
                 <div class="brand-box">Lamborghini</div>
                 <div class="brand-box">Maserati</div>
@@ -896,61 +858,34 @@ footer{
                 <div class="brand-box">Fiat</div>
                 <div class="brand-box">Abarth</div>
                 <div class="brand-box">Pagani</div>
-
             </div>
-
         </div>
 
-
-        <!-- FRENCH -->
         <div class="brand-country">
-
-            <div class="country-title">
-                🇫🇷 French Cars
-            </div>
-
+            <div class="country-title">🇫🇷 French Cars</div>
             <div class="brand-list">
-
                 <div class="brand-box">Peugeot</div>
                 <div class="brand-box">Renault</div>
                 <div class="brand-box">Citroën</div>
                 <div class="brand-box">DS Automobiles</div>
                 <div class="brand-box">Bugatti</div>
                 <div class="brand-box">Alpine</div>
-
             </div>
-
         </div>
 
-
-        <!-- KOREAN -->
         <div class="brand-country">
-
-            <div class="country-title">
-                🇰🇷 Korean Cars
-            </div>
-
+            <div class="country-title">🇰🇷 Korean Cars</div>
             <div class="brand-list">
-
                 <div class="brand-box">Hyundai</div>
                 <div class="brand-box">Kia</div>
                 <div class="brand-box">Genesis</div>
                 <div class="brand-box">SsangYong</div>
-
             </div>
-
         </div>
 
-
-        <!-- CHINESE -->
         <div class="brand-country">
-
-            <div class="country-title">
-                🇨🇳 Chinese Cars
-            </div>
-
+            <div class="country-title">🇨🇳 Chinese Cars</div>
             <div class="brand-list">
-
                 <div class="brand-box">MG</div>
                 <div class="brand-box">Geely</div>
                 <div class="brand-box">Changan</div>
@@ -967,59 +902,32 @@ footer{
                 <div class="brand-box">Great Wall</div>
                 <div class="brand-box">Foton</div>
                 <div class="brand-box">Zeekr</div>
-
             </div>
-
         </div>
 
-
-        <!-- SWEDISH -->
         <div class="brand-country">
-
-            <div class="country-title">
-                🇸🇪 Swedish Cars
-            </div>
-
+            <div class="country-title">🇸🇪 Swedish Cars</div>
             <div class="brand-list">
-
                 <div class="brand-box">Volvo</div>
                 <div class="brand-box">Polestar</div>
                 <div class="brand-box">Koenigsegg</div>
                 <div class="brand-box">Saab</div>
-
             </div>
-
         </div>
 
-
-        <!-- INDIAN -->
         <div class="brand-country">
-
-            <div class="country-title">
-                🇮🇳 Indian Cars
-            </div>
-
+            <div class="country-title">🇮🇳 Indian Cars</div>
             <div class="brand-list">
-
                 <div class="brand-box">Tata</div>
                 <div class="brand-box">Mahindra</div>
                 <div class="brand-box">Maruti Suzuki</div>
                 <div class="brand-box">Force Motors</div>
-
             </div>
-
         </div>
 
-
-        <!-- MIDDLE EAST & OTHERS -->
         <div class="brand-country">
-
-            <div class="country-title">
-                🌍 Middle East & Others
-            </div>
-
+            <div class="country-title">🌍 Middle East & Others</div>
             <div class="brand-list">
-
                 <div class="brand-box">W Motors</div>
                 <div class="brand-box">Nissan Patrol</div>
                 <div class="brand-box">Toyota Land Cruiser</div>
@@ -1028,9 +936,7 @@ footer{
                 <div class="brand-box">Chevrolet Tahoe</div>
                 <div class="brand-box">Ford Expedition</div>
                 <div class="brand-box">Cadillac Escalade</div>
-
             </div>
-
         </div>
 
     </div>
