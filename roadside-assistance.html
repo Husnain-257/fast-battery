@@ -4,304 +4,586 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Roadside Assistance in Dubai | FAST CAR BATTERY</title>
+<title>Roadside Assistance in Dubai | 800PowerBat</title>
 
-<meta name="description" content="24/7 professional roadside assistance in Dubai. FAST CAR BATTERY provides mobile battery replacement, jump start, battery diagnosis and vehicle starting assistance at your location.">
+<meta name="description" content="24/7 professional roadside assistance in Dubai by 800PowerBat. Mobile battery replacement, jump start, battery diagnosis and vehicle starting assistance at your location.">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#070b12">
 
 <style>
+:root{
+    --navy:#070b12;
+    --navy-2:#0d1420;
+    --navy-3:#121c2a;
+    --yellow:#f5c400;
+    --yellow-light:#fff5bf;
+    --white:#ffffff;
+    --text:#172033;
+    --muted:#687386;
+    --border:#e7ebf0;
+    --bg:#f5f7fa;
+    --green:#20c866;
+    --blue:#2563eb;
+    --shadow:0 18px 45px rgba(10,20,35,.08);
+}
+
 *{
     box-sizing:border-box;
     margin:0;
     padding:0;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f5f7fa;
-    color:#172033;
-    line-height:1.6;
+    font-family:Inter,Arial,Helvetica,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.65;
+    overflow-x:hidden;
 }
 
 a{
     text-decoration:none;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
+
 .header{
-    background:#0b1220;
-    padding:16px 20px;
     position:sticky;
     top:0;
     z-index:1000;
-    box-shadow:0 3px 15px rgba(0,0,0,.15);
+    background:rgba(7,11,18,.96);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    box-shadow:0 8px 30px rgba(0,0,0,.18);
+    backdrop-filter:blur(12px);
 }
 
 .header-inner{
-    max-width:1100px;
+    max-width:1180px;
     margin:auto;
+    min-height:72px;
+    padding:0 22px;
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content:space-between;
 }
 
 .logo{
     color:#fff;
-    font-size:22px;
-    font-weight:800;
-    letter-spacing:.5px;
+    font-size:23px;
+    font-weight:900;
+    letter-spacing:.4px;
 }
 
 .logo span{
-    color:#f5b400;
+    color:var(--yellow);
+}
+
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.header-call{
+    color:#fff;
+    font-size:13px;
+    font-weight:700;
+    opacity:.9;
 }
 
 .back-btn{
-    background:#f5b400;
-    color:#0b1220;
-    padding:10px 18px;
-    border-radius:7px;
-    font-size:14px;
-    font-weight:700;
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    background:var(--yellow);
+    color:var(--navy);
+    padding:11px 18px;
+    border-radius:9px;
+    font-size:13px;
+    font-weight:800;
+    transition:.25s ease;
 }
 
-/* HERO */
+.back-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(245,196,0,.22);
+}
+
+/* =========================
+   HERO
+========================= */
+
 .hero{
-    background:linear-gradient(135deg,#0b1220,#111827);
+    position:relative;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 15% 20%,rgba(245,196,0,.12),transparent 30%),
+        radial-gradient(circle at 85% 75%,rgba(37,99,235,.12),transparent 28%),
+        linear-gradient(135deg,#070b12,#0d1420 55%,#111b29);
     color:#fff;
-    padding:75px 20px 70px;
-    text-align:center;
+    padding:92px 20px 105px;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    opacity:.16;
+    background-image:
+        linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);
+    background-size:55px 55px;
+    pointer-events:none;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    border:1px solid rgba(245,196,0,.12);
+    border-radius:50%;
+    right:-160px;
+    top:-180px;
 }
 
 .hero-content{
-    max-width:850px;
+    position:relative;
+    z-index:2;
+    max-width:900px;
     margin:auto;
+    text-align:center;
 }
 
 .badge{
-    display:inline-block;
-    color:#f5b400;
-    font-size:13px;
-    font-weight:700;
-    letter-spacing:1px;
-    margin-bottom:14px;
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    color:var(--yellow);
+    border:1px solid rgba(245,196,0,.28);
+    background:rgba(245,196,0,.07);
+    padding:8px 14px;
+    border-radius:50px;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:1.3px;
+    margin-bottom:22px;
+}
+
+.badge::before{
+    content:"";
+    width:7px;
+    height:7px;
+    background:var(--yellow);
+    border-radius:50%;
+    box-shadow:0 0 0 5px rgba(245,196,0,.10);
 }
 
 .hero h1{
-    font-size:42px;
-    line-height:1.15;
-    margin-bottom:20px;
+    font-size:clamp(36px,5vw,60px);
+    line-height:1.08;
+    letter-spacing:-1.6px;
+    margin-bottom:22px;
+    font-weight:900;
 }
 
 .hero h1 span{
-    color:#f5b400;
+    color:var(--yellow);
 }
 
 .hero p{
-    max-width:720px;
+    max-width:760px;
     margin:auto;
-    color:#d5dae3;
+    color:#cbd3df;
     font-size:17px;
+    line-height:1.8;
 }
 
 .buttons{
-    margin-top:30px;
+    margin-top:32px;
     display:flex;
     justify-content:center;
+    align-items:center;
     gap:12px;
     flex-wrap:wrap;
 }
 
 .call-btn,
 .whatsapp-btn{
-    display:inline-block;
-    padding:13px 24px;
-    border-radius:7px;
-    font-weight:700;
-    transition:.2s;
+    min-height:50px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    padding:14px 24px;
+    border-radius:10px;
+    font-weight:800;
+    font-size:14px;
+    transition:.25s ease;
 }
 
 .call-btn{
-    background:#f5b400;
-    color:#0b1220;
+    background:var(--yellow);
+    color:var(--navy);
+    box-shadow:0 10px 28px rgba(245,196,0,.16);
 }
 
 .whatsapp-btn{
-    background:#25d366;
+    background:var(--green);
     color:#fff;
+    box-shadow:0 10px 28px rgba(32,200,102,.15);
 }
 
 .call-btn:hover,
 .whatsapp-btn:hover{
-    transform:translateY(-2px);
+    transform:translateY(-3px);
 }
 
-/* TRUST BAR */
+/* =========================
+   TRUST BAR
+========================= */
+
 .trust{
-    background:#fff;
-    max-width:1050px;
-    margin:-25px auto 0;
     position:relative;
-    border-radius:12px;
-    box-shadow:0 8px 25px rgba(15,23,42,.10);
-    padding:22px;
+    z-index:5;
+    max-width:1080px;
+    margin:-38px auto 0;
+    padding:0 20px;
+}
+
+.trust-inner{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    padding:24px;
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:15px;
-    text-align:center;
+    overflow:hidden;
 }
 
 .trust-item{
-    font-weight:700;
-    color:#172033;
+    text-align:center;
+    padding:5px 15px;
+    border-right:1px solid var(--border);
+    font-size:15px;
+    font-weight:850;
+    color:var(--text);
+}
+
+.trust-item:last-child{
+    border-right:0;
+}
+
+.trust-icon{
+    display:block;
+    font-size:22px;
+    margin-bottom:5px;
 }
 
 .trust-item span{
     display:block;
-    color:#667085;
-    font-size:13px;
-    font-weight:400;
-    margin-top:3px;
+    color:var(--muted);
+    font-size:12px;
+    font-weight:500;
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
+
 .section{
-    max-width:1050px;
-    margin:65px auto;
+    max-width:1080px;
+    margin:82px auto;
     padding:0 20px;
 }
 
 .section-title{
+    max-width:760px;
+    margin:0 auto 38px;
     text-align:center;
-    margin-bottom:35px;
+}
+
+.section-label{
+    color:#9b7b00;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:1.7px;
+    text-transform:uppercase;
+    margin-bottom:9px;
 }
 
 .section-title h2{
-    color:#0b1220;
-    font-size:30px;
-    margin-bottom:8px;
+    color:var(--navy);
+    font-size:clamp(28px,4vw,38px);
+    line-height:1.15;
+    letter-spacing:-.7px;
+    margin-bottom:12px;
 }
 
 .section-title h2 span{
-    color:#f5b400;
+    color:#b08c00;
 }
 
 .section-title p{
-    color:#667085;
+    color:var(--muted);
+    font-size:15px;
 }
 
-/* SERVICE CARDS */
-.services{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:18px;
-}
+/* =========================
+   INFO BOX
+========================= */
 
-.service-card{
-    background:#fff;
-    border:1px solid #e5e7eb;
-    border-radius:12px;
-    padding:25px;
-    box-shadow:0 6px 20px rgba(15,23,42,.05);
-}
-
-.icon{
-    width:45px;
-    height:45px;
-    border-radius:9px;
-    background:#fff4cc;
-    color:#0b1220;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:21px;
-    margin-bottom:15px;
-}
-
-.service-card h3{
-    color:#0b1220;
-    margin-bottom:8px;
-    font-size:19px;
-}
-
-.service-card p{
-    color:#667085;
-    font-size:14px;
-}
-
-/* ABOUT */
 .info-box{
+    position:relative;
     background:#fff;
-    border-radius:12px;
-    padding:30px;
-    border:1px solid #e5e7eb;
-    box-shadow:0 6px 20px rgba(15,23,42,.05);
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:36px;
+    box-shadow:var(--shadow);
+    overflow:hidden;
+}
+
+.info-box::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    width:4px;
+    background:var(--yellow);
 }
 
 .info-box p{
-    color:#667085;
-    margin-bottom:15px;
+    color:#596577;
+    font-size:15px;
+    line-height:1.85;
+    margin-bottom:17px;
 }
 
 .info-box p:last-child{
     margin-bottom:0;
 }
 
-/* LIST */
-.features{
+/* =========================
+   SERVICE CARDS
+========================= */
+
+.services{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:12px;
+    gap:20px;
+}
+
+.service-card{
+    position:relative;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:17px;
+    padding:29px;
+    box-shadow:0 10px 30px rgba(15,23,42,.055);
+    transition:.3s ease;
+    overflow:hidden;
+}
+
+.service-card::after{
+    content:"";
+    position:absolute;
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:rgba(245,196,0,.06);
+    right:-30px;
+    top:-30px;
+}
+
+.service-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 18px 40px rgba(15,23,42,.10);
+    border-color:#ead77c;
+}
+
+.icon{
+    position:relative;
+    z-index:2;
+    width:52px;
+    height:52px;
+    border-radius:13px;
+    background:var(--yellow-light);
+    border:1px solid #f1df86;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    margin-bottom:19px;
+}
+
+.service-card h3{
+    position:relative;
+    z-index:2;
+    color:var(--navy);
+    font-size:19px;
+    margin-bottom:9px;
+}
+
+.service-card p{
+    position:relative;
+    z-index:2;
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.75;
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
 }
 
 .feature{
     background:#fff;
-    border:1px solid #e5e7eb;
-    border-radius:9px;
-    padding:16px;
-    font-weight:600;
-    color:#172033;
+    border:1px solid var(--border);
+    border-radius:13px;
+    padding:18px 19px;
+    color:#202b3a;
+    font-size:14px;
+    font-weight:750;
+    box-shadow:0 6px 22px rgba(15,23,42,.04);
+    transition:.25s ease;
+}
+
+.feature:hover{
+    transform:translateY(-3px);
+    border-color:#ead77c;
 }
 
 .feature span{
-    color:#f5b400;
-    margin-right:7px;
+    display:inline-flex;
+    width:22px;
+    height:22px;
+    align-items:center;
+    justify-content:center;
+    background:var(--yellow-light);
+    color:#876b00;
+    border-radius:50%;
+    margin-right:8px;
+    font-size:12px;
+    font-weight:900;
 }
 
-/* CTA */
+/* =========================
+   VEHICLE SUPPORT
+========================= */
+
+.vehicle-box{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.vehicle-item{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:15px;
+    padding:22px;
+    box-shadow:0 8px 25px rgba(15,23,42,.04);
+}
+
+.vehicle-item strong{
+    display:block;
+    color:var(--navy);
+    margin-bottom:6px;
+    font-size:15px;
+}
+
+.vehicle-item p{
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* =========================
+   CTA
+========================= */
+
 .cta{
-    max-width:1050px;
-    margin:65px auto;
+    max-width:1080px;
+    margin:82px auto;
     padding:0 20px;
 }
 
 .cta-box{
-    background:#0b1220;
+    position:relative;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 85% 20%,rgba(245,196,0,.13),transparent 30%),
+        linear-gradient(135deg,#070b12,#101a27);
     color:#fff;
-    border-radius:14px;
-    padding:45px 25px;
+    border-radius:22px;
+    padding:62px 25px;
     text-align:center;
+    box-shadow:0 22px 55px rgba(7,11,18,.18);
 }
 
-.cta-box h2{
-    font-size:29px;
+.cta-box::before{
+    content:"";
+    position:absolute;
+    width:260px;
+    height:260px;
+    border:1px solid rgba(245,196,0,.12);
+    border-radius:50%;
+    left:-120px;
+    bottom:-160px;
+}
+
+.cta-content{
+    position:relative;
+    z-index:2;
+}
+
+.cta-tag{
+    color:var(--yellow);
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:1.5px;
     margin-bottom:10px;
 }
 
+.cta-box h2{
+    font-size:clamp(28px,4vw,38px);
+    line-height:1.2;
+    margin-bottom:12px;
+}
+
 .cta-box h2 span{
-    color:#f5b400;
+    color:var(--yellow);
 }
 
 .cta-box p{
-    color:#d5dae3;
+    color:#cbd3df;
     max-width:650px;
-    margin:0 auto 25px;
+    margin:0 auto;
+    font-size:15px;
 }
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
+
 .contact{
     background:#fff;
-    border-top:1px solid #e5e7eb;
-    padding:40px 20px;
+    border-top:1px solid var(--border);
+    padding:55px 20px;
 }
 
 .contact-inner{
@@ -310,50 +592,85 @@ a{
     text-align:center;
 }
 
-.contact-inner h2{
-    color:#0b1220;
-    margin-bottom:10px;
-}
-
-.contact-inner p{
-    color:#667085;
-    margin:6px 0;
-}
-
-.contact-inner a{
-    color:#0b1220;
-    font-weight:700;
-}
-
-/* FOOTER */
-.footer{
-    background:#0b1220;
-    color:#fff;
-    text-align:center;
-    padding:25px 15px 80px;
-}
-
-.footer-logo{
-    font-size:20px;
-    font-weight:800;
+.contact-brand{
+    font-size:25px;
+    font-weight:900;
+    color:var(--navy);
     margin-bottom:5px;
 }
 
+.contact-brand span{
+    color:#b08c00;
+}
+
+.contact-subtitle{
+    color:var(--muted);
+    font-size:14px;
+    margin-bottom:22px;
+}
+
+.contact-details{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.contact-details a,
+.contact-location{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    padding:11px 15px;
+    border:1px solid var(--border);
+    border-radius:10px;
+    color:var(--text);
+    background:#fafbfc;
+    font-size:13px;
+    font-weight:700;
+    transition:.2s ease;
+}
+
+.contact-details a:hover{
+    border-color:#ead77c;
+    background:#fffdf2;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+    background:var(--navy);
+    color:#fff;
+    text-align:center;
+    padding:34px 20px 90px;
+}
+
+.footer-logo{
+    font-size:21px;
+    font-weight:900;
+    margin-bottom:7px;
+}
+
 .footer-logo span{
-    color:#f5b400;
+    color:var(--yellow);
 }
 
 .footer p{
-    color:#aeb6c4;
-    font-size:13px;
+    color:#9da8b8;
+    font-size:12px;
     margin:4px 0;
 }
 
-/* FLOATING BUTTONS */
+/* =========================
+   FLOATING BUTTONS
+========================= */
+
 .floating{
     position:fixed;
-    right:16px;
-    bottom:18px;
+    right:18px;
+    bottom:20px;
     z-index:999;
     display:flex;
     flex-direction:column;
@@ -362,97 +679,165 @@ a{
 
 .float-call,
 .float-whatsapp{
-    width:52px;
-    height:52px;
+    width:53px;
+    height:53px;
     border-radius:50%;
     display:flex;
     justify-content:center;
     align-items:center;
     color:#fff;
     font-size:20px;
-    box-shadow:0 5px 18px rgba(0,0,0,.2);
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+    transition:.25s ease;
+    border:2px solid rgba(255,255,255,.9);
 }
 
 .float-call{
-    background:#2563eb;
+    background:var(--blue);
 }
 
 .float-whatsapp{
-    background:#25d366;
+    background:var(--green);
 }
 
-/* MOBILE */
-@media(max-width:700px){
+.float-call:hover,
+.float-whatsapp:hover{
+    transform:scale(1.07);
+}
 
-    .header{
-        padding:13px 15px;
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px){
+
+    .header-inner{
+        min-height:65px;
+        padding:0 15px;
+    }
+
+    .header-call{
+        display:none;
     }
 
     .logo{
-        font-size:18px;
+        font-size:19px;
     }
 
     .back-btn{
-        padding:8px 13px;
+        padding:9px 13px;
         font-size:12px;
     }
 
     .hero{
-        padding:55px 18px 60px;
+        padding:68px 18px 82px;
     }
 
     .hero h1{
-        font-size:31px;
+        letter-spacing:-.8px;
     }
 
     .hero p{
         font-size:15px;
+        line-height:1.7;
+    }
+
+    .trust{
+        margin:-28px 14px 0;
+        padding:0;
+    }
+
+    .trust-inner{
+        grid-template-columns:1fr;
+        padding:8px 18px;
+    }
+
+    .trust-item{
+        border-right:0;
+        border-bottom:1px solid var(--border);
+        padding:16px 8px;
+    }
+
+    .trust-item:last-child{
+        border-bottom:0;
+    }
+
+    .section{
+        margin:62px auto;
+    }
+
+    .services,
+    .features,
+    .vehicle-box{
+        grid-template-columns:1fr;
+    }
+
+    .info-box{
+        padding:27px 23px;
+    }
+
+    .cta{
+        margin:62px auto;
+    }
+
+    .cta-box{
+        padding:48px 20px;
+        border-radius:18px;
+    }
+
+    .contact-details{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .contact-details a,
+    .contact-location{
+        justify-content:center;
+    }
+}
+
+@media(max-width:430px){
+
+    .hero{
+        padding:55px 16px 70px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .badge{
+        font-size:9px;
+        letter-spacing:1px;
     }
 
     .buttons{
         flex-direction:column;
-        align-items:center;
+        width:100%;
     }
 
     .call-btn,
     .whatsapp-btn{
         width:100%;
-        max-width:280px;
-    }
-
-    .trust{
-        margin:0 15px;
-        grid-template-columns:1fr;
-        padding:18px;
     }
 
     .section{
-        margin:50px auto;
+        padding:0 16px;
     }
 
-    .section-title h2{
-        font-size:25px;
+    .service-card{
+        padding:24px;
     }
 
-    .services,
-    .features{
-        grid-template-columns:1fr;
+    .floating{
+        right:13px;
+        bottom:15px;
     }
 
-    .info-box{
-        padding:22px;
-    }
-
-    .cta{
-        margin:50px auto;
-    }
-
-    .cta-box{
-        padding:35px 20px;
-    }
-
-    .cta-box h2{
-        font-size:25px;
+    .float-call,
+    .float-whatsapp{
+        width:49px;
+        height:49px;
     }
 }
 </style>
@@ -465,12 +850,20 @@ a{
     <div class="header-inner">
 
         <div class="logo">
-            FAST <span>CAR BATTERY</span>
+            800<span>PowerBat</span>
         </div>
 
-        <a href="index.html" class="back-btn">
-            ← Back
-        </a>
+        <div class="header-right">
+
+            <div class="header-call">
+                24/7 Mobile Assistance
+            </div>
+
+            <a href="index.html" class="back-btn">
+                ← Back
+            </a>
+
+        </div>
 
     </div>
 </header>
@@ -490,10 +883,10 @@ a{
         </h1>
 
         <p>
-            Fast, reliable and professional roadside assistance when your
-            vehicle needs help. Our mobile technicians come to your location
-            and provide battery and vehicle-starting assistance to help you
-            get back on the road safely.
+            Fast, reliable and professional mobile roadside assistance when
+            your vehicle needs help. 800PowerBat comes to your location for
+            battery replacement, jump starts, battery testing and
+            vehicle-starting assistance.
         </p>
 
         <div class="buttons">
@@ -502,7 +895,10 @@ a{
                 📞 Call Now
             </a>
 
-            <a href="https://wa.me/971524040699" class="whatsapp-btn">
+            <a href="https://wa.me/971524040699"
+               class="whatsapp-btn"
+               target="_blank"
+               rel="noopener noreferrer">
                 💬 WhatsApp Us
             </a>
 
@@ -514,53 +910,71 @@ a{
 
 
 <!-- TRUST -->
-<div class="trust">
+<section class="trust" aria-label="800PowerBat service benefits">
 
-    <div class="trust-item">
-        ⚡ Fast Response
-        <span>Quick mobile assistance</span>
+    <div class="trust-inner">
+
+        <div class="trust-item">
+            <span class="trust-icon">⚡</span>
+            Fast Response
+            <span>Quick mobile assistance</span>
+        </div>
+
+        <div class="trust-item">
+            <span class="trust-icon">◷</span>
+            24/7 Service
+            <span>Available day and night</span>
+        </div>
+
+        <div class="trust-item">
+            <span class="trust-icon">⌖</span>
+            At Your Location
+            <span>Mobile roadside service</span>
+        </div>
+
     </div>
 
-    <div class="trust-item">
-        🕒 24/7 Service
-        <span>Available day and night</span>
-    </div>
-
-    <div class="trust-item">
-        📍 At Your Location
-        <span>Mobile roadside service</span>
-    </div>
-
-</div>
+</section>
 
 
 <!-- INTRO -->
 <section class="section">
 
     <div class="section-title">
-        <h2>Roadside Assistance <span>You Can Rely On</span></h2>
-        <p>Professional mobile assistance for battery-related roadside problems.</p>
+
+        <div class="section-label">
+            MOBILE ROADSIDE SUPPORT
+        </div>
+
+        <h2>
+            Roadside Assistance <span>You Can Rely On</span>
+        </h2>
+
+        <p>
+            Professional mobile assistance for battery-related roadside problems.
+        </p>
+
     </div>
 
     <div class="info-box">
 
         <p>
             When your vehicle will not start or your battery fails on the road,
-            FAST CAR BATTERY provides convenient mobile roadside assistance
-            across Dubai.
+            800PowerBat provides convenient mobile roadside assistance across
+            Dubai.
         </p>
 
         <p>
-            Instead of arranging a workshop visit, our mobile service allows
-            professional assistance to come directly to your location.
-            Whether you need a jump start, battery testing or a battery
-            replacement, we aim to provide a fast and safe solution.
+            Instead of arranging a workshop visit, our mobile service can come
+            directly to your location. Whether you need a jump start, battery
+            testing or a battery replacement, we provide practical assistance
+            designed to help get your vehicle moving again.
         </p>
 
         <p>
-            Our service is suitable for cars, SUVs and many different vehicle
-            makes and models. Battery requirements are checked according to
-            the vehicle before replacement.
+            Our service supports cars and SUVs across a wide range of makes and
+            models. Battery requirements are checked according to the vehicle
+            before replacement.
         </p>
 
     </div>
@@ -572,8 +986,19 @@ a{
 <section class="section">
 
     <div class="section-title">
-        <h2>Our Roadside <span>Services</span></h2>
-        <p>Mobile assistance designed to get your vehicle moving again.</p>
+
+        <div class="section-label">
+            WHAT WE DO
+        </div>
+
+        <h2>
+            Our Roadside <span>Services</span>
+        </h2>
+
+        <p>
+            Mobile assistance designed to help get your vehicle moving again.
+        </p>
+
     </div>
 
     <div class="services">
@@ -610,7 +1035,7 @@ a{
 
         <div class="service-card">
 
-            <div class="icon">🔍</div>
+            <div class="icon">⌕</div>
 
             <h3>Battery Diagnosis & Testing</h3>
 
@@ -644,8 +1069,20 @@ a{
 <section class="section">
 
     <div class="section-title">
-        <h2>Why Choose <span>FAST CAR BATTERY?</span></h2>
-        <p>Professional mobile service focused on convenience and reliability.</p>
+
+        <div class="section-label">
+            THE 800POWERBAT STANDARD
+        </div>
+
+        <h2>
+            Why Choose <span>800PowerBat?</span>
+        </h2>
+
+        <p>
+            Professional mobile service focused on convenience, safety and
+            dependable assistance.
+        </p>
+
     </div>
 
     <div class="features">
@@ -683,26 +1120,54 @@ a{
 <section class="section">
 
     <div class="section-title">
-        <h2>Support for <span>Many Vehicle Types</span></h2>
-        <p>Battery and starting assistance for a wide range of vehicles.</p>
+
+        <div class="section-label">
+            VEHICLE COVERAGE
+        </div>
+
+        <h2>
+            Support for <span>Many Vehicle Types</span>
+        </h2>
+
+        <p>
+            Battery and starting assistance for a wide range of vehicles.
+        </p>
+
     </div>
 
-    <div class="info-box">
+    <div class="vehicle-box">
 
-        <p>
-            FAST CAR BATTERY provides mobile battery and roadside assistance
-            for many European, Japanese, American, Korean and Chinese vehicles.
-        </p>
+        <div class="vehicle-item">
+            <strong>European Vehicles</strong>
+            <p>
+                Assistance for many European cars and SUVs, subject to vehicle
+                battery specifications and condition.
+            </p>
+        </div>
 
-        <p>
-            Our technicians can assist with a wide range of cars and SUVs,
-            subject to the vehicle's battery specification and condition.
-        </p>
+        <div class="vehicle-item">
+            <strong>Japanese & Korean Vehicles</strong>
+            <p>
+                Mobile battery and starting assistance for a wide range of
+                Japanese and Korean models.
+            </p>
+        </div>
 
-        <p>
-            We can also assist with premium and luxury vehicles where
-            appropriate battery and starting procedures are required.
-        </p>
+        <div class="vehicle-item">
+            <strong>American & Chinese Vehicles</strong>
+            <p>
+                Support for selected American and Chinese vehicles with
+                appropriate battery requirements.
+            </p>
+        </div>
+
+        <div class="vehicle-item">
+            <strong>Premium & Luxury Vehicles</strong>
+            <p>
+                Assistance for premium vehicles where appropriate battery and
+                starting procedures are required.
+            </p>
+        </div>
 
     </div>
 
@@ -714,24 +1179,35 @@ a{
 
     <div class="cta-box">
 
-        <h2>
-            Need <span>Roadside Assistance?</span>
-        </h2>
+        <div class="cta-content">
 
-        <p>
-            Call FAST CAR BATTERY now and get professional mobile assistance
-            at your location in Dubai.
-        </p>
+            <div class="cta-tag">
+                NEED HELP ON THE ROAD?
+            </div>
 
-        <div class="buttons">
+            <h2>
+                Need <span>Roadside Assistance?</span>
+            </h2>
 
-            <a href="tel:+971524040699" class="call-btn">
-                📞 Call +971 52 404 0699
-            </a>
+            <p>
+                Contact 800PowerBat for professional mobile assistance at your
+                location in Dubai.
+            </p>
 
-            <a href="https://wa.me/971524040699" class="whatsapp-btn">
-                💬 WhatsApp
-            </a>
+            <div class="buttons">
+
+                <a href="tel:+971524040699" class="call-btn">
+                    📞 Call +971 52 404 0699
+                </a>
+
+                <a href="https://wa.me/971524040699"
+                   class="whatsapp-btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    💬 WhatsApp
+                </a>
+
+            </div>
 
         </div>
 
@@ -745,25 +1221,29 @@ a{
 
     <div class="contact-inner">
 
-        <h2>FAST CAR BATTERY</h2>
+        <div class="contact-brand">
+            800<span>PowerBat</span>
+        </div>
 
-        <p>24/7 Mobile Car Battery & Roadside Assistance</p>
+        <div class="contact-subtitle">
+            24/7 Mobile Car Battery & Roadside Assistance
+        </div>
 
-        <p>
-            📞
+        <div class="contact-details">
+
             <a href="tel:+971524040699">
-                +971 52 404 0699
+                📞 +971 52 404 0699
             </a>
-        </p>
 
-        <p>
-            ✉️
             <a href="mailto:info@fastcarbattery.ae">
-                info@fastcarbattery.ae
+                ✉️ info@fastcarbattery.ae
             </a>
-        </p>
 
-        <p>📍 Dubai, United Arab Emirates</p>
+            <div class="contact-location">
+                📍 Dubai, United Arab Emirates
+            </div>
+
+        </div>
 
     </div>
 
@@ -774,15 +1254,16 @@ a{
 <footer class="footer">
 
     <div class="footer-logo">
-        FAST <span>CAR BATTERY</span>
+        800<span>PowerBat</span>
     </div>
 
     <p>
-        Fast, reliable and professional mobile battery service across Dubai.
+        Fast, reliable and professional mobile battery & roadside assistance
+        across Dubai.
     </p>
 
     <p>
-        © 2026 FAST CAR BATTERY. All Rights Reserved.
+        © 2026 800PowerBat. All Rights Reserved.
     </p>
 
 </footer>
@@ -793,13 +1274,15 @@ a{
 
     <a href="tel:+971524040699"
        class="float-call"
-       aria-label="Call FAST CAR BATTERY">
+       aria-label="Call 800PowerBat">
         📞
     </a>
 
     <a href="https://wa.me/971524040699"
        class="float-whatsapp"
-       aria-label="WhatsApp FAST CAR BATTERY">
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="WhatsApp 800PowerBat">
         💬
     </a>
 
