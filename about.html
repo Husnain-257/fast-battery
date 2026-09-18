@@ -4,209 +4,599 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>About Us | FAST BATTERY</title>
+<title>About Us | FAST CAR BATTERY</title>
 
 <style>
-* {
-    box-sizing: border-box;
+:root{
+    --navy:#0b1220;
+    --navy2:#111827;
+    --gold:#f5b400;
+    --gold-light:#ffc928;
+    --white:#ffffff;
+    --light:#f5f7fa;
+    --text:#172033;
+    --muted:#667085;
+    --border:#e5e7eb;
+    --green:#25d366;
+    --blue:#2563eb;
+    --shadow:0 8px 25px rgba(15,23,42,.08);
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f6f8;
-    color: #17202a;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--light);
+    color:var(--text);
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
 }
 
 /* HEADER */
-.header {
-    background: #111923;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(11,18,32,.98);
+    color:white;
+    min-height:68px;
+    padding:12px 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow:0 4px 18px rgba(0,0,0,.18);
 }
 
-.header .icon {
-    font-size: 48px;
+.logo{
+    font-size:22px;
+    font-weight:900;
+    letter-spacing:.4px;
+    text-decoration:none;
+    white-space:nowrap;
 }
 
-.header h1 {
-    margin: 10px 0;
-    font-size: 34px;
+.logo span{
+    color:var(--gold);
 }
 
-.header p {
-    margin: 0;
-    color: #d8dee4;
-    font-size: 17px;
+nav{
+    display:flex;
+    gap:6px;
 }
 
-/* CONTAINER */
-.container {
-    max-width: 850px;
-    margin: auto;
-    padding: 25px 16px 55px;
+nav a{
+    padding:8px 12px;
+    border-radius:7px;
+    color:white;
+    text-decoration:none;
+    font-weight:700;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:var(--gold);
+    background:rgba(255,255,255,.08);
+}
+
+/* PAGE HEADER */
+.page-header{
+    background:
+    radial-gradient(circle at top right,rgba(245,180,0,.14),transparent 30%),
+    linear-gradient(135deg,#080e1a,#111827 65%,#1e293b);
+    color:white;
+    text-align:center;
+    padding:65px 20px 60px;
+}
+
+.page-icon{
+    width:76px;
+    height:76px;
+    margin:0 auto 16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:rgba(245,180,0,.12);
+    border:1px solid rgba(245,180,0,.4);
+    font-size:36px;
+}
+
+.page-header h1{
+    font-size:clamp(32px,6vw,48px);
+    line-height:1.1;
+    margin-bottom:10px;
+    font-weight:900;
+}
+
+.page-header h1 span{
+    color:var(--gold);
+}
+
+.page-header p{
+    color:#d7dee8;
+    font-size:17px;
+}
+
+/* MAIN CONTAINER */
+.container{
+    max-width:1050px;
+    margin:auto;
+    padding:30px 18px 60px;
 }
 
 /* INTRO */
-.intro {
-    background: white;
-    border-radius: 22px;
-    padding: 30px 25px;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-    margin-bottom: 20px;
+.intro{
+    background:white;
+    border-radius:18px;
+    padding:35px 30px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    border:1px solid var(--border);
+    margin-bottom:22px;
 }
 
-.intro h2 {
-    font-size: 27px;
-    margin-top: 0;
+.intro h2{
+    color:var(--navy);
+    font-size:29px;
+    margin-bottom:14px;
 }
 
-.intro p {
-    color: #59636e;
-    line-height: 1.7;
-    font-size: 16px;
+.intro h2::after{
+    content:"";
+    display:block;
+    width:55px;
+    height:4px;
+    background:var(--gold);
+    border-radius:10px;
+    margin:12px auto 0;
 }
 
-/* SECTIONS */
-.section {
-    background: white;
-    border-radius: 20px;
-    padding: 25px;
-    margin: 18px 0;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+.intro p{
+    max-width:850px;
+    margin:12px auto 0;
+    color:var(--muted);
+    line-height:1.75;
+    font-size:16px;
 }
 
-.section h2 {
-    margin-top: 0;
-    font-size: 23px;
+/* CONTENT SECTIONS */
+.section{
+    background:white;
+    border-radius:18px;
+    padding:30px;
+    margin:20px 0;
+    box-shadow:var(--shadow);
+    border:1px solid var(--border);
 }
 
-.section p {
-    color: #4b5563;
-    line-height: 1.7;
+.section h2{
+    color:var(--navy);
+    font-size:24px;
+    margin-bottom:13px;
+    position:relative;
+    padding-left:14px;
+}
+
+.section h2::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:5px;
+    width:4px;
+    height:24px;
+    background:var(--gold);
+    border-radius:5px;
+}
+
+.section p{
+    color:#4b5563;
+    line-height:1.75;
+    margin-bottom:13px;
+}
+
+.section p:last-child{
+    margin-bottom:0;
 }
 
 /* SERVICES */
-.service-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    margin-top: 18px;
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-top:20px;
 }
 
-.service {
-    background: #f4f6f8;
-    border-radius: 16px;
-    padding: 18px;
+.service{
+    background:#f8fafc;
+    border:1px solid var(--border);
+    border-top:3px solid var(--gold);
+    border-radius:14px;
+    padding:20px;
+    transition:.2s ease;
 }
 
-.service-icon {
-    font-size: 28px;
+.service:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(15,23,42,.08);
 }
 
-.service h3 {
-    margin: 8px 0;
-    font-size: 17px;
+.service-icon{
+    font-size:29px;
+    margin-bottom:5px;
 }
 
-.service p {
-    margin: 0;
-    font-size: 14px;
+.service h3{
+    color:var(--navy);
+    margin:5px 0 7px;
+    font-size:18px;
+}
+
+.service p{
+    margin:0;
+    font-size:14px;
+    color:var(--muted);
+}
+
+/* VEHICLE SECTION */
+.vehicle-highlight{
+    background:var(--navy);
+    color:white;
+    border-radius:18px;
+    padding:30px;
+    margin:20px 0;
+    box-shadow:var(--shadow);
+}
+
+.vehicle-highlight h2{
+    color:white;
+    font-size:24px;
+    margin-bottom:13px;
+}
+
+.vehicle-highlight p{
+    color:#d7dee8;
+    line-height:1.75;
+    margin-bottom:12px;
+}
+
+.vehicle-highlight p:last-child{
+    margin-bottom:0;
 }
 
 /* WHY US */
-.why-us {
-    background: #111923;
-    color: white;
-    border-radius: 22px;
-    padding: 28px 25px;
-    margin-top: 20px;
+.why-us{
+    background:
+    radial-gradient(circle at top right,rgba(245,180,0,.12),transparent 35%),
+    linear-gradient(135deg,#0b1220,#111827);
+    color:white;
+    border-radius:20px;
+    padding:32px 30px;
+    margin:22px 0;
+    box-shadow:0 12px 30px rgba(0,0,0,.14);
 }
 
-.why-us h2 {
-    margin-top: 0;
+.why-us h2{
+    color:white;
+    font-size:25px;
+    margin-bottom:18px;
 }
 
-.why-us ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 0;
+.why-us h2 span{
+    color:var(--gold);
 }
 
-.why-us li {
-    padding: 10px 0;
-    color: #e0e5e9;
-    line-height: 1.5;
+.why-us ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.why-us li{
+    padding:10px 0;
+    color:#e0e6ed;
+    line-height:1.5;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.why-us li:last-child{
+    border-bottom:none;
+}
+
+.check{
+    color:var(--gold);
+    font-weight:900;
+    margin-right:8px;
+}
+
+/* COMMITMENT */
+.commitment{
+    background:white;
+    border-radius:18px;
+    padding:30px;
+    margin:20px 0;
+    box-shadow:var(--shadow);
+    border:1px solid var(--border);
+}
+
+.commitment h2{
+    color:var(--navy);
+    font-size:24px;
+    margin-bottom:12px;
+}
+
+.commitment p{
+    color:#4b5563;
+    line-height:1.75;
 }
 
 /* CTA */
-.cta {
-    text-align: center;
-    margin-top: 30px;
+.cta{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:35px 25px;
+    text-align:center;
+    margin-top:25px;
+    box-shadow:var(--shadow);
 }
 
-.cta h2 {
-    font-size: 25px;
+.cta h2{
+    color:var(--navy);
+    font-size:27px;
+    margin-bottom:8px;
 }
 
-.cta p {
-    color: #59636e;
+.cta p{
+    color:var(--muted);
+    margin-bottom:16px;
 }
 
-.button {
-    display: inline-block;
-    background: #FFD400;
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 15px 27px;
-    border-radius: 30px;
-    border: 2px solid #000;
-    margin: 7px;
-    transition: 0.3s;
+.button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    background:var(--gold);
+    color:#111827;
+    text-decoration:none;
+    font-weight:900;
+    padding:13px 22px;
+    border-radius:9px;
+    margin:5px;
+    transition:.2s ease;
 }
 
-.button:hover {
-    background: #000;
-    color: #FFD400;
+.button:hover{
+    transform:translateY(-2px);
+    background:var(--gold-light);
 }
 
-/* BACK */
-.back {
-    display: block;
-    width: fit-content;
-    margin: 28px auto 0;
-    padding: 13px 24px;
-    background: #FFD400;
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-    border: 2px solid #000;
-    border-radius: 30px;
+.button.whatsapp{
+    background:var(--green);
+    color:white;
 }
 
-.back:hover {
-    background: #000;
-    color: #FFD400;
+/* BACK BUTTON */
+.back{
+    display:flex;
+    width:max-content;
+    margin:25px auto 0;
+    padding:12px 22px;
+    background:var(--navy);
+    color:white;
+    text-decoration:none;
+    font-weight:800;
+    border-radius:9px;
+    transition:.2s ease;
+}
+
+.back:hover{
+    background:#1e293b;
+    color:var(--gold);
+}
+
+/* FOOTER */
+footer{
+    background:#050a12;
+    color:white;
+    border-top:3px solid var(--gold);
+    padding:38px 6% 0;
+}
+
+.footer-grid{
+    max-width:1050px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr;
+    gap:35px;
+}
+
+.footer-brand h2{
+    font-size:24px;
+}
+
+.footer-brand h2 span{
+    color:var(--gold);
+}
+
+.footer-tagline{
+    color:var(--gold);
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:1px;
+    margin-top:3px;
+}
+
+.footer-brand p{
+    color:#cbd5e1;
+    margin-top:10px;
+    font-size:14px;
+}
+
+.footer-col h3{
+    color:var(--gold);
+    margin-bottom:12px;
+}
+
+.footer-col ul{
+    list-style:none;
+}
+
+.footer-col li{
+    margin:8px 0;
+    font-size:14px;
+}
+
+.footer-col a{
+    color:white;
+    text-decoration:none;
+    font-weight:700;
+}
+
+.footer-col a:hover{
+    color:var(--gold);
+}
+
+.footer-actions{
+    max-width:1050px;
+    margin:28px auto 0;
+    display:flex;
+    border-top:1px solid #263244;
+}
+
+.footer-actions a{
+    flex:1;
+    text-align:center;
+    padding:14px;
+    color:white;
+    text-decoration:none;
+    font-weight:900;
+}
+
+.footer-actions .whatsapp{
+    background:var(--green);
+}
+
+.footer-actions .call{
+    border-right:1px solid #263244;
+}
+
+.footer-bottom{
+    max-width:1050px;
+    margin:auto;
+    padding:17px 0;
+    border-top:1px solid #263244;
+    text-align:center;
+    color:#94a3b8;
+    font-size:12px;
+}
+
+/* FLOATING BUTTONS */
+.floating{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    z-index:9999;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.float-btn{
+    width:51px;
+    height:51px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+    box-shadow:0 5px 18px rgba(0,0,0,.25);
+}
+
+.float-call{
+    background:var(--blue);
+}
+
+.float-wa{
+    background:var(--green);
 }
 
 /* MOBILE */
-@media (max-width: 600px) {
+@media(max-width:750px){
 
-    .header h1 {
-        font-size: 29px;
+    header{
+        padding:12px 4%;
     }
 
-    .service-grid {
-        grid-template-columns: 1fr;
+    .logo{
+        font-size:18px;
+    }
+
+    nav a{
+        font-size:12px;
+        padding:7px 7px;
+    }
+
+    .page-header{
+        padding:55px 18px 50px;
+    }
+
+    .page-header h1{
+        font-size:34px;
+    }
+
+    .container{
+        padding:22px 14px 50px;
     }
 
     .intro,
     .section,
-    .why-us {
-        padding: 24px 20px;
+    .vehicle-highlight,
+    .why-us,
+    .commitment,
+    .cta{
+        padding:25px 20px;
+    }
+
+    .intro h2{
+        font-size:25px;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+    .footer-actions{
+        margin-left:-14px;
+        margin-right:-14px;
+    }
+
+    .floating{
+        right:13px;
+        bottom:13px;
+    }
+
+    .float-btn{
+        width:48px;
+        height:48px;
     }
 }
 </style>
@@ -215,18 +605,41 @@ body {
 <body>
 
 <!-- HEADER -->
-<div class="header">
-    <div class="icon">🔋</div>
+<header>
 
-    <h1>About FAST BATTERY</h1>
+    <a href="index.html" class="logo">
+        FAST <span>CAR BATTERY</span>
+    </a>
+
+    <nav>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#brands">Brands</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+
+</header>
+
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+
+    <div class="page-icon">
+        🔋
+    </div>
+
+    <h1>
+        About <span>FAST CAR BATTERY</span>
+    </h1>
 
     <p>
         Professional On-Site Car Battery Services in Dubai
     </p>
-</div>
+
+</section>
 
 
 <div class="container">
+
 
 <!-- INTRO -->
 <div class="intro">
@@ -234,7 +647,7 @@ body {
     <h2>Reliable Battery Assistance When You Need It</h2>
 
     <p>
-        FAST BATTERY provides professional on-site car battery
+        FAST CAR BATTERY provides professional on-site car battery
         services across Dubai. We specialize in battery replacement,
         battery diagnosis, jump start assistance and roadside battery
         support.
@@ -255,7 +668,7 @@ body {
     <h2>Who We Are</h2>
 
     <p>
-        FAST BATTERY is an on-site automotive battery service
+        FAST CAR BATTERY is an on-site automotive battery service
         provider focused on convenient and professional battery
         solutions for drivers in Dubai.
     </p>
@@ -263,9 +676,8 @@ body {
     <p>
         Instead of waiting at a workshop, customers can contact us
         when their vehicle has a weak battery, starting problem or
-        battery-related issue. Our technicians come to the customer's
-        location with the necessary equipment to diagnose and service
-        the battery.
+        battery-related issue. Our mobile service is designed to bring
+        battery assistance directly to the customer's location.
     </p>
 
 </div>
@@ -282,7 +694,8 @@ body {
             <div class="service-icon">🔋</div>
             <h3>Battery Replacement</h3>
             <p>
-                Professional battery replacement at your location.
+                Professional battery replacement and installation
+                at your location.
             </p>
         </div>
 
@@ -290,7 +703,8 @@ body {
             <div class="service-icon">⚡</div>
             <h3>Battery Diagnosis</h3>
             <p>
-                Battery health, voltage and starting-system testing.
+                Battery health, voltage and starting-system testing
+                to identify battery-related problems.
             </p>
         </div>
 
@@ -298,8 +712,8 @@ body {
             <div class="service-icon">🚗</div>
             <h3>Jump Start</h3>
             <p>
-                On-site jump start assistance when your vehicle will
-                not start.
+                On-site jump start assistance when your vehicle
+                will not start.
             </p>
         </div>
 
@@ -307,7 +721,8 @@ body {
             <div class="service-icon">🛠️</div>
             <h3>Roadside Assistance</h3>
             <p>
-                Mobile battery assistance for unexpected breakdowns.
+                Mobile battery assistance for unexpected
+                battery-related breakdowns.
             </p>
         </div>
 
@@ -317,45 +732,74 @@ body {
 
 
 <!-- VEHICLES -->
-<div class="section">
+<div class="vehicle-highlight">
 
-    <h2>Vehicles We Service</h2>
+    <h2>🚗 Vehicles We Service</h2>
 
     <p>
         We provide battery services for a wide range of vehicles,
-        including European, American, Japanese, Korean, Chinese and
-        GCC-spec vehicles.
+        including European, American, Japanese, Korean, Chinese
+        and GCC-spec vehicles.
     </p>
 
     <p>
-        Our service covers everyday vehicles as well as premium and
-        luxury cars, subject to battery compatibility and vehicle
-        requirements.
+        Our service covers everyday vehicles as well as premium,
+        luxury and performance cars, subject to battery compatibility
+        and vehicle requirements.
     </p>
 
 </div>
 
 
-<!-- WHY FAST BATTERY -->
+<!-- WHY US -->
 <div class="why-us">
 
-    <h2>Why Choose FAST BATTERY?</h2>
+    <h2>Why Choose <span>FAST CAR BATTERY?</span></h2>
 
     <ul>
-        <li>✓ On-site battery service across Dubai</li>
-        <li>✓ Professional battery testing and diagnosis</li>
-        <li>✓ Fast response for battery-related emergencies</li>
-        <li>✓ Professional battery installation</li>
-        <li>✓ Battery solutions for multiple vehicle types</li>
-        <li>✓ Clear and straightforward service</li>
-        <li>✓ Customer-focused approach</li>
+
+        <li>
+            <span class="check">✓</span>
+            On-site battery service across Dubai
+        </li>
+
+        <li>
+            <span class="check">✓</span>
+            Professional battery testing and diagnosis
+        </li>
+
+        <li>
+            <span class="check">✓</span>
+            Fast response for battery-related emergencies
+        </li>
+
+        <li>
+            <span class="check">✓</span>
+            Professional battery installation
+        </li>
+
+        <li>
+            <span class="check">✓</span>
+            Battery solutions for multiple vehicle types
+        </li>
+
+        <li>
+            <span class="check">✓</span>
+            Clear and straightforward service
+        </li>
+
+        <li>
+            <span class="check">✓</span>
+            Customer-focused approach
+        </li>
+
     </ul>
 
 </div>
 
 
-<!-- MISSION -->
-<div class="section">
+<!-- COMMITMENT -->
+<div class="commitment">
 
     <h2>Our Commitment</h2>
 
@@ -369,20 +813,24 @@ body {
 </div>
 
 
-<!-- CONTACT -->
+<!-- CTA -->
 <div class="cta">
 
     <h2>Need Battery Assistance?</h2>
 
     <p>
-        Contact FAST BATTERY for professional on-site battery service.
+        Contact FAST CAR BATTERY for professional on-site battery
+        service in Dubai.
     </p>
 
     <a href="tel:+971524040699" class="button">
         📞 Call Now
     </a>
 
-    <a href="https://wa.me/971524040699" class="button">
+    <a href="https://wa.me/971524040699"
+       class="button whatsapp"
+       target="_blank"
+       rel="noopener">
         💬 WhatsApp
     </a>
 
@@ -391,8 +839,131 @@ body {
 
 <!-- BACK -->
 <a href="index.html" class="back">
-    ← Back to FAST BATTERY
+    ← Back to FAST CAR BATTERY
 </a>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-grid">
+
+        <div class="footer-brand">
+
+            <h2>
+                FAST <span>CAR BATTERY</span>
+            </h2>
+
+            <div class="footer-tagline">
+                24/7 MOBILE CAR BATTERY SERVICE
+            </div>
+
+            <p>
+                Fast, reliable and professional mobile car battery
+                replacement, jump start and roadside battery
+                assistance across Dubai and the UAE.
+            </p>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h3>Company</h3>
+
+            <ul>
+
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+
+                <li>
+                    <a href="reviews.html">Reviews</a>
+                </li>
+
+                <li>
+                    <a href="faqs.html">FAQs</a>
+                </li>
+
+                <li>
+                    <a href="index.html#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h3>Reach Us</h3>
+
+            <ul>
+
+                <li>
+                    <a href="tel:+971524040699">
+                        +971 52 404 0699
+                    </a>
+                </li>
+
+                <li>
+                    <a href="mailto:info@fastcarbattery.ae">
+                        info@fastcarbattery.ae
+                    </a>
+                </li>
+
+                <li>Dubai, UAE</li>
+
+                <li>24/7 Mobile Service</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-actions">
+
+        <a class="call" href="tel:+971524040699">
+            📞 Call Us
+        </a>
+
+        <a class="whatsapp"
+           href="https://wa.me/971524040699"
+           target="_blank"
+           rel="noopener">
+            💬 WhatsApp
+        </a>
+
+    </div>
+
+
+    <div class="footer-bottom">
+        © 2026 FAST CAR BATTERY — Dubai On-Site Car Battery Replacement
+    </div>
+
+</footer>
+
+
+<!-- FLOATING BUTTONS -->
+<div class="floating">
+
+    <a href="tel:+971524040699"
+       class="float-btn float-call"
+       aria-label="Call FAST CAR BATTERY">
+        📞
+    </a>
+
+    <a href="https://wa.me/971524040699"
+       target="_blank"
+       rel="noopener"
+       class="float-btn float-wa"
+       aria-label="WhatsApp FAST CAR BATTERY">
+        💬
+    </a>
 
 </div>
 
