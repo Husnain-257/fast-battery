@@ -1,298 +1,515 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
+<title>Jump Start Service | FAST BATTERY</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <title>Jump Start Service | Fast Battery</title>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #17202a;
+    min-height: 100vh;
+}
 
-    <style>
+/* HEADER */
+header {
+    background: #111923;
+    color: #fff;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.12);
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f7fa;
-            color: #222;
-            min-height: 100vh;
-        }
+.logo span {
+    color: #ffd400;
+}
 
-        header {
-            background: #111827;
-            color: white;
-            padding: 18px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.back-btn {
+    color: #111923;
+    background: #ffd400;
+    padding: 11px 17px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.2s;
+}
 
-        .logo {
-            font-size: 22px;
-            font-weight: bold;
-        }
+.back-btn:hover {
+    background: #fff;
+}
 
-        .back-btn {
-            color: white;
-            background: #2563eb;
-            padding: 10px 16px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 14px;
-        }
+/* HERO */
+.hero {
+    background: #111923;
+    padding: 35px 20px 55px;
+    text-align: center;
+    color: #fff;
+}
 
-        .container {
-            max-width: 850px;
-            margin: 40px auto;
-            padding: 20px;
-        }
+.hero-icon {
+    width: 82px;
+    height: 82px;
+    margin: 0 auto 18px;
+    background: #ffd400;
+    color: #111923;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    box-shadow: 0 8px 25px rgba(255,212,0,0.25);
+}
 
-        .service-box {
-            background: white;
-            padding: 35px;
-            border-radius: 20px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
-        }
+.hero h1 {
+    font-size: 34px;
+    margin-bottom: 12px;
+    font-weight: 800;
+}
 
-        .icon {
-            font-size: 55px;
-            margin-bottom: 15px;
-        }
+.hero h1 span {
+    color: #ffd400;
+}
 
-        h1 {
-            font-size: 32px;
-            margin-bottom: 15px;
-            color: #111827;
-        }
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #d9dee3;
+}
 
-        .description {
-            font-size: 17px;
-            line-height: 1.7;
-            color: #555;
-            margin-bottom: 25px;
-        }
+/* MAIN */
+.container {
+    max-width: 900px;
+    margin: -25px auto 50px;
+    padding: 0 18px;
+    position: relative;
+}
 
-        h2 {
-            font-size: 22px;
-            color: #111827;
-            margin-bottom: 15px;
-        }
+.service-box {
+    background: #fff;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.10);
+}
 
-        .details {
-            list-style: none;
-            padding: 0;
-        }
+/* TRUST BAR */
+.trust-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 32px;
+}
 
-        .details li {
-            padding: 12px 0;
-            border-bottom: 1px solid #eeeeee;
-            font-size: 16px;
-        }
+.trust-item {
+    background: #f9fafb;
+    border: 1px solid #e6e9ec;
+    border-radius: 12px;
+    padding: 15px 10px;
+    text-align: center;
+}
 
-        .price-box {
-            margin-top: 30px;
-            padding: 22px;
-            text-align: center;
-            background: #eff6ff;
-            border: 2px solid #2563eb;
-            border-radius: 14px;
-        }
+.trust-item strong {
+    display: block;
+    font-size: 14px;
+    color: #111923;
+    margin-top: 5px;
+}
 
-        .price-title {
-            color: #555;
-            font-size: 15px;
-            margin-bottom: 5px;
-        }
+.trust-item span {
+    font-size: 22px;
+}
 
-        .price {
-            color: #2563eb;
-            font-size: 34px;
-            font-weight: bold;
-        }
+/* CONTENT */
+h2 {
+    color: #111923;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
 
-        .book-btn {
-            display: block;
-            width: 100%;
-            margin-top: 25px;
-            padding: 16px;
-            text-align: center;
-            background: #16a34a;
-            color: white;
-            text-decoration: none;
-            border-radius: 12px;
-            font-size: 19px;
-            font-weight: bold;
-            border: none;
-        }
+.description {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #555e66;
+    margin-bottom: 30px;
+}
 
-        .book-btn:hover {
-            background: #15803d;
-        }
+/* DETAILS */
+.details {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
 
-        .phone-text {
-            text-align: center;
-            margin-top: 12px;
-            color: #666;
-            font-size: 14px;
-        }
+.details li {
+    padding: 15px 12px;
+    border-bottom: 1px solid #edf0f2;
+    font-size: 16px;
+    color: #303942;
+}
 
-        @media (max-width: 600px) {
+.details li:last-child {
+    border-bottom: none;
+}
 
-            .container {
-                margin: 20px auto;
-                padding: 15px;
-            }
+.check {
+    color: #111923;
+    background: #ffd400;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 9px;
+    font-size: 14px;
+    font-weight: bold;
+}
 
-            .service-box {
-                padding: 25px 20px;
-            }
+/* PRICE */
+.price-box {
+    margin-top: 10px;
+    padding: 25px 20px;
+    text-align: center;
+    background: #fffbea;
+    border: 2px solid #ffd400;
+    border-radius: 16px;
+}
 
-            h1 {
-                font-size: 28px;
-            }
+.price-title {
+    color: #626b73;
+    font-size: 14px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
 
-            .description {
-                font-size: 16px;
-            }
+.price {
+    color: #111923;
+    font-size: 38px;
+    font-weight: 800;
+}
 
-            .price {
-                font-size: 30px;
-            }
+.price-note {
+    color: #6a7075;
+    font-size: 13px;
+    margin-top: 6px;
+}
 
-        }
+/* CALL BUTTON */
+.book-btn {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 17px;
+    text-align: center;
+    background: #ffd400;
+    color: #111923;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 19px;
+    font-weight: 800;
+    transition: 0.2s;
+    box-shadow: 0 5px 15px rgba(255,212,0,0.25);
+}
 
-    </style>
+.book-btn:hover {
+    background: #111923;
+    color: #ffd400;
+}
 
+/* WHATSAPP */
+.whatsapp-btn {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    padding: 15px;
+    text-align: center;
+    background: #111923;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.whatsapp-btn:hover {
+    background: #ffd400;
+    color: #111923;
+}
+
+.phone-text {
+    text-align: center;
+    margin-top: 12px;
+    color: #737b82;
+    font-size: 13px;
+}
+
+/* FOOTER */
+footer {
+    background: #111923;
+    color: #cdd3d8;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 13px;
+}
+
+footer strong {
+    color: #ffd400;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    header {
+        padding: 16px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .back-btn {
+        padding: 9px 12px;
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 30px 18px 48px;
+    }
+
+    .hero-icon {
+        width: 72px;
+        height: 72px;
+        font-size: 36px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .container {
+        margin-top: -20px;
+        padding: 0 12px;
+    }
+
+    .service-box {
+        padding: 25px 18px;
+        border-radius: 17px;
+    }
+
+    .trust-bar {
+        gap: 7px;
+    }
+
+    .trust-item {
+        padding: 12px 5px;
+    }
+
+    .trust-item strong {
+        font-size: 11px;
+    }
+
+    .trust-item span {
+        font-size: 19px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .details li {
+        font-size: 15px;
+        padding: 14px 5px;
+    }
+
+    .price {
+        font-size: 34px;
+    }
+}
+</style>
 </head>
-
 
 <body>
 
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        FAST <span>BATTERY</span>
+    </div>
 
-    <!-- HEADER -->
+    <a href="index.html" class="back-btn">
+        ← Back
+    </a>
+</header>
 
-    <header>
+<!-- HERO -->
+<section class="hero">
 
-        <div class="logo">
-            Fast Battery
+    <div class="hero-icon">
+        ⚡
+    </div>
+
+    <h1>
+        Professional <span>Jump Start</span> Service
+    </h1>
+
+    <p>
+        Fast and reliable mobile car jump start assistance
+        at your location in Dubai. Available 24/7 for
+        emergency battery situations.
+    </p>
+
+</section>
+
+<!-- MAIN -->
+<main class="container">
+
+    <div class="service-box">
+
+        <!-- TRUST -->
+        <div class="trust-bar">
+
+            <div class="trust-item">
+                <span>⚡</span>
+                <strong>Fast Response</strong>
+            </div>
+
+            <div class="trust-item">
+                <span>🕐</span>
+                <strong>24/7 Service</strong>
+            </div>
+
+            <div class="trust-item">
+                <span>📍</span>
+                <strong>At Your Location</strong>
+            </div>
+
         </div>
 
-        <a href="index.html" class="back-btn">
-            ← Back
+        <!-- DESCRIPTION -->
+        <h2>
+            Emergency Jump Start Assistance
+        </h2>
+
+        <p class="description">
+            Is your car battery weak or completely discharged?
+            FAST BATTERY provides professional mobile jump start
+            assistance at your location. Our technician comes to
+            you with the proper equipment to safely start your
+            vehicle and get you back on the road.
+        </p>
+
+        <!-- DETAILS -->
+        <h2>
+            What's Included
+        </h2>
+
+        <ul class="details">
+
+            <li>
+                <span class="check">✓</span>
+                Professional car jump start
+            </li>
+
+            <li>
+                <span class="check">✓</span>
+                Safe battery boosting equipment
+            </li>
+
+            <li>
+                <span class="check">✓</span>
+                Cars, SUVs and other vehicles
+            </li>
+
+            <li>
+                <span class="check">✓</span>
+                24/7 emergency roadside assistance
+            </li>
+
+            <li>
+                <span class="check">✓</span>
+                Mobile service at your location
+            </li>
+
+            <li>
+                <span class="check">✓</span>
+                Professional technician assistance
+            </li>
+
+        </ul>
+
+        <!-- PRICE -->
+        <div class="price-box">
+
+            <div class="price-title">
+                Jump Start Service
+            </div>
+
+            <div class="price">
+                AED 100
+            </div>
+
+            <div class="price-note">
+                Starting service price
+            </div>
+
+        </div>
+
+        <!-- CALL -->
+        <a href="tel:+971524040699" class="book-btn">
+            📞 Call Now – Book Jump Start
         </a>
 
-    </header>
+        <!-- WHATSAPP -->
+        <a
+            href="https://wa.me/971524040699?text=Hello%20FAST%20BATTERY,%20I%20need%20a%20car%20jump%20start%20service."
+            class="whatsapp-btn"
+        >
+            💬 WhatsApp Us
+        </a>
 
+        <p class="phone-text">
+            Call or WhatsApp us and tell us your location.
+        </p>
 
-    <!-- MAIN CONTENT -->
+    </div>
 
-    <main class="container">
+</main>
 
-        <div class="service-box">
-
-
-            <!-- SERVICE ICON -->
-
-            <div class="icon">
-                ⚡
-            </div>
-
-
-            <!-- SERVICE TITLE -->
-
-            <h1>
-                Jump Start Service
-            </h1>
-
-
-            <!-- SERVICE DESCRIPTION -->
-
-            <p class="description">
-                Our professional Jump Start service is available
-                24/7 to help you start your vehicle when the battery
-                is weak or completely discharged.
-            </p>
-
-
-            <!-- DETAILS -->
-
-            <h2>
-                Jump Start Details
-            </h2>
-
-
-            <ul class="details">
-
-                <li>
-                    ⚡ Professional Car Jump Start
-                </li>
-
-                <li>
-                    🚗 Service for Cars and Vehicles
-                </li>
-
-                <li>
-                    🕐 24/7 Emergency Service
-                </li>
-
-                <li>
-                    🔋 Safe Battery Boost
-                </li>
-
-                <li>
-                    📍 Mobile Service at Your Location
-                </li>
-
-                <li>
-                    👨‍🔧 Professional Assistance
-                </li>
-
-            </ul>
-
-
-            <!-- PRICE -->
-
-            <div class="price-box">
-
-                <div class="price-title">
-                    Service Price
-                </div>
-
-                <div class="price">
-                    AED 100
-                </div>
-
-            </div>
-
-
-            <!-- BOOK NOW BUTTON -->
-
-            <a
-                href="tel:+971524040699"
-                class="book-btn"
-            >
-                📞 Book Now
-            </a>
-
-
-            <!-- PHONE TEXT -->
-
-            <p class="phone-text">
-                Tap "Book Now" to call us directly
-            </p>
-
-
-        </div>
-
-    </main>
-
+<!-- FOOTER -->
+<footer>
+    <strong>FAST BATTERY</strong><br>
+    24/7 Mobile Car Battery & Jump Start Service in Dubai
+</footer>
 
 </body>
-
 </html>
