@@ -1,265 +1,736 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Battery Diagnosis | FAST BATTERY</title>
-
-<style>
-* {
-    box-sizing: border-box;
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Battery Diagnosis in Dubai | FAST CAR BATTERY</title><meta name="description" content="Professional car battery diagnosis and testing in Dubai. FAST CAR BATTERY checks battery health, CCA, charging system, cranking performance and electrical drain at your location."><style>
+:root{
+    --navy:#0b1220;
+    --navy2:#111827;
+    --gold:#f5b400;
+    --gold-light:#ffc928;
+    --white:#ffffff;
+    --light:#f5f7fa;
+    --text:#172033;
+    --muted:#667085;
+    --border:#e5e7eb;
+    --green:#25d366;
+    --blue:#2563eb;
+    --shadow:0 8px 25px rgba(15,23,42,.08);
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f6f8;
-    color: #17202a;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-.header {
-    background: #111923;
-    color: white;
-    padding: 25px 20px;
-    text-align: center;
+html{
+    scroll-behavior:smooth;
 }
 
-.header h1 {
-    margin: 0;
-    font-size: 30px;
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--light);
+    color:var(--text);
+    line-height:1.6;
 }
 
-.header p {
-    margin: 10px 0 0;
-    font-size: 16px;
-    color: #d8dee4;
+/* HEADER */
+.header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(11,18,32,.98);
+    color:white;
+    min-height:68px;
+    padding:12px 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow:0 4px 18px rgba(0,0,0,.18);
 }
 
-.container {
-    max-width: 850px;
-    margin: auto;
-    padding: 25px 16px 50px;
+.logo{
+    color:white;
+    text-decoration:none;
+    font-size:21px;
+    font-weight:900;
+    letter-spacing:.4px;
+    white-space:nowrap;
 }
 
-.intro {
-    background: white;
-    border-radius: 20px;
-    padding: 25px;
-    margin-bottom: 20px;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+.logo span{
+    color:var(--gold);
 }
 
-.intro h2 {
-    margin-top: 0;
+.back-top{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    background:var(--gold);
+    color:var(--navy);
+    text-decoration:none;
+    padding:9px 15px;
+    border-radius:8px;
+    font-size:13px;
+    font-weight:900;
+    transition:.2s ease;
 }
 
-.step {
-    background: white;
-    border-radius: 18px;
-    padding: 22px;
-    margin: 15px 0;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+.back-top:hover{
+    background:var(--gold-light);
+    transform:translateY(-2px);
 }
 
-.step-number {
-    font-size: 14px;
-    font-weight: bold;
-    color: #1677ff;
-    margin-bottom: 7px;
+/* HERO */
+.hero{
+    background:
+    radial-gradient(circle at top right,rgba(245,180,0,.14),transparent 30%),
+    linear-gradient(135deg,#080e1a,#111827 65%,#1e293b);
+    color:white;
+    text-align:center;
+    padding:70px 20px 75px;
 }
 
-.step h3 {
-    margin: 5px 0 10px;
-    font-size: 21px;
+.badge{
+    display:inline-block;
+    padding:7px 15px;
+    border:1px solid rgba(245,180,0,.45);
+    background:rgba(245,180,0,.10);
+    color:#ffd966;
+    border-radius:50px;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:.6px;
 }
 
-.step p {
-    margin: 0;
-    line-height: 1.6;
-    color: #4b5563;
+.hero h1{
+    max-width:850px;
+    margin:18px auto 14px;
+    font-size:clamp(34px,6vw,50px);
+    line-height:1.1;
+    font-weight:900;
 }
 
-.result {
-    background: #111923;
-    color: white;
-    border-radius: 20px;
-    padding: 25px;
-    margin-top: 25px;
+.hero h1 span{
+    color:var(--gold);
 }
 
-.result h2 {
-    margin-top: 0;
+.hero p{
+    max-width:720px;
+    margin:auto;
+    color:#d7dee8;
+    font-size:17px;
 }
 
-.result p {
-    line-height: 1.6;
+/* CONTAINER */
+.container{
+    max-width:1050px;
+    margin:auto;
+    padding:0 20px 70px;
 }
 
-/* CALL & WHATSAPP BUTTONS */
-.cta {
-    text-align: center;
-    margin-top: 30px;
+/* INTRO CARD */
+.intro{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:30px;
+    margin-top:-28px;
+    position:relative;
+    box-shadow:var(--shadow);
+    text-align:center;
 }
 
-.cta a {
-    display: inline-block;
-    text-decoration: none;
-    color: #000000;
-    background: #FFD400;
-    padding: 15px 28px;
-    border-radius: 30px;
-    font-weight: bold;
-    margin: 6px;
-    border: 2px solid #000000;
-    transition: 0.3s ease;
+.intro h2{
+    color:var(--navy);
+    font-size:27px;
+    margin-bottom:9px;
 }
 
-.cta a:hover {
-    background: #000000;
-    color: #FFD400;
+.intro h2 span{
+    color:var(--gold);
 }
 
-/* BACK TO FAST BATTERY */
-.back {
-    display: block;
-    text-align: center;
-    margin: 25px auto 0;
-    color: #000000;
-    background: #FFD400;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 13px 24px;
-    border-radius: 30px;
-    border: 2px solid #000000;
-    width: fit-content;
-    transition: 0.3s ease;
+.intro p{
+    max-width:750px;
+    margin:auto;
+    color:var(--muted);
+    font-size:15px;
 }
 
-.back:hover {
-    background: #000000;
-    color: #FFD400;
+/* DIAGNOSIS STEPS */
+.steps-title{
+    text-align:center;
+    margin:55px 0 28px;
 }
-</style>
-</head>
 
-<body>
+.steps-title h2{
+    color:var(--navy);
+    font-size:30px;
+    margin-bottom:7px;
+}
 
-<div class="header">
-    <h1>🔋 Battery Diagnosis</h1>
-    <p>Professional Battery Testing & Diagnosis</p>
+.steps-title h2 span{
+    color:var(--gold);
+}
+
+.steps-title p{
+    color:var(--muted);
+}
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.step{
+    background:white;
+    border:1px solid var(--border);
+    border-top:4px solid var(--gold);
+    border-radius:14px;
+    padding:24px;
+    box-shadow:var(--shadow);
+    transition:.2s ease;
+}
+
+.step:hover{
+    transform:translateY(-3px);
+    box-shadow:0 14px 30px rgba(15,23,42,.11);
+    border-color:var(--gold);
+}
+
+.step-number{
+    display:inline-block;
+    color:var(--navy);
+    background:#fff4cc;
+    border-radius:6px;
+    padding:5px 9px;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:.6px;
+    margin-bottom:12px;
+}
+
+.step h3{
+    color:var(--navy);
+    font-size:19px;
+    margin-bottom:8px;
+}
+
+.step p{
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.65;
+}
+
+/* RESULT */
+.result{
+    margin-top:45px;
+    background:
+    radial-gradient(circle at top right,rgba(245,180,0,.12),transparent 35%),
+    linear-gradient(135deg,var(--navy),var(--navy2));
+    color:white;
+    border-radius:16px;
+    padding:35px 30px;
+    box-shadow:0 12px 30px rgba(11,18,32,.16);
+}
+
+.result h2{
+    text-align:center;
+    font-size:27px;
+    margin-bottom:22px;
+}
+
+.result h2 span{
+    color:var(--gold);
+}
+
+.result-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+}
+
+.result-item{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:9px;
+    padding:14px 16px;
+    font-weight:700;
+    font-size:14px;
+}
+
+/* CTA */
+.cta{
+    text-align:center;
+    padding:45px 0 10px;
+}
+
+.cta h2{
+    color:var(--navy);
+    font-size:28px;
+    margin-bottom:7px;
+}
+
+.cta h2 span{
+    color:var(--gold);
+}
+
+.cta p{
+    color:var(--muted);
+    margin-bottom:18px;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:13px 23px;
+    margin:5px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:900;
+    transition:.2s ease;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.call{
+    background:var(--gold);
+    color:var(--navy);
+}
+
+.wa{
+    background:var(--green);
+    color:white;
+}
+
+/* FOOTER */
+.footer{
+    background:#050a12;
+    color:white;
+    text-align:center;
+    border-top:3px solid var(--gold);
+    padding:30px 20px 85px;
+}
+
+.footer-logo{
+    font-size:21px;
+    font-weight:900;
+    margin-bottom:4px;
+}
+
+.footer-logo span{
+    color:var(--gold);
+}
+
+.footer-tagline{
+    color:var(--gold);
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:1px;
+    margin-bottom:8px;
+}
+
+.footer p{
+    color:#94a3b8;
+    font-size:13px;
+    margin:4px 0;
+}
+
+/* FLOATING BUTTONS */
+.floating{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    z-index:9999;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.float-btn{
+    width:51px;
+    height:51px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:20px;
+    text-decoration:none;
+    box-shadow:0 5px 18px rgba(0,0,0,.25);
+}
+
+.float-call{
+    background:var(--blue);
+}
+
+.float-wa{
+    background:var(--green);
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+    .header{
+        padding:12px 15px;
+    }
+
+    .logo{
+        font-size:17px;
+    }
+
+    .back-top{
+        padding:8px 11px;
+        font-size:11px;
+    }
+
+    .hero{
+        padding:55px 18px 65px;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .container{
+        padding:0 15px 60px;
+    }
+
+    .intro{
+        margin-top:-25px;
+        padding:24px 19px;
+    }
+
+    .intro h2{
+        font-size:24px;
+    }
+
+    .steps-title{
+        margin:45px 0 25px;
+    }
+
+    .steps-title h2{
+        font-size:26px;
+    }
+
+    .steps{
+        grid-template-columns:1fr;
+    }
+
+    .step{
+        padding:21px;
+    }
+
+    .result{
+        padding:28px 18px;
+    }
+
+    .result-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cta h2{
+        font-size:25px;
+    }
+
+    .btn{
+        width:100%;
+        max-width:290px;
+        margin:5px auto;
+    }
+
+    .floating{
+        right:13px;
+        bottom:13px;
+    }
+
+    .float-btn{
+        width:48px;
+        height:48px;
+    }
+}
+</style></head><body><!-- HEADER --><header class="header"><a href="index.html" class="logo">
+    FAST <span>CAR BATTERY</span>
+</a>
+
+<a href="index.html" class="back-top">
+    ← Back
+</a>
+
+</header><!-- HERO --><section class="hero"><div class="badge">
+    PROFESSIONAL BATTERY DIAGNOSIS • DUBAI
 </div>
 
-<div class="container">
+<h1>
+    Car Battery <span>Diagnosis & Testing</span>
+</h1>
 
+<p>
+    Professional battery, starting and charging-system checks
+    to help identify why your vehicle is not starting or why
+    the battery keeps losing power.
+</p>
+
+</section><div class="container"><!-- INTRO -->
 <div class="intro">
-    <h2>Complete Battery Diagnosis</h2>
+
+    <h2>
+        Complete <span>Battery Diagnosis</span>
+    </h2>
+
     <p>
-        We check your battery, starting system and charging system
-        to identify the actual cause of your vehicle's starting problem.
+        FAST CAR BATTERY provides mobile battery diagnosis at your
+        location in Dubai. Our technicians check the battery and
+        related starting and charging systems before recommending
+        the appropriate solution.
     </p>
+
 </div>
 
-<div class="step">
-    <div class="step-number">STEP 01</div>
-    <h3>🔍 Vehicle Inspection</h3>
+
+<!-- STEPS -->
+<div class="steps-title">
+
+    <h2>
+        Our Diagnosis <span>Process</span>
+    </h2>
+
     <p>
-        We identify the vehicle make, model, year and battery
-        specifications before starting the diagnosis.
+        A structured inspection to identify battery-related problems.
     </p>
+
 </div>
 
-<div class="step">
-    <div class="step-number">STEP 02</div>
-    <h3>👁️ Visual Battery Inspection</h3>
-    <p>
-        Battery casing, terminals, cables, corrosion, leakage
-        and physical damage are carefully inspected.
-    </p>
+
+<div class="steps">
+
+    <!-- STEP 01 -->
+    <div class="step">
+
+        <div class="step-number">STEP 01</div>
+
+        <h3>🔍 Vehicle Inspection</h3>
+
+        <p>
+            We identify the vehicle make, model, year and relevant
+            battery specifications before beginning the diagnosis.
+        </p>
+
+    </div>
+
+
+    <!-- STEP 02 -->
+    <div class="step">
+
+        <div class="step-number">STEP 02</div>
+
+        <h3>👁️ Visual Battery Inspection</h3>
+
+        <p>
+            Battery casing, terminals, cables, corrosion, leakage
+            and visible physical damage are carefully inspected.
+        </p>
+
+    </div>
+
+
+    <!-- STEP 03 -->
+    <div class="step">
+
+        <div class="step-number">STEP 03</div>
+
+        <h3>⚡ Battery Voltage Test</h3>
+
+        <p>
+            Resting battery voltage and charge level are measured
+            using appropriate diagnostic equipment.
+        </p>
+
+    </div>
+
+
+    <!-- STEP 04 -->
+    <div class="step">
+
+        <div class="step-number">STEP 04</div>
+
+        <h3>🔋 Battery Health & CCA Test</h3>
+
+        <p>
+            Battery health, Cold Cranking Amps (CCA) and starting
+            capability are checked to assess battery condition.
+        </p>
+
+    </div>
+
+
+    <!-- STEP 05 -->
+    <div class="step">
+
+        <div class="step-number">STEP 05</div>
+
+        <h3>🚗 Cranking Test</h3>
+
+        <p>
+            Starting performance and voltage drop during engine
+            cranking are checked to identify possible battery issues.
+        </p>
+
+    </div>
+
+
+    <!-- STEP 06 -->
+    <div class="step">
+
+        <div class="step-number">STEP 06</div>
+
+        <h3>⚙️ Alternator Charging Test</h3>
+
+        <p>
+            Charging voltage and alternator performance are checked
+            to determine whether the battery is receiving appropriate
+            charging.
+        </p>
+
+    </div>
+
+
+    <!-- STEP 07 -->
+    <div class="step">
+
+        <div class="step-number">STEP 07</div>
+
+        <h3>🔌 Electrical Drain Check</h3>
+
+        <p>
+            If the battery repeatedly becomes discharged, we can check
+            for abnormal electrical consumption or possible battery drain.
+        </p>
+
+    </div>
+
+
+    <!-- STEP 08 -->
+    <div class="step">
+
+        <div class="step-number">STEP 08</div>
+
+        <h3>📋 Diagnosis Result</h3>
+
+        <p>
+            After testing, we explain the findings and advise whether
+            the battery appears healthy, weak, requires replacement,
+            or whether further charging-system inspection may be needed.
+        </p>
+
+    </div>
+
 </div>
 
-<div class="step">
-    <div class="step-number">STEP 03</div>
-    <h3>⚡ Voltage Test</h3>
-    <p>
-        Battery resting voltage and charge level are measured
-        using professional diagnostic equipment.
-    </p>
-</div>
 
-<div class="step">
-    <div class="step-number">STEP 04</div>
-    <h3>🔋 Battery Health & CCA Test</h3>
-    <p>
-        Battery health, Cold Cranking Amps (CCA) and starting
-        capacity are tested to determine battery condition.
-    </p>
-</div>
-
-<div class="step">
-    <div class="step-number">STEP 05</div>
-    <h3>🚗 Cranking Test</h3>
-    <p>
-        We check voltage drop and battery performance while
-        starting the engine.
-    </p>
-</div>
-
-<div class="step">
-    <div class="step-number">STEP 06</div>
-    <h3>⚙️ Alternator Charging Test</h3>
-    <p>
-        Alternator output and charging voltage are checked to
-        make sure the battery is receiving the correct charge.
-    </p>
-</div>
-
-<div class="step">
-    <div class="step-number">STEP 07</div>
-    <h3>🔌 Electrical Drain Check</h3>
-    <p>
-        If the battery repeatedly goes flat, we check for
-        abnormal electrical consumption and possible battery drain.
-    </p>
-</div>
-
-<div class="step">
-    <div class="step-number">STEP 08</div>
-    <h3>📋 Diagnosis Result</h3>
-    <p>
-        After testing, we clearly explain whether your battery
-        is good, weak, requires replacement, or if there is a
-        charging-system issue.
-    </p>
-</div>
-
+<!-- RESULTS -->
 <div class="result">
-    <h2>Diagnosis Results</h2>
 
-    <p>🟢 Battery Good</p>
-    <p>🟠 Battery Weak</p>
-    <p>🔴 Battery Replacement Required</p>
-    <p>🔧 Charging System Issue</p>
+    <h2>
+        Possible <span>Diagnosis Results</span>
+    </h2>
+
+    <div class="result-grid">
+
+        <div class="result-item">
+            🟢 Battery Condition: Good
+        </div>
+
+        <div class="result-item">
+            🟠 Battery Condition: Weak
+        </div>
+
+        <div class="result-item">
+            🔴 Battery Replacement Recommended
+        </div>
+
+        <div class="result-item">
+            🔧 Charging System Issue
+        </div>
+
+    </div>
+
 </div>
 
+
+<!-- CTA -->
 <div class="cta">
 
-    <a href="tel:+971524040699">
+    <h2>
+        Need a <span>Battery Diagnosis?</span>
+    </h2>
+
+    <p>
+        Call or WhatsApp FAST CAR BATTERY for mobile assistance
+        at your location in Dubai.
+    </p>
+
+    <a href="tel:+971524040699" class="btn call">
         📞 Call Now
     </a>
 
-    <a href="https://wa.me/971524040699">
+    <a href="https://wa.me/971524040699"
+       class="btn wa"
+       target="_blank"
+       rel="noopener">
         💬 WhatsApp
     </a>
 
 </div>
 
-<a href="index.html" class="back">
-    ← Back to FAST BATTERY
-</a>
-
+</div><!-- FOOTER --><footer class="footer"><div class="footer-logo">
+    FAST <span>CAR BATTERY</span>
 </div>
 
-</body>
+<div class="footer-tagline">
+    24/7 MOBILE CAR BATTERY SERVICE
+</div>
+
+<p>
+    Professional mobile battery diagnosis, replacement,
+    jump start and roadside assistance across Dubai.
+</p>
+
+<p>
+    📞 +971 52 404 0699
+</p>
+
+<p>
+    ✉️ info@fastcarbattery.ae
+</p>
+
+<p>
+    © 2026 FAST CAR BATTERY — Dubai, UAE
+</p>
+
+</footer><!-- FLOATING BUTTONS --><div class="floating"><a href="tel:+971524040699"
+   class="float-btn float-call"
+   aria-label="Call FAST CAR BATTERY">
+    📞
+</a>
+
+<a href="https://wa.me/971524040699"
+   target="_blank"
+   rel="noopener"
+   class="float-btn float-wa"
+   aria-label="WhatsApp FAST CAR BATTERY">
+    💬
+</a>
+
+</div></body>
 </html>
