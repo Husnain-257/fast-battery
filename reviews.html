@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Customer Reviews | FAST BATTERY</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #17202a;
+}
+
+/* HEADER */
+.header {
+    background: #111923;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.header .icon {
+    font-size: 45px;
+}
+
+.header h1 {
+    margin: 8px 0;
+    font-size: 32px;
+}
+
+.header p {
+    margin: 0;
+    color: #d5d9de;
+}
+
+/* MAIN */
+.container {
+    max-width: 850px;
+    margin: auto;
+    padding: 25px 16px 50px;
+}
+
+/* RATING SUMMARY */
+.rating-summary {
+    background: white;
+    border-radius: 22px;
+    padding: 28px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    margin-bottom: 25px;
+}
+
+.rating-number {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.rating-stars {
+    color: #FFD400;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+.rating-summary p {
+    color: #59636e;
+}
+
+/* REVIEW CARDS */
+.review-card {
+    background: white;
+    border-radius: 20px;
+    padding: 23px;
+    margin: 16px 0;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+.review-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.customer-name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.review-date {
+    color: #8a929a;
+    font-size: 13px;
+}
+
+.review-stars {
+    color: #FFD400;
+    font-size: 21px;
+    margin: 8px 0;
+}
+
+.review-card p {
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* WRITE REVIEW */
+.write-review {
+    background: #111923;
+    color: white;
+    border-radius: 22px;
+    padding: 28px 22px;
+    margin-top: 30px;
+}
+
+.write-review h2 {
+    margin-top: 0;
+}
+
+.write-review p {
+    color: #d5d9de;
+}
+
+.form-group {
+    margin: 16px 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* STAR SELECTOR */
+.star-select {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.star-select input {
+    display: none;
+}
+
+.star-select label {
+    font-size: 35px;
+    color: #777;
+    cursor: pointer;
+}
+
+.star-select label:hover,
+.star-select label:hover ~ label,
+.star-select input:checked ~ label {
+    color: #FFD400;
+}
+
+/* SUBMIT */
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    margin-top: 8px;
+    border: 2px solid #000;
+    border-radius: 30px;
+    background: #FFD400;
+    color: #000;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: #000;
+    color: #FFD400;
+}
+
+/* GOOGLE REVIEW */
+.google-review {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.google-review a {
+    display: inline-block;
+    background: #FFD400;
+    color: #000;
+    text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    border: 2px solid #000;
+    font-weight: bold;
+}
+
+/* BACK BUTTON */
+.back {
+    display: block;
+    width: fit-content;
+    margin: 28px auto 0;
+    padding: 13px 24px;
+    border-radius: 30px;
+    background: #FFD400;
+    border: 2px solid #000;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back:hover {
+    background: #000;
+    color: #FFD400;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .review-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .rating-number {
+        font-size: 40px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <div class="icon">⭐</div>
+    <h1>Customer Reviews</h1>
+    <p>See what our customers say about FAST BATTERY</p>
+</div>
+
+<div class="container">
+
+<!-- RATING SUMMARY -->
+<div class="rating-summary">
+    <div class="rating-number">5.0</div>
+
+    <div class="rating-stars">
+        ★ ★ ★ ★ ★
+    </div>
+
+    <p>Customer satisfaction is our priority.</p>
+</div>
+
+
+<!-- EXISTING REVIEWS -->
+
+<div class="review-card">
+
+    <div class="review-top">
+        <div class="customer-name">Ahmed</div>
+        <div class="review-date">★★★★★</div>
+    </div>
+
+    <div class="review-stars">
+        ★★★★★
+    </div>
+
+    <p>
+        Very fast battery replacement service. The technician arrived
+        at my location and replaced the battery professionally.
+    </p>
+
+</div>
+
+
+<div class="review-card">
+
+    <div class="review-top">
+        <div class="customer-name">Mohammed</div>
+        <div class="review-date">★★★★★</div>
+    </div>
+
+    <div class="review-stars">
+        ★★★★★
+    </div>
+
+    <p>
+        Excellent service and quick response. Very professional
+        and helpful technician.
+    </p>
+
+</div>
+
+
+<div class="review-card">
+
+    <div class="review-top">
+        <div class="customer-name">Customer</div>
+        <div class="review-date">★★★★★</div>
+    </div>
+
+    <div class="review-stars">
+        ★★★★★
+    </div>
+
+    <p>
+        Fast onsite battery service. Everything was explained clearly
+        and the replacement was completed quickly.
+    </p>
+
+</div>
+
+
+<!-- WRITE REVIEW -->
+
+<div class="write-review">
+
+    <h2>✍️ Write a Review</h2>
+
+    <p>
+        Had a good experience with FAST BATTERY?
+        Share your feedback with us.
+    </p>
+
+    <form id="reviewForm">
+
+        <div class="form-group">
+            <label>Your Name</label>
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Enter your name"
+                required>
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Your Rating</label>
+
+            <div class="star-select">
+
+                <input type="radio" id="star5" name="rating" value="5" required>
+                <label for="star5">★</label>
+
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4">★</label>
+
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3">★</label>
+
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2">★</label>
+
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1">★</label>
+
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Your Review</label>
+
+            <textarea
+                id="reviewText"
+                placeholder="Tell us about your experience..."
+                required></textarea>
+
+        </div>
+
+
+        <button type="submit" class="submit-btn">
+            ⭐ Submit Review
+        </button>
+
+    </form>
+
+</div>
+
+
+<!-- GOOGLE REVIEW BUTTON -->
+
+<div class="google-review">
+
+    <a href="YOUR_GOOGLE_REVIEW_LINK" target="_blank">
+        ⭐ Leave a Google Review
+    </a>
+
+</div>
+
+
+<!-- BACK -->
+
+<a href="index.html" class="back">
+    ← Back to FAST BATTERY
+</a>
+
+</div>
+
+
+<script>
+
+document.getElementById("reviewForm").addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const name = document.getElementById("customerName").value;
+    const review = document.getElementById("reviewText").value;
+    const rating = document.querySelector('input[name="rating"]:checked').value;
+
+    const stars = "★".repeat(rating) + "☆".repeat(5 - rating);
+
+    const reviewCard = document.createElement("div");
+
+    reviewCard.className = "review-card";
+
+    reviewCard.innerHTML = `
+        <div class="review-top">
+            <div class="customer-name">${name}</div>
+            <div class="review-date">New Review</div>
+        </div>
+
+        <div class="review-stars">
+            ${stars}
+        </div>
+
+        <p>${review}</p>
+    `;
+
+    document
+        .getElementById("reviewForm")
+        .closest(".write-review")
+        .before(reviewCard);
+
+    document.getElementById("reviewForm").reset();
+
+    alert("Thank you for your review!");
+
+});
+
+</script>
+
+</body>
+</html>
