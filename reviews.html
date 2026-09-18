@@ -4,11 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Customer Reviews | FAST CAR BATTERY</title>
+<meta name="theme-color" content="#080d16">
+<meta name="description" content="Read customer reviews for 800PowerBat – professional 24/7 mobile car battery replacement, jump start and roadside assistance in Dubai.">
+<meta name="robots" content="index, follow">
 
-<meta name="description" content="Read customer reviews for FAST CAR BATTERY – professional 24/7 mobile car battery replacement and roadside battery assistance in Dubai.">
+<title>Customer Reviews | 800PowerBat</title>
 
 <style>
+:root {
+    --navy: #080d16;
+    --navy-2: #0e1622;
+    --navy-3: #172232;
+    --yellow: #f5c400;
+    --yellow-dark: #c99e00;
+    --yellow-soft: #fff8d7;
+    --white: #ffffff;
+    --bg: #f4f6f8;
+    --text: #17202a;
+    --muted: #66717d;
+    --border: #e3e8ed;
+    --green: #1fa463;
+    --shadow: 0 18px 50px rgba(8,13,22,.10);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -19,292 +37,425 @@ html {
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f4f6f8;
-    color: #17202a;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
 }
 
-/* =========================
+a {
+    text-decoration: none;
+}
+
+/* =================================
    HEADER
-========================= */
+================================= */
 
 .header {
-    background: #0b1220;
-    color: #fff;
-    padding: 16px 20px;
     position: sticky;
     top: 0;
-    z-index: 999;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.20);
+    z-index: 1000;
+    background: rgba(8,13,22,.97);
+    border-bottom: 1px solid rgba(255,255,255,.07);
+    box-shadow: 0 5px 25px rgba(0,0,0,.16);
+    backdrop-filter: blur(14px);
 }
 
 .header-inner {
-    max-width: 1150px;
+    max-width: 1180px;
     margin: auto;
+    padding: 16px 22px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 15px;
+    gap: 20px;
 }
 
 .logo {
-    color: #f5b400;
-    text-decoration: none;
-    font-size: 21px;
-    font-weight: 900;
-    letter-spacing: 0.5px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 950;
+    letter-spacing: -.7px;
+}
+
+.logo span {
+    color: var(--yellow);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.header-status {
+    color: #aeb8c2;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .back-btn {
-    text-decoration: none;
-    color: #0b1220;
-    background: #f5b400;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--navy);
+    background: var(--yellow);
     padding: 10px 16px;
-    border-radius: 8px;
-    font-size: 13px;
-    font-weight: 800;
-    transition: 0.3s;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 900;
+    transition: .25s ease;
 }
 
 .back-btn:hover {
-    background: #ffc928;
+    background: #fff;
     transform: translateY(-2px);
 }
 
-/* =========================
+/* =================================
    HERO
-========================= */
+================================= */
 
 .hero {
+    position: relative;
+    overflow: hidden;
     background:
-        linear-gradient(rgba(11,18,32,0.96), rgba(17,24,39,0.96));
-    color: white;
+        radial-gradient(circle at 78% 25%, rgba(245,196,0,.13), transparent 28%),
+        radial-gradient(circle at 12% 85%, rgba(245,196,0,.07), transparent 25%),
+        var(--navy);
+    color: #fff;
     text-align: center;
-    padding: 70px 20px 65px;
+    padding: 72px 20px 115px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: .22;
+    background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+    background-size: 55px 55px;
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    max-width: 850px;
+    margin: auto;
 }
 
 .hero-icon {
-    width: 68px;
-    height: 68px;
-    margin: 0 auto 18px;
-    border-radius: 50%;
-    background: #f5b400;
-    color: #0b1220;
+    width: 76px;
+    height: 76px;
+    margin: 0 auto 21px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 32px;
-    box-shadow: 0 8px 25px rgba(245,180,0,0.25);
+    background: linear-gradient(145deg, #ffd83b, #e5b500);
+    color: var(--navy);
+    border-radius: 21px;
+    font-size: 34px;
+    font-weight: 900;
+    box-shadow: 0 16px 40px rgba(245,196,0,.18);
+    transform: rotate(-2deg);
 }
 
 .hero-label {
-    color: #f5b400;
-    font-size: 13px;
-    font-weight: 800;
+    display: inline-block;
+    color: var(--yellow);
+    font-size: 11px;
+    font-weight: 900;
     letter-spacing: 2px;
-    margin-bottom: 10px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
 }
 
 .hero h1 {
     margin: 0;
-    font-size: 42px;
-    font-weight: 900;
+    font-size: clamp(36px, 5vw, 56px);
+    line-height: 1.05;
+    letter-spacing: -1.7px;
+    font-weight: 950;
+}
+
+.hero h1 span {
+    color: var(--yellow);
 }
 
 .hero p {
     max-width: 720px;
-    margin: 18px auto 0;
-    line-height: 1.7;
-    color: #d7dce3;
+    margin: 21px auto 0;
+    color: #c7d0da;
+    line-height: 1.75;
     font-size: 16px;
 }
 
-/* =========================
-   MAIN
-========================= */
+/* =================================
+   MAIN CONTAINER
+================================= */
 
 .container {
-    max-width: 1150px;
-    margin: auto;
-    padding: 55px 20px;
+    max-width: 1160px;
+    margin: -55px auto 75px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 5;
 }
 
-/* =========================
+/* =================================
    RATING SUMMARY
-========================= */
+================================= */
 
 .rating-box {
-    background: white;
-    border-radius: 18px;
-    padding: 30px;
-    display: flex;
+    background: #fff;
+    border: 1px solid rgba(10,20,30,.06);
+    border-radius: 22px;
+    padding: 32px 38px;
+    display: grid;
+    grid-template-columns: 250px 1fr;
     align-items: center;
-    justify-content: center;
-    gap: 45px;
-    margin-bottom: 45px;
-    border: 1px solid #e1e5e9;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+    gap: 38px;
+    box-shadow: var(--shadow);
 }
 
 .rating-number {
     text-align: center;
+    padding-right: 35px;
+    border-right: 1px solid var(--border);
 }
 
 .rating-number strong {
     display: block;
-    font-size: 48px;
-    font-weight: 900;
-    color: #0b1220;
+    color: var(--navy);
+    font-size: 54px;
+    line-height: 1;
+    font-weight: 950;
+    letter-spacing: -2px;
 }
 
 .rating-stars {
-    color: #f5b400;
-    font-size: 25px;
+    color: var(--yellow);
+    font-size: 23px;
     letter-spacing: 3px;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
-.rating-title {
-    text-align: center;
+.rating-caption {
+    color: #89929b;
+    font-size: 11px;
+    font-weight: 800;
+    margin-top: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .rating-title h2 {
-    margin: 0 0 8px;
-    font-size: 23px;
-    color: #0b1220;
+    margin: 0 0 9px;
+    color: var(--navy);
+    font-size: 25px;
+    font-weight: 900;
 }
 
 .rating-title p {
+    max-width: 650px;
     margin: 0;
-    color: #667085;
-    line-height: 1.6;
+    color: var(--muted);
+    line-height: 1.7;
+    font-size: 14px;
 }
 
-/* =========================
+/* =================================
    SECTION TITLE
-========================= */
+================================= */
 
 .section-title {
     text-align: center;
-    margin-bottom: 30px;
+    margin: 62px auto 32px;
 }
 
 .section-title .small-title {
-    color: #c28b00;
-    font-size: 12px;
-    font-weight: 900;
+    color: var(--yellow-dark);
+    font-size: 10px;
+    font-weight: 950;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 
 .section-title h2 {
     margin: 8px 0 10px;
-    font-size: 30px;
-    color: #0b1220;
+    color: var(--navy);
+    font-size: 32px;
+    letter-spacing: -.8px;
+    font-weight: 950;
 }
 
 .section-title p {
-    margin: 0 auto;
     max-width: 680px;
-    color: #667085;
-    line-height: 1.6;
+    margin: auto;
+    color: var(--muted);
+    line-height: 1.7;
+    font-size: 14px;
 }
 
-/* =========================
+/* =================================
    REVIEWS GRID
-========================= */
+================================= */
 
 .reviews-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 22px;
+    gap: 18px;
 }
 
 .review-card {
-    background: white;
-    border-radius: 16px;
+    position: relative;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 18px;
     padding: 25px;
-    border: 1px solid #e1e5e9;
-    box-shadow: 0 7px 22px rgba(0,0,0,0.06);
-    transition: 0.3s;
+    box-shadow: 0 9px 28px rgba(8,13,22,.055);
+    transition: .28s ease;
+    overflow: hidden;
+}
+
+.review-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--yellow);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: .28s ease;
 }
 
 .review-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.10);
-    border-color: #f5b400;
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(8,13,22,.11);
+    border-color: #e5c84c;
+}
+
+.review-card:hover::before {
+    transform: scaleX(1);
 }
 
 .review-top {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 13px;
 }
 
 .avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: #0b1220;
-    color: #f5b400;
+    width: 51px;
+    height: 51px;
+    flex: 0 0 51px;
+    border-radius: 14px;
+    background: var(--navy);
+    color: var(--yellow);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
-    font-weight: 900;
-    flex-shrink: 0;
+    font-size: 19px;
+    font-weight: 950;
 }
 
 .review-top h3 {
-    margin: 0 0 4px;
-    color: #0b1220;
-    font-size: 17px;
+    margin: 0 0 3px;
+    color: var(--navy);
+    font-size: 16px;
+    font-weight: 900;
 }
 
 .review-top span {
-    color: #667085;
-    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #8a949e;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.review-top span::before {
+    content: "✓";
+    width: 15px;
+    height: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--green);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 9px;
 }
 
 .stars {
-    color: #f5b400;
-    font-size: 19px;
+    color: var(--yellow);
+    font-size: 17px;
     letter-spacing: 2px;
     margin: 17px 0 12px;
 }
 
 .review-card p {
     margin: 0;
-    color: #4b5563;
-    line-height: 1.75;
-    font-size: 14px;
+    color: #505b66;
+    line-height: 1.78;
+    font-size: 13.5px;
 }
 
-/* =========================
+/* =================================
    WRITE REVIEW
-========================= */
+================================= */
 
 .write-review {
-    margin-top: 55px;
-    background: #0b1220;
+    position: relative;
+    overflow: hidden;
+    margin-top: 58px;
+    background:
+        radial-gradient(circle at 90% 15%, rgba(245,196,0,.11), transparent 25%),
+        var(--navy);
     color: white;
-    border-radius: 20px;
-    padding: 38px 30px;
-    box-shadow: 0 12px 35px rgba(11,18,32,0.18);
+    border-radius: 23px;
+    padding: 43px 30px;
+    box-shadow: 0 20px 55px rgba(8,13,22,.20);
+}
+
+.write-review::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: .14;
+    background-image:
+        linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size: 45px 45px;
+    pointer-events: none;
+}
+
+.write-content {
+    position: relative;
+    z-index: 1;
 }
 
 .write-review h2 {
     margin: 0;
     text-align: center;
-    font-size: 28px;
+    font-size: 29px;
+    font-weight: 950;
 }
 
-.write-review > p {
+.write-review > .write-content > p {
     text-align: center;
-    color: #c9ced6;
-    margin: 10px auto 30px;
+    color: #b9c2cc;
+    margin: 9px auto 30px;
     max-width: 650px;
-    line-height: 1.6;
+    line-height: 1.65;
+    font-size: 14px;
 }
 
 .form-box {
@@ -319,179 +470,223 @@ body {
 .form-group label {
     display: block;
     margin-bottom: 8px;
-    font-size: 13px;
-    font-weight: 700;
-    color: #f5b400;
+    color: var(--yellow);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: .5px;
+    text-transform: uppercase;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    border: 1px solid #344054;
-    background: #111827;
-    color: white;
-    border-radius: 9px;
-    padding: 13px 14px;
+    border: 1px solid #303d4d;
+    background: #101925;
+    color: #fff;
+    border-radius: 11px;
+    padding: 14px 15px;
     font-size: 14px;
     outline: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: inherit;
+    transition: .2s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #778391;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #f5b400;
+    border-color: var(--yellow);
+    box-shadow: 0 0 0 3px rgba(245,196,0,.08);
 }
 
 .form-group textarea {
-    min-height: 130px;
+    min-height: 135px;
     resize: vertical;
 }
 
-/* =========================
+/* =================================
    STAR SELECTOR
-========================= */
+================================= */
 
 .star-selector {
     display: flex;
-    gap: 6px;
-    margin-top: 5px;
+    gap: 4px;
 }
 
 .star-btn {
     border: none;
     background: transparent;
-    color: #667085;
-    font-size: 30px;
+    color: #536070;
+    font-size: 31px;
+    line-height: 1;
     cursor: pointer;
-    padding: 0;
-    transition: 0.2s;
+    padding: 0 2px;
+    transition: .18s ease;
 }
 
 .star-btn.active,
 .star-btn:hover {
-    color: #f5b400;
-    transform: scale(1.1);
+    color: var(--yellow);
+    transform: scale(1.08);
+}
+
+.rating-selected {
+    color: #8995a1;
+    font-size: 11px;
+    margin-left: 8px;
+    align-self: center;
 }
 
 .submit-btn {
     width: 100%;
     border: none;
-    background: #f5b400;
-    color: #0b1220;
-    padding: 14px;
-    border-radius: 9px;
-    font-size: 15px;
-    font-weight: 900;
+    background: var(--yellow);
+    color: var(--navy);
+    padding: 15px;
+    border-radius: 11px;
+    font-size: 14px;
+    font-weight: 950;
     cursor: pointer;
-    transition: 0.3s;
+    transition: .25s ease;
+    box-shadow: 0 9px 24px rgba(245,196,0,.14);
 }
 
 .submit-btn:hover {
-    background: #ffc928;
+    background: #fff;
     transform: translateY(-2px);
 }
 
-/* =========================
+/* =================================
    GOOGLE REVIEW
-========================= */
+================================= */
 
 .google-box {
-    margin-top: 28px;
-    background: white;
-    border-radius: 18px;
-    padding: 30px;
+    margin-top: 25px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 32px 25px;
     text-align: center;
-    border: 1px solid #e1e5e9;
-    box-shadow: 0 7px 22px rgba(0,0,0,0.06);
+    box-shadow: 0 8px 28px rgba(8,13,22,.055);
+}
+
+.google-badge {
+    width: 44px;
+    height: 44px;
+    margin: 0 auto 13px;
+    border-radius: 12px;
+    background: var(--yellow-soft);
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    font-weight: 950;
 }
 
 .google-box h2 {
-    margin: 0 0 10px;
-    color: #0b1220;
+    margin: 0 0 8px;
+    color: var(--navy);
+    font-size: 23px;
+    font-weight: 900;
 }
 
 .google-box p {
-    margin: 0 auto 20px;
     max-width: 650px;
-    color: #667085;
-    line-height: 1.6;
+    margin: 0 auto 20px;
+    color: var(--muted);
+    line-height: 1.65;
+    font-size: 13px;
 }
 
 .google-btn {
-    display: inline-block;
-    text-decoration: none;
-    background: #0b1220;
-    color: #f5b400;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--navy);
+    color: var(--yellow);
     padding: 13px 22px;
-    border-radius: 9px;
-    font-weight: 800;
-    transition: 0.3s;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 900;
+    transition: .25s ease;
 }
 
 .google-btn:hover {
-    background: #f5b400;
-    color: #0b1220;
-}
-
-/* =========================
-   BACK BUTTON
-========================= */
-
-.back-section {
-    text-align: center;
-    margin: 45px 0 10px;
-}
-
-.main-back-btn {
-    display: inline-block;
-    text-decoration: none;
-    background: #f5b400;
-    color: #0b1220;
-    padding: 13px 25px;
-    border-radius: 9px;
-    font-weight: 900;
-    transition: 0.3s;
-}
-
-.main-back-btn:hover {
-    background: #ffc928;
+    background: var(--yellow);
+    color: var(--navy);
     transform: translateY(-2px);
 }
 
-/* =========================
+/* =================================
+   BACK SECTION
+================================= */
+
+.back-section {
+    text-align: center;
+    margin: 42px 0 8px;
+}
+
+.main-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--yellow);
+    color: var(--navy);
+    padding: 13px 23px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 950;
+    transition: .25s ease;
+}
+
+.main-back-btn:hover {
+    background: var(--navy);
+    color: var(--yellow);
+    transform: translateY(-2px);
+}
+
+/* =================================
    FOOTER
-========================= */
+================================= */
 
 .footer {
-    background: #0b1220;
-    color: #c9ced6;
+    background: var(--navy);
+    color: #9ca7b2;
     text-align: center;
-    padding: 35px 20px 90px;
-    margin-top: 35px;
+    padding: 38px 20px 90px;
+    border-top: 1px solid rgba(255,255,255,.06);
 }
 
 .footer-logo {
-    color: #f5b400;
-    font-size: 22px;
-    font-weight: 900;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 950;
     margin-bottom: 8px;
 }
 
+.footer-logo span {
+    color: var(--yellow);
+}
+
 .footer p {
-    margin: 7px 0;
-    font-size: 13px;
+    margin: 6px 0;
+    font-size: 12px;
     line-height: 1.6;
 }
 
 .footer a {
-    color: #f5b400;
-    text-decoration: none;
-    font-weight: 700;
+    color: var(--yellow);
+    font-weight: 800;
 }
 
-/* =========================
+/* =================================
    FLOATING BUTTONS
-========================= */
+================================= */
 
 .floating-buttons {
     position: fixed;
@@ -499,22 +694,21 @@ body {
     right: 18px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    z-index: 1000;
+    gap: 9px;
+    z-index: 2000;
 }
 
 .float-btn {
-    width: 52px;
-    height: 52px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
     text-decoration: none;
-    font-size: 21px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.22);
-    transition: 0.3s;
+    font-size: 20px;
+    box-shadow: 0 9px 27px rgba(0,0,0,.22);
+    transition: .25s ease;
 }
 
 .float-btn:hover {
@@ -522,85 +716,110 @@ body {
 }
 
 .call-btn {
-    background: #2563eb;
+    background: var(--yellow);
+    color: var(--navy);
 }
 
 .whatsapp-btn {
-    background: #25d366;
+    background: #fff;
+    color: #168a52;
+    border: 1px solid #dce3e8;
 }
 
-/* =========================
+/* =================================
    RESPONSIVE
-========================= */
+================================= */
 
 @media (max-width: 800px) {
 
+    .header-inner {
+        padding: 14px 16px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .header-status {
+        display: none;
+    }
+
     .hero {
-        padding: 55px 18px;
+        padding: 55px 18px 95px;
+    }
+
+    .hero-icon {
+        width: 66px;
+        height: 66px;
+        font-size: 29px;
+        border-radius: 18px;
     }
 
     .hero h1 {
-        font-size: 32px;
+        font-size: 35px;
     }
 
     .hero p {
         font-size: 14px;
     }
 
+    .container {
+        margin-top: -42px;
+        padding: 0 13px;
+    }
+
     .rating-box {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         gap: 20px;
-        padding: 25px 18px;
+        padding: 27px 20px;
+    }
+
+    .rating-number {
+        padding: 0 0 20px;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
     }
 
     .reviews-grid {
         grid-template-columns: 1fr;
     }
 
-    .container {
-        padding: 40px 15px;
-    }
-
-    .write-review {
-        padding: 30px 18px;
+    .section-title {
+        margin-top: 48px;
     }
 
     .section-title h2 {
-        font-size: 26px;
+        font-size: 27px;
     }
 
-    .header-inner {
-        flex-wrap: wrap;
-    }
-
-    .logo {
-        font-size: 18px;
-    }
-
-    .back-btn {
-        font-size: 12px;
-        padding: 9px 12px;
+    .write-review {
+        padding: 32px 18px;
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
+
+    .back-btn {
+        padding: 9px 12px;
+        font-size: 11px;
+    }
 
     .hero h1 {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .hero-icon {
         width: 58px;
         height: 58px;
-        font-size: 27px;
+        font-size: 26px;
     }
 
     .rating-number strong {
-        font-size: 42px;
+        font-size: 45px;
     }
 
     .review-card {
-        padding: 20px;
+        padding: 21px;
     }
 
     .write-review h2 {
@@ -613,8 +832,9 @@ body {
     }
 
     .float-btn {
-        width: 48px;
-        height: 48px;
+        width: 47px;
+        height: 47px;
+        font-size: 18px;
     }
 }
 </style>
@@ -622,54 +842,69 @@ body {
 
 <body>
 
-<!-- =========================
+<!-- =================================
      HEADER
-========================= -->
+================================= -->
 
 <header class="header">
+
     <div class="header-inner">
 
         <a href="index.html" class="logo">
-            FAST CAR BATTERY
+            800<span>PowerBat</span>
         </a>
 
-        <a href="index.html" class="back-btn">
-            ← Back to Home
-        </a>
+        <div class="header-right">
+
+            <div class="header-status">
+                24/7 Mobile Battery Service
+            </div>
+
+            <a href="index.html" class="back-btn">
+                ← Back to Home
+            </a>
+
+        </div>
 
     </div>
+
 </header>
 
 
-<!-- =========================
+<!-- =================================
      HERO
-========================= -->
+================================= -->
 
 <section class="hero">
 
-    <div class="hero-icon">
-        ★
+    <div class="hero-content">
+
+        <div class="hero-icon" aria-hidden="true">
+            ★
+        </div>
+
+        <div class="hero-label">
+            Customer Experience
+        </div>
+
+        <h1>
+            What Our <span>Customers Say</span>
+        </h1>
+
+        <p>
+            Discover customer feedback about our mobile car battery
+            replacement, jump start, battery diagnosis and roadside
+            assistance services across Dubai.
+        </p>
+
     </div>
-
-    <div class="hero-label">
-        CUSTOMER EXPERIENCE
-    </div>
-
-    <h1>Customer Reviews</h1>
-
-    <p>
-        See what our customers say about FAST CAR BATTERY.
-        We provide professional 24/7 mobile car battery replacement,
-        battery diagnosis, jump start and roadside battery assistance
-        across Dubai.
-    </p>
 
 </section>
 
 
-<!-- =========================
+<!-- =================================
      MAIN
-========================= -->
+================================= -->
 
 <main class="container">
 
@@ -679,21 +914,30 @@ body {
     <section class="rating-box">
 
         <div class="rating-number">
+
             <strong>5.0</strong>
 
             <div class="rating-stars">
                 ★★★★★
             </div>
+
+            <div class="rating-caption">
+                Customer Rating
+            </div>
+
         </div>
+
 
         <div class="rating-title">
 
-            <h2>Customer Satisfaction</h2>
+            <h2>
+                Customer Satisfaction
+            </h2>
 
             <p>
-                We appreciate every customer who trusts
-                FAST CAR BATTERY with their vehicle.
-                Your feedback helps us continue improving our service.
+                We value every customer who chooses 800PowerBat.
+                Your feedback helps us maintain professional service
+                standards and continuously improve the customer experience.
             </p>
 
         </div>
@@ -701,34 +945,36 @@ body {
     </section>
 
 
-    <!-- REVIEWS TITLE -->
+    <!-- REVIEWS HEADING -->
 
-    <div class="section-title">
+    <section class="section-title">
 
         <div class="small-title">
-            CUSTOMER FEEDBACK
+            Customer Feedback
         </div>
 
-        <h2>What Our Customers Say</h2>
+        <h2>
+            Recent Customer Experiences
+        </h2>
 
         <p>
-            Real customer experiences with our mobile battery
+            Feedback from customers who used our mobile battery
             replacement and roadside assistance services.
         </p>
 
-    </div>
+    </section>
 
 
-    <!-- =========================
+    <!-- =================================
          REVIEWS
-    ========================= -->
+    ================================= -->
 
     <section class="reviews-grid" id="reviewsList">
 
 
         <!-- AHMED -->
 
-        <div class="review-card">
+        <article class="review-card">
 
             <div class="review-top">
 
@@ -737,8 +983,13 @@ body {
                 </div>
 
                 <div>
+
                     <h3>Ahmed</h3>
-                    <span>✓ Customer Review</span>
+
+                    <span>
+                        Customer Review
+                    </span>
+
                 </div>
 
             </div>
@@ -748,18 +999,18 @@ body {
             </div>
 
             <p>
-                Very fast and professional service. My car battery
-                stopped working and FAST CAR BATTERY came to my location
-                quickly. The battery was replaced on-site without any hassle.
+                Very fast and professional service. My car battery stopped
+                working and 800PowerBat came to my location quickly.
+                The battery was replaced on-site without any hassle.
                 Highly recommended.
             </p>
 
-        </div>
+        </article>
 
 
         <!-- MOHAMMED -->
 
-        <div class="review-card">
+        <article class="review-card">
 
             <div class="review-top">
 
@@ -768,8 +1019,13 @@ body {
                 </div>
 
                 <div>
+
                     <h3>Mohammed</h3>
-                    <span>✓ Customer Review</span>
+
+                    <span>
+                        Customer Review
+                    </span>
+
                 </div>
 
             </div>
@@ -784,12 +1040,12 @@ body {
                 Very professional and reliable mobile battery service.
             </p>
 
-        </div>
+        </article>
 
 
         <!-- SAFA -->
 
-        <div class="review-card">
+        <article class="review-card">
 
             <div class="review-top">
 
@@ -798,8 +1054,13 @@ body {
                 </div>
 
                 <div>
+
                     <h3>Safa Albaloshi</h3>
-                    <span>✓ Customer Review</span>
+
+                    <span>
+                        Customer Review
+                    </span>
+
                 </div>
 
             </div>
@@ -809,17 +1070,17 @@ body {
             </div>
 
             <p>
-                Great experience with FAST CAR BATTERY. Quick response,
+                Great experience with 800PowerBat. Quick response,
                 professional technician and smooth battery replacement.
                 I really appreciate the service and support.
             </p>
 
-        </div>
+        </article>
 
 
         <!-- GEORGE -->
 
-        <div class="review-card">
+        <article class="review-card">
 
             <div class="review-top">
 
@@ -828,8 +1089,13 @@ body {
                 </div>
 
                 <div>
+
                     <h3>George</h3>
-                    <span>✓ Customer Review</span>
+
+                    <span>
+                        Customer Review
+                    </span>
+
                 </div>
 
             </div>
@@ -839,151 +1105,175 @@ body {
             </div>
 
             <p>
-                Excellent and professional battery service. FAST CAR BATTERY
+                Excellent and professional battery service. 800PowerBat
                 arrived quickly, diagnosed the issue and replaced my car
                 battery on-site. Very fast, reliable and professional service
                 in Dubai.
             </p>
 
-        </div>
+        </article>
 
 
     </section>
 
 
-    <!-- =========================
+    <!-- =================================
          WRITE REVIEW
-    ========================= -->
+    ================================= -->
 
     <section class="write-review">
 
-        <h2>Share Your Experience</h2>
+        <div class="write-content">
 
-        <p>
-            Had a good experience with FAST CAR BATTERY?
-            Share your feedback with us.
-        </p>
+            <h2>
+                Share Your Experience
+            </h2>
 
-
-        <div class="form-box">
-
-            <form id="reviewForm">
-
-                <!-- NAME -->
-
-                <div class="form-group">
-
-                    <label for="customerName">
-                        Your Name
-                    </label>
-
-                    <input
-                        type="text"
-                        id="customerName"
-                        placeholder="Enter your name"
-                        required
-                    >
-
-                </div>
+            <p>
+                Used 800PowerBat recently? Share your experience
+                and let us know how our service performed for you.
+            </p>
 
 
-                <!-- RATING -->
+            <div class="form-box">
 
-                <div class="form-group">
+                <form id="reviewForm">
 
-                    <label>
-                        Your Rating
-                    </label>
 
-                    <div class="star-selector" id="starSelector">
+                    <!-- NAME -->
 
-                        <button
-                            type="button"
-                            class="star-btn"
-                            data-rating="1"
-                        >★</button>
+                    <div class="form-group">
 
-                        <button
-                            type="button"
-                            class="star-btn"
-                            data-rating="2"
-                        >★</button>
+                        <label for="customerName">
+                            Your Name
+                        </label>
 
-                        <button
-                            type="button"
-                            class="star-btn"
-                            data-rating="3"
-                        >★</button>
-
-                        <button
-                            type="button"
-                            class="star-btn"
-                            data-rating="4"
-                        >★</button>
-
-                        <button
-                            type="button"
-                            class="star-btn"
-                            data-rating="5"
-                        >★</button>
+                        <input
+                            type="text"
+                            id="customerName"
+                            placeholder="Enter your name"
+                            maxlength="60"
+                            required
+                        >
 
                     </div>
 
-                </div>
+
+                    <!-- RATING -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Your Rating
+                        </label>
+
+                        <div class="star-selector">
+
+                            <button
+                                type="button"
+                                class="star-btn"
+                                data-rating="1"
+                                aria-label="1 star"
+                            >★</button>
+
+                            <button
+                                type="button"
+                                class="star-btn"
+                                data-rating="2"
+                                aria-label="2 stars"
+                            >★</button>
+
+                            <button
+                                type="button"
+                                class="star-btn"
+                                data-rating="3"
+                                aria-label="3 stars"
+                            >★</button>
+
+                            <button
+                                type="button"
+                                class="star-btn"
+                                data-rating="4"
+                                aria-label="4 stars"
+                            >★</button>
+
+                            <button
+                                type="button"
+                                class="star-btn"
+                                data-rating="5"
+                                aria-label="5 stars"
+                            >★</button>
+
+                            <span class="rating-selected" id="ratingText">
+                                Select rating
+                            </span>
+
+                        </div>
+
+                    </div>
 
 
-                <!-- REVIEW -->
+                    <!-- REVIEW -->
 
-                <div class="form-group">
+                    <div class="form-group">
 
-                    <label for="customerReview">
-                        Your Review
-                    </label>
+                        <label for="customerReview">
+                            Your Review
+                        </label>
 
-                    <textarea
-                        id="customerReview"
-                        placeholder="Write your experience..."
-                        required
-                    ></textarea>
+                        <textarea
+                            id="customerReview"
+                            placeholder="Tell us about your experience..."
+                            maxlength="600"
+                            required
+                        ></textarea>
 
-                </div>
+                    </div>
 
 
-                <!-- SUBMIT -->
+                    <!-- SUBMIT -->
 
-                <button
-                    type="submit"
-                    class="submit-btn"
-                >
-                    Submit Review
-                </button>
+                    <button
+                        type="submit"
+                        class="submit-btn"
+                    >
+                        Submit Customer Review
+                    </button>
 
-            </form>
+                </form>
+
+            </div>
 
         </div>
 
     </section>
 
 
-    <!-- =========================
+    <!-- =================================
          GOOGLE REVIEW
-    ========================= -->
+    ================================= -->
 
     <section class="google-box">
 
-        <h2>Review Us on Google</h2>
+        <div class="google-badge">
+            G
+        </div>
+
+        <h2>
+            Review 800PowerBat on Google
+        </h2>
 
         <p>
-            Your Google review helps other customers find
-            FAST CAR BATTERY when they need fast and reliable
-            mobile battery assistance in Dubai.
+            Your genuine Google review can help other customers
+            understand our mobile battery and roadside assistance service.
         </p>
 
-        <!-- Replace the link below with your actual Google Review link -->
+        <!-- Replace with your actual Google review link -->
 
         <a
             href="YOUR_GOOGLE_REVIEW_LINK"
             target="_blank"
+            rel="noopener noreferrer"
             class="google-btn"
         >
             ★ Leave a Google Review
@@ -992,7 +1282,7 @@ body {
     </section>
 
 
-    <!-- BACK BUTTON -->
+    <!-- BACK -->
 
     <div class="back-section">
 
@@ -1000,23 +1290,22 @@ body {
             href="index.html"
             class="main-back-btn"
         >
-            ← Back to FAST CAR BATTERY
+            ← Back to 800PowerBat
         </a>
 
     </div>
 
-
 </main>
 
 
-<!-- =========================
+<!-- =================================
      FOOTER
-========================= -->
+================================= -->
 
 <footer class="footer">
 
     <div class="footer-logo">
-        FAST CAR BATTERY
+        800<span>PowerBat</span>
     </div>
 
     <p>
@@ -1040,61 +1329,76 @@ body {
     </p>
 
     <p>
-        © 2026 FAST CAR BATTERY. All Rights Reserved.
+        © 2026 800PowerBat. All Rights Reserved.
     </p>
 
 </footer>
 
 
-<!-- =========================
-     FLOATING BUTTONS
-========================= -->
+<!-- =================================
+     FLOATING CONTACT
+================================= -->
 
 <div class="floating-buttons">
 
     <a
         href="tel:+971524040699"
         class="float-btn call-btn"
-        aria-label="Call FAST CAR BATTERY"
+        aria-label="Call 800PowerBat"
+        title="Call 800PowerBat"
     >
         ☎
     </a>
 
     <a
-        href="https://wa.me/971524040699"
+        href="https://wa.me/971524040699?text=Hello%20800PowerBat,%20I%20would%20like%20to%20contact%20you."
         target="_blank"
+        rel="noopener noreferrer"
         class="float-btn whatsapp-btn"
-        aria-label="WhatsApp FAST CAR BATTERY"
+        aria-label="WhatsApp 800PowerBat"
+        title="WhatsApp 800PowerBat"
     >
-        ☎
+        💬
     </a>
 
 </div>
 
 
-<!-- =========================
+<!-- =================================
      JAVASCRIPT
-========================= -->
+================================= -->
 
 <script>
 
 let selectedRating = 0;
 
-const starButtons = document.querySelectorAll(".star-btn");
+const starButtons =
+    document.querySelectorAll(".star-btn");
+
+const ratingText =
+    document.getElementById("ratingText");
+
+
+const ratingNames = {
+    1: "1 star selected",
+    2: "2 stars selected",
+    3: "3 stars selected",
+    4: "4 stars selected",
+    5: "5 stars selected"
+};
+
 
 starButtons.forEach(function(button) {
 
     button.addEventListener("click", function() {
 
-        selectedRating = parseInt(
-            this.getAttribute("data-rating")
-        );
+        selectedRating =
+            Number(this.dataset.rating);
 
         starButtons.forEach(function(star) {
 
-            const rating = parseInt(
-                star.getAttribute("data-rating")
-            );
+            const rating =
+                Number(star.dataset.rating);
 
             if (rating <= selectedRating) {
                 star.classList.add("active");
@@ -1104,14 +1408,17 @@ starButtons.forEach(function(button) {
 
         });
 
+        ratingText.textContent =
+            ratingNames[selectedRating];
+
     });
 
 });
 
 
-document.getElementById("reviewForm").addEventListener(
-    "submit",
-    function(event) {
+document
+    .getElementById("reviewForm")
+    .addEventListener("submit", function(event) {
 
         event.preventDefault();
 
@@ -1131,35 +1438,44 @@ document.getElementById("reviewForm").addEventListener(
 
         if (!name || !review) {
 
-            alert("Please enter your name and review.");
+            alert(
+                "Please enter your name and review."
+            );
 
             return;
-
         }
 
 
         if (selectedRating === 0) {
 
-            alert("Please select a rating.");
+            alert(
+                "Please select a rating."
+            );
 
             return;
-
         }
 
 
         /*
-         * Basic security:
-         * Prevent HTML tags from being inserted
-         * into the page through the review form.
+         * Escape user text before displaying it.
          */
 
         const safeName =
-            name.replace(/</g, "&lt;")
-                .replace(/>/g, "&gt;");
+            name
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+
 
         const safeReview =
-            review.replace(/</g, "&lt;")
-                  .replace(/>/g, "&gt;");
+            review
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
 
 
         const stars =
@@ -1168,13 +1484,17 @@ document.getElementById("reviewForm").addEventListener(
 
 
         const firstLetter =
-            safeName.charAt(0).toUpperCase();
+            safeName
+                .charAt(0)
+                .toUpperCase();
 
 
         const newReview =
-        document.createElement("div");
+            document.createElement("article");
 
-        newReview.className = "review-card";
+
+        newReview.className =
+            "review-card";
 
 
         newReview.innerHTML = `
@@ -1190,7 +1510,7 @@ document.getElementById("reviewForm").addEventListener(
                     <h3>${safeName}</h3>
 
                     <span>
-                        ✓ Customer Review
+                        Customer Review
                     </span>
 
                 </div>
@@ -1218,17 +1538,16 @@ document.getElementById("reviewForm").addEventListener(
          */
 
         nameInput.value = "";
-
         reviewInput.value = "";
 
         selectedRating = 0;
 
-
         starButtons.forEach(function(star) {
-
             star.classList.remove("active");
-
         });
+
+        ratingText.textContent =
+            "Select rating";
 
 
         alert(
@@ -1241,9 +1560,7 @@ document.getElementById("reviewForm").addEventListener(
             block: "center"
         });
 
-    }
-
-);
+    });
 
 </script>
 
