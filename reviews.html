@@ -4,246 +4,617 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Customer Reviews | FAST BATTERY</title>
+<title>Customer Reviews | FAST CAR BATTERY</title>
+
+<meta name="description" content="Read customer reviews for FAST CAR BATTERY – professional 24/7 mobile car battery replacement and roadside battery assistance in Dubai.">
 
 <style>
 * {
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background: #f4f6f8;
     color: #17202a;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
+
 .header {
-    background: #111923;
+    background: #0b1220;
+    color: #fff;
+    padding: 16px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.20);
+}
+
+.header-inner {
+    max-width: 1150px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.logo {
+    color: #f5b400;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+}
+
+.back-btn {
+    text-decoration: none;
+    color: #0b1220;
+    background: #f5b400;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #ffc928;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    background:
+        linear-gradient(rgba(11,18,32,0.96), rgba(17,24,39,0.96));
     color: white;
     text-align: center;
-    padding: 35px 20px;
+    padding: 70px 20px 65px;
 }
 
-.header .icon {
-    font-size: 45px;
-}
-
-.header h1 {
-    margin: 8px 0;
+.hero-icon {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #f5b400;
+    color: #0b1220;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 32px;
+    box-shadow: 0 8px 25px rgba(245,180,0,0.25);
 }
 
-.header p {
+.hero-label {
+    color: #f5b400;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
     margin: 0;
-    color: #d5d9de;
+    font-size: 42px;
+    font-weight: 900;
 }
 
-/* MAIN */
+.hero p {
+    max-width: 720px;
+    margin: 18px auto 0;
+    line-height: 1.7;
+    color: #d7dce3;
+    font-size: 16px;
+}
+
+/* =========================
+   MAIN
+========================= */
+
 .container {
-    max-width: 850px;
+    max-width: 1150px;
     margin: auto;
-    padding: 25px 16px 50px;
+    padding: 55px 20px;
 }
 
-/* RATING SUMMARY */
-.rating-summary {
+/* =========================
+   RATING SUMMARY
+========================= */
+
+.rating-box {
     background: white;
-    border-radius: 22px;
-    padding: 28px;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-    margin-bottom: 25px;
+    border-radius: 18px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+    margin-bottom: 45px;
+    border: 1px solid #e1e5e9;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
 }
 
 .rating-number {
-    font-size: 45px;
-    font-weight: bold;
+    text-align: center;
+}
+
+.rating-number strong {
+    display: block;
+    font-size: 48px;
+    font-weight: 900;
+    color: #0b1220;
 }
 
 .rating-stars {
-    color: #FFD400;
-    font-size: 30px;
+    color: #f5b400;
+    font-size: 25px;
     letter-spacing: 3px;
+    margin-top: 5px;
 }
 
-.rating-summary p {
-    color: #59636e;
+.rating-title {
+    text-align: center;
 }
 
-/* REVIEW CARDS */
+.rating-title h2 {
+    margin: 0 0 8px;
+    font-size: 23px;
+    color: #0b1220;
+}
+
+.rating-title p {
+    margin: 0;
+    color: #667085;
+    line-height: 1.6;
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title .small-title {
+    color: #c28b00;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-title h2 {
+    margin: 8px 0 10px;
+    font-size: 30px;
+    color: #0b1220;
+}
+
+.section-title p {
+    margin: 0 auto;
+    max-width: 680px;
+    color: #667085;
+    line-height: 1.6;
+}
+
+/* =========================
+   REVIEWS GRID
+========================= */
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
 .review-card {
     background: white;
-    border-radius: 20px;
-    padding: 23px;
-    margin: 16px 0;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    border-radius: 16px;
+    padding: 25px;
+    border: 1px solid #e1e5e9;
+    box-shadow: 0 7px 22px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+
+.review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+    border-color: #f5b400;
 }
 
 .review-top {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    gap: 14px;
 }
 
-.customer-name {
-    font-weight: bold;
-    font-size: 18px;
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #0b1220;
+    color: #f5b400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 900;
+    flex-shrink: 0;
 }
 
-.review-date {
-    color: #8a929a;
-    font-size: 13px;
+.review-top h3 {
+    margin: 0 0 4px;
+    color: #0b1220;
+    font-size: 17px;
 }
 
-.review-stars {
-    color: #FFD400;
-    font-size: 21px;
-    margin: 8px 0;
+.review-top span {
+    color: #667085;
+    font-size: 12px;
+}
+
+.stars {
+    color: #f5b400;
+    font-size: 19px;
+    letter-spacing: 2px;
+    margin: 17px 0 12px;
 }
 
 .review-card p {
+    margin: 0;
     color: #4b5563;
-    line-height: 1.6;
-    margin-bottom: 0;
+    line-height: 1.75;
+    font-size: 14px;
 }
 
-/* WRITE REVIEW */
+/* =========================
+   WRITE REVIEW
+========================= */
+
 .write-review {
-    background: #111923;
+    margin-top: 55px;
+    background: #0b1220;
     color: white;
-    border-radius: 22px;
-    padding: 28px 22px;
-    margin-top: 30px;
+    border-radius: 20px;
+    padding: 38px 30px;
+    box-shadow: 0 12px 35px rgba(11,18,32,0.18);
 }
 
 .write-review h2 {
-    margin-top: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 28px;
 }
 
-.write-review p {
-    color: #d5d9de;
+.write-review > p {
+    text-align: center;
+    color: #c9ced6;
+    margin: 10px auto 30px;
+    max-width: 650px;
+    line-height: 1.6;
+}
+
+.form-box {
+    max-width: 720px;
+    margin: auto;
 }
 
 .form-group {
-    margin: 16px 0;
+    margin-bottom: 18px;
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 7px;
-    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #f5b400;
 }
 
-input,
-textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
-    padding: 14px;
-    border: none;
-    border-radius: 12px;
-    font-size: 16px;
-    font-family: Arial, sans-serif;
+    border: 1px solid #344054;
+    background: #111827;
+    color: white;
+    border-radius: 9px;
+    padding: 13px 14px;
+    font-size: 14px;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-textarea {
-    min-height: 120px;
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #f5b400;
+}
+
+.form-group textarea {
+    min-height: 130px;
     resize: vertical;
 }
 
-/* STAR SELECTOR */
-.star-select {
+/* =========================
+   STAR SELECTOR
+========================= */
+
+.star-selector {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    gap: 5px;
+    gap: 6px;
+    margin-top: 5px;
 }
 
-.star-select input {
-    display: none;
-}
-
-.star-select label {
-    font-size: 35px;
-    color: #777;
+.star-btn {
+    border: none;
+    background: transparent;
+    color: #667085;
+    font-size: 30px;
     cursor: pointer;
+    padding: 0;
+    transition: 0.2s;
 }
 
-.star-select label:hover,
-.star-select label:hover ~ label,
-.star-select input:checked ~ label {
-    color: #FFD400;
+.star-btn.active,
+.star-btn:hover {
+    color: #f5b400;
+    transform: scale(1.1);
 }
 
-/* SUBMIT */
 .submit-btn {
     width: 100%;
-    padding: 16px;
-    margin-top: 8px;
-    border: 2px solid #000;
-    border-radius: 30px;
-    background: #FFD400;
-    color: #000;
-    font-size: 17px;
-    font-weight: bold;
+    border: none;
+    background: #f5b400;
+    color: #0b1220;
+    padding: 14px;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 900;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .submit-btn:hover {
-    background: #000;
-    color: #FFD400;
+    background: #ffc928;
+    transform: translateY(-2px);
 }
 
-/* GOOGLE REVIEW */
-.google-review {
+/* =========================
+   GOOGLE REVIEW
+========================= */
+
+.google-box {
+    margin-top: 28px;
+    background: white;
+    border-radius: 18px;
+    padding: 30px;
     text-align: center;
-    margin-top: 25px;
+    border: 1px solid #e1e5e9;
+    box-shadow: 0 7px 22px rgba(0,0,0,0.06);
 }
 
-.google-review a {
+.google-box h2 {
+    margin: 0 0 10px;
+    color: #0b1220;
+}
+
+.google-box p {
+    margin: 0 auto 20px;
+    max-width: 650px;
+    color: #667085;
+    line-height: 1.6;
+}
+
+.google-btn {
     display: inline-block;
-    background: #FFD400;
-    color: #000;
     text-decoration: none;
-    padding: 14px 25px;
-    border-radius: 30px;
-    border: 2px solid #000;
-    font-weight: bold;
+    background: #0b1220;
+    color: #f5b400;
+    padding: 13px 22px;
+    border-radius: 9px;
+    font-weight: 800;
+    transition: 0.3s;
 }
 
-/* BACK BUTTON */
-.back {
-    display: block;
-    width: fit-content;
-    margin: 28px auto 0;
-    padding: 13px 24px;
-    border-radius: 30px;
-    background: #FFD400;
-    border: 2px solid #000;
-    color: #000;
+.google-btn:hover {
+    background: #f5b400;
+    color: #0b1220;
+}
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-section {
+    text-align: center;
+    margin: 45px 0 10px;
+}
+
+.main-back-btn {
+    display: inline-block;
     text-decoration: none;
-    font-weight: bold;
+    background: #f5b400;
+    color: #0b1220;
+    padding: 13px 25px;
+    border-radius: 9px;
+    font-weight: 900;
+    transition: 0.3s;
 }
 
-.back:hover {
-    background: #000;
-    color: #FFD400;
+.main-back-btn:hover {
+    background: #ffc928;
+    transform: translateY(-2px);
 }
 
-/* MOBILE */
-@media (max-width: 600px) {
-    .header h1 {
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #0b1220;
+    color: #c9ced6;
+    text-align: center;
+    padding: 35px 20px 90px;
+    margin-top: 35px;
+}
+
+.footer-logo {
+    color: #f5b400;
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.footer p {
+    margin: 7px 0;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.footer a {
+    color: #f5b400;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* =========================
+   FLOATING BUTTONS
+========================= */
+
+.floating-buttons {
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.float-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 21px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.22);
+    transition: 0.3s;
+}
+
+.float-btn:hover {
+    transform: scale(1.08);
+}
+
+.call-btn {
+    background: #2563eb;
+}
+
+.whatsapp-btn {
+    background: #25d366;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .hero {
+        padding: 55px 18px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .rating-box {
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px 18px;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 40px 15px;
+    }
+
+    .write-review {
+        padding: 30px 18px;
+    }
+
+    .section-title h2 {
+        font-size: 26px;
+    }
+
+    .header-inner {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .back-btn {
+        font-size: 12px;
+        padding: 9px 12px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .hero h1 {
         font-size: 28px;
     }
 
-    .review-top {
-        flex-direction: column;
-        align-items: flex-start;
+    .hero-icon {
+        width: 58px;
+        height: 58px;
+        font-size: 27px;
     }
 
-    .rating-number {
-        font-size: 40px;
+    .rating-number strong {
+        font-size: 42px;
+    }
+
+    .review-card {
+        padding: 20px;
+    }
+
+    .write-review h2 {
+        font-size: 24px;
+    }
+
+    .floating-buttons {
+        right: 13px;
+        bottom: 13px;
+    }
+
+    .float-btn {
+        width: 48px;
+        height: 48px;
     }
 }
 </style>
@@ -251,214 +622,628 @@ textarea {
 
 <body>
 
-<div class="header">
-    <div class="icon">⭐</div>
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="header">
+    <div class="header-inner">
+
+        <a href="index.html" class="logo">
+            FAST CAR BATTERY
+        </a>
+
+        <a href="index.html" class="back-btn">
+            ← Back to Home
+        </a>
+
+    </div>
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-icon">
+        ★
+    </div>
+
+    <div class="hero-label">
+        CUSTOMER EXPERIENCE
+    </div>
+
     <h1>Customer Reviews</h1>
-    <p>See what our customers say about FAST BATTERY</p>
-</div>
-
-<div class="container">
-
-<!-- RATING SUMMARY -->
-<div class="rating-summary">
-    <div class="rating-number">5.0</div>
-
-    <div class="rating-stars">
-        ★ ★ ★ ★ ★
-    </div>
-
-    <p>Customer satisfaction is our priority.</p>
-</div>
-
-
-<!-- EXISTING REVIEWS -->
-
-<div class="review-card">
-
-    <div class="review-top">
-        <div class="customer-name">Ahmed</div>
-        <div class="review-date">★★★★★</div>
-    </div>
-
-    <div class="review-stars">
-        ★★★★★
-    </div>
 
     <p>
-        Very fast battery replacement service. The technician arrived
-        at my location and replaced the battery professionally.
+        See what our customers say about FAST CAR BATTERY.
+        We provide professional 24/7 mobile car battery replacement,
+        battery diagnosis, jump start and roadside battery assistance
+        across Dubai.
     </p>
 
-</div>
+</section>
 
 
-<div class="review-card">
+<!-- =========================
+     MAIN
+========================= -->
 
-    <div class="review-top">
-        <div class="customer-name">Mohammed</div>
-        <div class="review-date">★★★★★</div>
-    </div>
-
-    <div class="review-stars">
-        ★★★★★
-    </div>
-
-    <p>
-        Excellent service and quick response. Very professional
-        and helpful technician.
-    </p>
-
-</div>
+<main class="container">
 
 
-<div class="review-card">
+    <!-- RATING SUMMARY -->
 
-    <div class="review-top">
-        <div class="customer-name">Safa Albaloshi</div>
-        <div class="review-date">★★★★★</div>
-    </div>
+    <section class="rating-box">
 
-    <div class="review-stars">
-        ★★★★★
-    </div>
+        <div class="rating-number">
+            <strong>5.0</strong>
 
-    <p>
-        Fast onsite battery service. Everything was explained clearly
-        and the replacement was completed quickly.
-    </p>
-
-</div>
-
-
-<!-- WRITE REVIEW -->
-
-<div class="write-review">
-
-    <h2>✍️ Write a Review</h2>
-
-    <p>
-        Had a good experience with FAST BATTERY?
-        Share your feedback with us.
-    </p>
-
-    <form id="reviewForm">
-
-        <div class="form-group">
-            <label>Your Name</label>
-            <input
-                type="text"
-                id="customerName"
-                placeholder="Enter your name"
-                required>
+            <div class="rating-stars">
+                ★★★★★
+            </div>
         </div>
 
+        <div class="rating-title">
 
-        <div class="form-group">
+            <h2>Customer Satisfaction</h2>
 
-            <label>Your Rating</label>
+            <p>
+                We appreciate every customer who trusts
+                FAST CAR BATTERY with their vehicle.
+                Your feedback helps us continue improving our service.
+            </p>
 
-            <div class="star-select">
+        </div>
 
-                <input type="radio" id="star5" name="rating" value="5" required>
-                <label for="star5">★</label>
+    </section>
 
-                <input type="radio" id="star4" name="rating" value="4">
-                <label for="star4">★</label>
 
-                <input type="radio" id="star3" name="rating" value="3">
-                <label for="star3">★</label>
+    <!-- REVIEWS TITLE -->
 
-                <input type="radio" id="star2" name="rating" value="2">
-                <label for="star2">★</label>
+    <div class="section-title">
 
-                <input type="radio" id="star1" name="rating" value="1">
-                <label for="star1">★</label>
+        <div class="small-title">
+            CUSTOMER FEEDBACK
+        </div>
+
+        <h2>What Our Customers Say</h2>
+
+        <p>
+            Real customer experiences with our mobile battery
+            replacement and roadside assistance services.
+        </p>
+
+    </div>
+
+
+    <!-- =========================
+         REVIEWS
+    ========================= -->
+
+    <section class="reviews-grid" id="reviewsList">
+
+
+        <!-- AHMED -->
+
+        <div class="review-card">
+
+            <div class="review-top">
+
+                <div class="avatar">
+                    A
+                </div>
+
+                <div>
+                    <h3>Ahmed</h3>
+                    <span>✓ Customer Review</span>
+                </div>
 
             </div>
 
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                Very fast and professional service. My car battery
+                stopped working and FAST CAR BATTERY came to my location
+                quickly. The battery was replaced on-site without any hassle.
+                Highly recommended.
+            </p>
+
         </div>
 
 
-        <div class="form-group">
+        <!-- MOHAMMED -->
 
-            <label>Your Review</label>
+        <div class="review-card">
 
-            <textarea
-                id="reviewText"
-                placeholder="Tell us about your experience..."
-                required></textarea>
+            <div class="review-top">
+
+                <div class="avatar">
+                    M
+                </div>
+
+                <div>
+                    <h3>Mohammed</h3>
+                    <span>✓ Customer Review</span>
+                </div>
+
+            </div>
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                Excellent service in Dubai. The technician arrived on time,
+                checked the battery and explained everything clearly.
+                Very professional and reliable mobile battery service.
+            </p>
 
         </div>
 
 
-        <button type="submit" class="submit-btn">
-            ⭐ Submit Review
-        </button>
+        <!-- SAFA -->
 
-    </form>
+        <div class="review-card">
 
-</div>
+            <div class="review-top">
+
+                <div class="avatar">
+                    S
+                </div>
+
+                <div>
+                    <h3>Safa Albaloshi</h3>
+                    <span>✓ Customer Review</span>
+                </div>
+
+            </div>
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                Great experience with FAST CAR BATTERY. Quick response,
+                professional technician and smooth battery replacement.
+                I really appreciate the service and support.
+            </p>
+
+        </div>
 
 
-<!-- GOOGLE REVIEW BUTTON -->
+        <!-- GEORGE -->
 
-<div class="google-review">
+        <div class="review-card">
 
-    <a href="YOUR_GOOGLE_REVIEW_LINK" target="_blank">
-        ⭐ Leave a Google Review
+            <div class="review-top">
+
+                <div class="avatar">
+                    G
+                </div>
+
+                <div>
+                    <h3>George</h3>
+                    <span>✓ Customer Review</span>
+                </div>
+
+            </div>
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                Excellent and professional battery service. FAST CAR BATTERY
+                arrived quickly, diagnosed the issue and replaced my car
+                battery on-site. Very fast, reliable and professional service
+                in Dubai.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =========================
+         WRITE REVIEW
+    ========================= -->
+
+    <section class="write-review">
+
+        <h2>Share Your Experience</h2>
+
+        <p>
+            Had a good experience with FAST CAR BATTERY?
+            Share your feedback with us.
+        </p>
+
+
+        <div class="form-box">
+
+            <form id="reviewForm">
+
+                <!-- NAME -->
+
+                <div class="form-group">
+
+                    <label for="customerName">
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="customerName"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- RATING -->
+
+                <div class="form-group">
+
+                    <label>
+                        Your Rating
+                    </label>
+
+                    <div class="star-selector" id="starSelector">
+
+                        <button
+                            type="button"
+                            class="star-btn"
+                            data-rating="1"
+                        >★</button>
+
+                        <button
+                            type="button"
+                            class="star-btn"
+                            data-rating="2"
+                        >★</button>
+
+                        <button
+                            type="button"
+                            class="star-btn"
+                            data-rating="3"
+                        >★</button>
+
+                        <button
+                            type="button"
+                            class="star-btn"
+                            data-rating="4"
+                        >★</button>
+
+                        <button
+                            type="button"
+                            class="star-btn"
+                            data-rating="5"
+                        >★</button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- REVIEW -->
+
+                <div class="form-group">
+
+                    <label for="customerReview">
+                        Your Review
+                    </label>
+
+                    <textarea
+                        id="customerReview"
+                        placeholder="Write your experience..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+                    Submit Review
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         GOOGLE REVIEW
+    ========================= -->
+
+    <section class="google-box">
+
+        <h2>Review Us on Google</h2>
+
+        <p>
+            Your Google review helps other customers find
+            FAST CAR BATTERY when they need fast and reliable
+            mobile battery assistance in Dubai.
+        </p>
+
+        <!-- Replace the link below with your actual Google Review link -->
+
+        <a
+            href="YOUR_GOOGLE_REVIEW_LINK"
+            target="_blank"
+            class="google-btn"
+        >
+            ★ Leave a Google Review
+        </a>
+
+    </section>
+
+
+    <!-- BACK BUTTON -->
+
+    <div class="back-section">
+
+        <a
+            href="index.html"
+            class="main-back-btn"
+        >
+            ← Back to FAST CAR BATTERY
+        </a>
+
+    </div>
+
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+    <div class="footer-logo">
+        FAST CAR BATTERY
+    </div>
+
+    <p>
+        24/7 Mobile Car Battery Replacement & Roadside Assistance
+    </p>
+
+    <p>
+        Dubai, UAE
+    </p>
+
+    <p>
+        <a href="tel:+971524040699">
+            +971 52 404 0699
+        </a>
+    </p>
+
+    <p>
+        <a href="mailto:info@fastcarbattery.ae">
+            info@fastcarbattery.ae
+        </a>
+    </p>
+
+    <p>
+        © 2026 FAST CAR BATTERY. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- =========================
+     FLOATING BUTTONS
+========================= -->
+
+<div class="floating-buttons">
+
+    <a
+        href="tel:+971524040699"
+        class="float-btn call-btn"
+        aria-label="Call FAST CAR BATTERY"
+    >
+        ☎
+    </a>
+
+    <a
+        href="https://wa.me/971524040699"
+        target="_blank"
+        class="float-btn whatsapp-btn"
+        aria-label="WhatsApp FAST CAR BATTERY"
+    >
+        ☎
     </a>
 
 </div>
 
 
-<!-- BACK -->
-
-<a href="index.html" class="back">
-    ← Back to FAST BATTERY
-</a>
-
-</div>
-
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
 <script>
 
-document.getElementById("reviewForm").addEventListener("submit", function(e) {
+let selectedRating = 0;
 
-    e.preventDefault();
+const starButtons = document.querySelectorAll(".star-btn");
 
-    const name = document.getElementById("customerName").value;
-    const review = document.getElementById("reviewText").value;
-    const rating = document.querySelector('input[name="rating"]:checked').value;
+starButtons.forEach(function(button) {
 
-    const stars = "★".repeat(rating) + "☆".repeat(5 - rating);
+    button.addEventListener("click", function() {
 
-    const reviewCard = document.createElement("div");
+        selectedRating = parseInt(
+            this.getAttribute("data-rating")
+        );
 
-    reviewCard.className = "review-card";
+        starButtons.forEach(function(star) {
 
-    reviewCard.innerHTML = `
-        <div class="review-top">
-            <div class="customer-name">${name}</div>
-            <div class="review-date">New Review</div>
-        </div>
+            const rating = parseInt(
+                star.getAttribute("data-rating")
+            );
 
-        <div class="review-stars">
-            ${stars}
-        </div>
+            if (rating <= selectedRating) {
+                star.classList.add("active");
+            } else {
+                star.classList.remove("active");
+            }
 
-        <p>${review}</p>
-    `;
+        });
 
-    document
-        .getElementById("reviewForm")
-        .closest(".write-review")
-        .before(reviewCard);
-
-    document.getElementById("reviewForm").reset();
-
-    alert("Thank you for your review!");
+    });
 
 });
+
+
+document.getElementById("reviewForm").addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+        const nameInput =
+            document.getElementById("customerName");
+
+        const reviewInput =
+            document.getElementById("customerReview");
+
+
+        const name =
+            nameInput.value.trim();
+
+        const review =
+            reviewInput.value.trim();
+
+
+        if (!name || !review) {
+
+            alert("Please enter your name and review.");
+
+            return;
+
+        }
+
+
+        if (selectedRating === 0) {
+
+            alert("Please select a rating.");
+
+            return;
+
+        }
+
+
+        /*
+         * Basic security:
+         * Prevent HTML tags from being inserted
+         * into the page through the review form.
+         */
+
+        const safeName =
+            name.replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;");
+
+        const safeReview =
+            review.replace(/</g, "&lt;")
+                  .replace(/>/g, "&gt;");
+
+
+        const stars =
+            "★".repeat(selectedRating) +
+            "☆".repeat(5 - selectedRating);
+
+
+        const firstLetter =
+            safeName.charAt(0).toUpperCase();
+
+
+        const newReview =
+        document.createElement("div");
+
+        newReview.className = "review-card";
+
+
+        newReview.innerHTML = `
+
+            <div class="review-top">
+
+                <div class="avatar">
+                    ${firstLetter}
+                </div>
+
+                <div>
+
+                    <h3>${safeName}</h3>
+
+                    <span>
+                        ✓ Customer Review
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="stars">
+                ${stars}
+            </div>
+
+            <p>
+                ${safeReview}
+            </p>
+
+        `;
+
+
+        document
+            .getElementById("reviewsList")
+            .appendChild(newReview);
+
+
+        /*
+         * Reset form
+         */
+
+        nameInput.value = "";
+
+        reviewInput.value = "";
+
+        selectedRating = 0;
+
+
+        starButtons.forEach(function(star) {
+
+            star.classList.remove("active");
+
+        });
+
+
+        alert(
+            "Thank you! Your review has been added."
+        );
+
+
+        newReview.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+    }
+
+);
 
 </script>
 
