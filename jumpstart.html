@@ -4,355 +4,768 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Jump Start Service | FAST BATTERY</title>
+<meta name="theme-color" content="#080d16">
+<meta name="description" content="24/7 professional mobile car jump start service in Dubai by 800PowerBat. Fast roadside assistance at your location.">
+<meta name="robots" content="index, follow">
+
+<title>Jump Start Service in Dubai | 800PowerBat</title>
 
 <style>
+:root {
+    --navy: #080d16;
+    --navy-2: #101824;
+    --navy-3: #172232;
+    --yellow: #f5c400;
+    --yellow-light: #fff7cf;
+    --white: #ffffff;
+    --text: #17202a;
+    --muted: #68727d;
+    --border: #e7ebef;
+    --soft: #f5f7f9;
+    --shadow: 0 20px 55px rgba(8, 13, 22, 0.12);
+    --radius: 20px;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f4f6f8;
-    color: #17202a;
-    min-height: 100vh;
+html {
+    scroll-behavior: smooth;
 }
 
-/* HEADER */
+body {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    background: #f3f5f7;
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =========================
+   HEADER
+========================= */
+
 header {
-    background: #111923;
-    color: #fff;
-    padding: 18px 20px;
+    background: rgba(8, 13, 22, 0.97);
+    color: var(--white);
+    padding: 17px 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(14px);
+}
+
+.header-inner {
+    max-width: 1180px;
+    margin: auto;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.12);
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .logo {
-    font-size: 23px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    line-height: 1;
 }
 
 .logo span {
-    color: #ffd400;
+    color: var(--yellow);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.service-status {
+    color: #cbd2da;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    text-transform: uppercase;
 }
 
 .back-btn {
-    color: #111923;
-    background: #ffd400;
-    padding: 11px 17px;
-    border-radius: 9px;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 700;
-    transition: 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--yellow);
+    color: var(--navy);
+    padding: 10px 17px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 800;
+    transition: .25s ease;
 }
 
 .back-btn:hover {
     background: #fff;
+    transform: translateY(-2px);
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
+
 .hero {
-    background: #111923;
-    padding: 35px 20px 55px;
-    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 80% 20%, rgba(245,196,0,.13), transparent 28%),
+        radial-gradient(circle at 15% 80%, rgba(245,196,0,.07), transparent 25%),
+        var(--navy);
     color: #fff;
+    padding: 72px 20px 120px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: .22;
+    background-image:
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+    background-size: 55px 55px;
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 13px;
+    border: 1px solid rgba(245,196,0,.35);
+    background: rgba(245,196,0,.08);
+    color: var(--yellow);
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+.hero-badge::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background: var(--yellow);
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px rgba(245,196,0,.10);
 }
 
 .hero-icon {
-    width: 82px;
-    height: 82px;
-    margin: 0 auto 18px;
-    background: #ffd400;
-    color: #111923;
-    border-radius: 50%;
+    width: 78px;
+    height: 78px;
+    margin: 0 auto 22px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 42px;
-    box-shadow: 0 8px 25px rgba(255,212,0,0.25);
+    background: linear-gradient(145deg, #ffd92f, #eab500);
+    color: var(--navy);
+    border-radius: 22px;
+    font-size: 38px;
+    box-shadow: 0 16px 40px rgba(245,196,0,.18);
+    transform: rotate(-2deg);
 }
 
 .hero h1 {
-    font-size: 34px;
-    margin-bottom: 12px;
-    font-weight: 800;
+    max-width: 850px;
+    margin: auto;
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1.05;
+    letter-spacing: -1.8px;
+    font-weight: 900;
 }
 
 .hero h1 span {
-    color: #ffd400;
+    color: var(--yellow);
 }
 
 .hero p {
-    max-width: 650px;
-    margin: auto;
+    max-width: 700px;
+    margin: 22px auto 0;
+    color: #c8d0d9;
     font-size: 17px;
-    line-height: 1.7;
-    color: #d9dee3;
+    line-height: 1.75;
 }
 
-/* MAIN */
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.hero-call,
+.hero-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 190px;
+    padding: 14px 22px;
+    border-radius: 11px;
+    font-size: 14px;
+    font-weight: 850;
+    transition: .25s ease;
+}
+
+.hero-call {
+    background: var(--yellow);
+    color: var(--navy);
+}
+
+.hero-call:hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+.hero-whatsapp {
+    border: 1px solid rgba(255,255,255,.2);
+    color: #fff;
+    background: rgba(255,255,255,.05);
+}
+
+.hero-whatsapp:hover {
+    background: #fff;
+    color: var(--navy);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
 .container {
-    max-width: 900px;
-    margin: -25px auto 50px;
+    max-width: 1050px;
+    margin: -55px auto 70px;
     padding: 0 18px;
     position: relative;
+    z-index: 5;
 }
+
+/* =========================
+   MAIN CARD
+========================= */
 
 .service-box {
     background: #fff;
-    padding: 35px;
-    border-radius: 20px;
-    box-shadow: 0 10px 35px rgba(0,0,0,0.10);
+    border: 1px solid rgba(10,20,30,.06);
+    border-radius: 24px;
+    padding: 42px;
+    box-shadow: var(--shadow);
 }
 
-/* TRUST BAR */
+/* =========================
+   TRUST BAR
+========================= */
+
 .trust-bar {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
-    margin-bottom: 32px;
+    margin-bottom: 42px;
 }
 
 .trust-item {
-    background: #f9fafb;
-    border: 1px solid #e6e9ec;
-    border-radius: 12px;
-    padding: 15px 10px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    background: #f8fafb;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 17px;
+    transition: .25s ease;
+}
+
+.trust-item:hover {
+    border-color: rgba(245,196,0,.55);
+    transform: translateY(-2px);
+}
+
+.trust-icon {
+    width: 39px;
+    height: 39px;
+    flex: 0 0 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--yellow-light);
+    color: var(--navy);
+    border-radius: 10px;
+    font-size: 18px;
 }
 
 .trust-item strong {
     display: block;
-    font-size: 14px;
-    color: #111923;
-    margin-top: 5px;
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 850;
 }
 
-.trust-item span {
-    font-size: 22px;
+.trust-item small {
+    display: block;
+    color: #7b858e;
+    font-size: 11px;
+    margin-top: 2px;
 }
 
-/* CONTENT */
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+.section-label {
+    color: #a18400;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
 h2 {
-    color: #111923;
-    font-size: 23px;
+    color: var(--navy);
+    font-size: 27px;
+    line-height: 1.2;
+    letter-spacing: -.5px;
     margin-bottom: 15px;
+    font-weight: 900;
 }
 
 .description {
-    font-size: 17px;
-    line-height: 1.8;
-    color: #555e66;
-    margin-bottom: 30px;
+    max-width: 850px;
+    color: #5e6872;
+    font-size: 16px;
+    line-height: 1.85;
+    margin-bottom: 38px;
 }
 
-/* DETAILS */
+/* =========================
+   DETAILS
+========================= */
+
+.details-heading {
+    margin-top: 5px;
+}
+
 .details {
     list-style: none;
-    padding: 0;
-    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 0 0 35px;
 }
 
 .details li {
-    padding: 15px 12px;
-    border-bottom: 1px solid #edf0f2;
-    font-size: 16px;
-    color: #303942;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    color: #343d46;
+    background: #fff;
+    font-size: 14px;
+    font-weight: 650;
+    transition: .25s ease;
 }
 
-.details li:last-child {
-    border-bottom: none;
+.details li:hover {
+    border-color: rgba(245,196,0,.6);
+    background: #fffdf2;
+    transform: translateY(-2px);
 }
 
 .check {
-    color: #111923;
-    background: #ffd400;
-    border-radius: 50%;
     width: 25px;
     height: 25px;
+    flex: 0 0 25px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-right: 9px;
-    font-size: 14px;
-    font-weight: bold;
+    background: var(--yellow);
+    color: var(--navy);
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: 900;
 }
 
-/* PRICE */
+/* =========================
+   PRICE CARD
+========================= */
+
 .price-box {
-    margin-top: 10px;
-    padding: 25px 20px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 8px;
+    padding: 28px;
+    background:
+        linear-gradient(135deg, #fffdf1, #fff9d9);
+    border: 1px solid #f0d65b;
+    border-radius: 18px;
     text-align: center;
-    background: #fffbea;
-    border: 2px solid #ffd400;
-    border-radius: 16px;
+}
+
+.price-box::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    right: -90px;
+    top: -90px;
+    background: rgba(245,196,0,.12);
+    border-radius: 50%;
 }
 
 .price-title {
-    color: #626b73;
-    font-size: 14px;
-    margin-bottom: 6px;
+    position: relative;
+    z-index: 1;
+    color: #77715d;
+    font-size: 11px;
+    font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600;
+    letter-spacing: 1.5px;
 }
 
 .price {
-    color: #111923;
-    font-size: 38px;
-    font-weight: 800;
+    position: relative;
+    z-index: 1;
+    margin-top: 5px;
+    color: var(--navy);
+    font-size: 43px;
+    line-height: 1.15;
+    font-weight: 950;
+    letter-spacing: -1px;
 }
 
 .price-note {
-    color: #6a7075;
-    font-size: 13px;
-    margin-top: 6px;
+    position: relative;
+    z-index: 1;
+    margin-top: 5px;
+    color: #76736a;
+    font-size: 12px;
 }
 
-/* CALL BUTTON */
-.book-btn {
-    display: block;
-    width: 100%;
-    margin-top: 25px;
-    padding: 17px;
-    text-align: center;
-    background: #ffd400;
-    color: #111923;
-    text-decoration: none;
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.book-btn,
+.whatsapp-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
     border-radius: 12px;
-    font-size: 19px;
-    font-weight: 800;
-    transition: 0.2s;
-    box-shadow: 0 5px 15px rgba(255,212,0,0.25);
+    font-size: 14px;
+    font-weight: 850;
+    transition: .25s ease;
+}
+
+.book-btn {
+    background: var(--yellow);
+    color: var(--navy);
+    box-shadow: 0 10px 25px rgba(245,196,0,.18);
 }
 
 .book-btn:hover {
-    background: #111923;
-    color: #ffd400;
+    background: var(--navy);
+    color: var(--yellow);
+    transform: translateY(-2px);
 }
 
-/* WHATSAPP */
 .whatsapp-btn {
-    display: block;
-    width: 100%;
-    margin-top: 12px;
-    padding: 15px;
-    text-align: center;
-    background: #111923;
+    background: var(--navy);
     color: #fff;
-    text-decoration: none;
-    border-radius: 12px;
-    font-size: 17px;
-    font-weight: 700;
-    transition: 0.2s;
 }
 
 .whatsapp-btn:hover {
-    background: #ffd400;
-    color: #111923;
+    background: #182536;
+    color: var(--yellow);
+    transform: translateY(-2px);
 }
 
 .phone-text {
     text-align: center;
-    margin-top: 12px;
-    color: #737b82;
-    font-size: 13px;
+    margin-top: 13px;
+    color: #858d95;
+    font-size: 11px;
 }
 
-/* FOOTER */
+/* =========================
+   SERVICE NOTE
+========================= */
+
+.service-note {
+    display: flex;
+    gap: 13px;
+    margin-top: 35px;
+    padding: 18px;
+    background: #f7f9fa;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+.note-icon {
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--navy);
+    color: var(--yellow);
+    border-radius: 9px;
+    font-weight: 900;
+}
+
+.service-note strong {
+    display: block;
+    color: var(--navy);
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.service-note p {
+    color: #69737d;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
 footer {
-    background: #111923;
-    color: #cdd3d8;
+    background: var(--navy);
+    color: #9fa9b3;
     text-align: center;
-    padding: 25px 15px;
-    font-size: 13px;
+    padding: 34px 18px 80px;
+    font-size: 12px;
+    border-top: 1px solid rgba(255,255,255,.06);
 }
 
-footer strong {
-    color: #ffd400;
+.footer-brand {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: 7px;
 }
 
-/* MOBILE */
-@media (max-width: 600px) {
+.footer-brand span {
+    color: var(--yellow);
+}
+
+footer p {
+    color: #87919b;
+    margin-top: 4px;
+}
+
+/* =========================
+   FLOATING BUTTONS
+========================= */
+
+.floating-actions {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.float-btn {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.22);
+    transition: .25s ease;
+}
+
+.float-btn:hover {
+    transform: scale(1.08);
+}
+
+.float-call {
+    background: var(--yellow);
+    color: var(--navy);
+}
+
+.float-whatsapp {
+    background: #fff;
+    color: var(--navy);
+    border: 1px solid #dce2e6;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 760px) {
 
     header {
-        padding: 16px;
+        padding: 15px;
+    }
+
+    .header-inner {
+        gap: 10px;
     }
 
     .logo {
         font-size: 20px;
     }
 
+    .service-status {
+        display: none;
+    }
+
     .back-btn {
-        padding: 9px 12px;
-        font-size: 13px;
+        padding: 9px 13px;
+        font-size: 12px;
     }
 
     .hero {
-        padding: 30px 18px 48px;
+        padding: 52px 18px 95px;
     }
 
     .hero-icon {
-        width: 72px;
-        height: 72px;
-        font-size: 36px;
+        width: 68px;
+        height: 68px;
+        border-radius: 19px;
+        font-size: 32px;
     }
 
     .hero h1 {
-        font-size: 28px;
+        font-size: 35px;
+        letter-spacing: -1px;
     }
 
     .hero p {
         font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 330px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-call,
+    .hero-whatsapp {
+        width: 100%;
     }
 
     .container {
-        margin-top: -20px;
+        margin-top: -42px;
         padding: 0 12px;
     }
 
     .service-box {
-        padding: 25px 18px;
-        border-radius: 17px;
+        padding: 27px 18px;
+        border-radius: 20px;
     }
 
     .trust-bar {
-        gap: 7px;
+        grid-template-columns: 1fr;
+        gap: 8px;
+        margin-bottom: 32px;
     }
 
     .trust-item {
-        padding: 12px 5px;
-    }
-
-    .trust-item strong {
-        font-size: 11px;
-    }
-
-    .trust-item span {
-        font-size: 19px;
+        padding: 13px;
     }
 
     h2 {
-        font-size: 21px;
+        font-size: 23px;
     }
 
     .description {
-        font-size: 16px;
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    .details {
+        grid-template-columns: 1fr;
+        gap: 8px;
     }
 
     .details li {
-        font-size: 15px;
-        padding: 14px 5px;
+        padding: 13px;
+        font-size: 13px;
+    }
+
+    .price-box {
+        padding: 24px 15px;
     }
 
     .price {
-        font-size: 34px;
+        font-size: 38px;
+    }
+
+    .actions {
+        grid-template-columns: 1fr;
+    }
+
+    .floating-actions {
+        right: 14px;
+        bottom: 14px;
+    }
+
+    .float-btn {
+        width: 47px;
+        height: 47px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .service-box {
+        padding: 23px 15px;
+    }
+
+    .price {
+        font-size: 35px;
     }
 }
 </style>
@@ -360,76 +773,156 @@ footer strong {
 
 <body>
 
-<!-- HEADER -->
-<header>
-    <div class="logo">
-        FAST <span>BATTERY</span>
-    </div>
+<!-- =========================
+     HEADER
+========================= -->
 
-    <a href="index.html" class="back-btn">
-        ← Back
-    </a>
+<header>
+    <div class="header-inner">
+
+        <div class="logo">
+            800<span>PowerBat</span>
+        </div>
+
+        <div class="header-right">
+
+            <div class="service-status">
+                24/7 Mobile Service • Dubai
+            </div>
+
+            <a href="index.html" class="back-btn" aria-label="Back to homepage">
+                ← Back
+            </a>
+
+        </div>
+
+    </div>
 </header>
 
-<!-- HERO -->
+
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
 
-    <div class="hero-icon">
-        ⚡
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            Emergency Roadside Assistance
+        </div>
+
+        <div class="hero-icon" aria-hidden="true">
+            ⚡
+        </div>
+
+        <h1>
+            Professional <span>Jump Start</span>
+            Service in Dubai
+        </h1>
+
+        <p>
+            Fast, safe and professional mobile jump start assistance
+            delivered directly to your location. Available 24/7 across Dubai
+            for cars, SUVs and other vehicles.
+        </p>
+
+        <div class="hero-actions">
+
+            <a href="tel:+971524040699" class="hero-call">
+                ☎ Call 800PowerBat
+            </a>
+
+            <a
+                href="https://wa.me/971524040699?text=Hello%20800PowerBat,%20I%20need%20a%20car%20jump%20start%20service."
+                class="hero-whatsapp"
+            >
+                WhatsApp Assistance
+            </a>
+
+        </div>
+
     </div>
-
-    <h1>
-        Professional <span>Jump Start</span> Service
-    </h1>
-
-    <p>
-        Fast and reliable mobile car jump start assistance
-        at your location in Dubai. Available 24/7 for
-        emergency battery situations.
-    </p>
 
 </section>
 
-<!-- MAIN -->
+
+<!-- =========================
+     MAIN
+========================= -->
+
 <main class="container">
 
     <div class="service-box">
 
-        <!-- TRUST -->
+        <!-- TRUST BAR -->
+
         <div class="trust-bar">
 
             <div class="trust-item">
-                <span>⚡</span>
-                <strong>Fast Response</strong>
+
+                <div class="trust-icon">⚡</div>
+
+                <div>
+                    <strong>Fast Response</strong>
+                    <small>Mobile assistance</small>
+                </div>
+
             </div>
 
-            <div class="trust-item">
-                <span>🕐</span>
-                <strong>24/7 Service</strong>
-            </div>
 
             <div class="trust-item">
-                <span>📍</span>
-                <strong>At Your Location</strong>
+
+                <div class="trust-icon">24</div>
+
+                <div>
+                    <strong>24/7 Availability</strong>
+                    <small>Day & night support</small>
+                </div>
+
+            </div>
+
+
+            <div class="trust-item">
+
+                <div class="trust-icon">⌖</div>
+
+                <div>
+                    <strong>At Your Location</strong>
+                    <small>Dubai-wide service</small>
+                </div>
+
             </div>
 
         </div>
 
-        <!-- DESCRIPTION -->
+
+        <!-- INTRO -->
+
+        <div class="section-label">
+            Mobile Roadside Service
+        </div>
+
         <h2>
             Emergency Jump Start Assistance
         </h2>
 
         <p class="description">
-            Is your car battery weak or completely discharged?
-            FAST BATTERY provides professional mobile jump start
-            assistance at your location. Our technician comes to
-            you with the proper equipment to safely start your
-            vehicle and get you back on the road.
+            If your vehicle battery is weak or completely discharged,
+            800PowerBat provides professional mobile jump start assistance
+            at your location in Dubai. Our technician arrives with suitable
+            equipment to safely assist with starting your vehicle and help
+            you get back on the road.
         </p>
 
-        <!-- DETAILS -->
-        <h2>
+
+        <!-- INCLUDED -->
+
+        <div class="section-label">
+            Service Details
+        </div>
+
+        <h2 class="details-heading">
             What's Included
         </h2>
 
@@ -437,7 +930,7 @@ footer strong {
 
             <li>
                 <span class="check">✓</span>
-                Professional car jump start
+                Professional vehicle jump start
             </li>
 
             <li>
@@ -447,7 +940,7 @@ footer strong {
 
             <li>
                 <span class="check">✓</span>
-                Cars, SUVs and other vehicles
+                Cars, SUVs & selected vehicles
             </li>
 
             <li>
@@ -467,7 +960,9 @@ footer strong {
 
         </ul>
 
+
         <!-- PRICE -->
+
         <div class="price-box">
 
             <div class="price-title">
@@ -479,37 +974,115 @@ footer strong {
             </div>
 
             <div class="price-note">
-                Starting service price
+                Starting service price • Final price may vary by location and vehicle requirements
             </div>
 
         </div>
 
-        <!-- CALL -->
-        <a href="tel:+971524040699" class="book-btn">
-            📞 Call Now – Book Jump Start
-        </a>
 
-        <!-- WHATSAPP -->
-        <a
-            href="https://wa.me/971524040699?text=Hello%20FAST%20BATTERY,%20I%20need%20a%20car%20jump%20start%20service."
-            class="whatsapp-btn"
-        >
-            💬 WhatsApp Us
-        </a>
+        <!-- ACTIONS -->
+
+        <div class="actions">
+
+            <a
+                href="tel:+971524040699"
+                class="book-btn"
+                aria-label="Call 800PowerBat to book jump start service"
+            >
+                ☎ Call Now — Book Service
+            </a>
+
+            <a
+                href="https://wa.me/971524040699?text=Hello%20800PowerBat,%20I%20need%20a%20car%20jump%20start%20service."
+                class="whatsapp-btn"
+                aria-label="Contact 800PowerBat on WhatsApp"
+            >
+                💬 WhatsApp Us
+            </a>
+
+        </div>
 
         <p class="phone-text">
-            Call or WhatsApp us and tell us your location.
+            Call or WhatsApp us with your location and vehicle details.
         </p>
+
+
+        <!-- NOTE -->
+
+        <div class="service-note">
+
+            <div class="note-icon">i</div>
+
+            <div>
+                <strong>Important Service Note</strong>
+
+                <p>
+                    A jump start is intended to help start a vehicle with a
+                    discharged battery. If the battery cannot hold a charge
+                    or has reached the end of its service life, battery
+                    replacement may be recommended after inspection.
+                </p>
+            </div>
+
+        </div>
 
     </div>
 
 </main>
 
-<!-- FOOTER -->
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
-    <strong>FAST BATTERY</strong><br>
-    24/7 Mobile Car Battery & Jump Start Service in Dubai
+
+    <div class="footer-brand">
+        800<span>PowerBat</span>
+    </div>
+
+    <p>
+        24/7 Mobile Car Battery & Jump Start Service in Dubai
+    </p>
+
+    <p>
+        Professional • Reliable • On-Site
+    </p>
+
+    <br>
+
+    <p>
+        © 2026 800PowerBat. All Rights Reserved.
+    </p>
+
 </footer>
+
+
+<!-- =========================
+     FLOATING ACTIONS
+========================= -->
+
+<div class="floating-actions">
+
+    <a
+        href="tel:+971524040699"
+        class="float-btn float-call"
+        aria-label="Call 800PowerBat"
+        title="Call 800PowerBat"
+    >
+        ☎
+    </a>
+
+    <a
+        href="https://wa.me/971524040699?text=Hello%20800PowerBat,%20I%20need%20a%20jump%20start."
+        class="float-btn float-whatsapp"
+        aria-label="WhatsApp 800PowerBat"
+        title="WhatsApp 800PowerBat"
+    >
+        💬
+    </a>
+
+</div>
 
 </body>
 </html>
