@@ -15,6 +15,10 @@
     padding:0;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family:Arial,Helvetica,sans-serif;
     background:#f5f7fa;
@@ -26,14 +30,16 @@ a{
     text-decoration:none;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 .header{
     background:#0b1220;
     padding:16px 20px;
     position:sticky;
     top:0;
     z-index:1000;
-    box-shadow:0 3px 15px rgba(0,0,0,.15);
+    box-shadow:0 3px 18px rgba(0,0,0,.18);
 }
 
 .header-inner{
@@ -62,13 +68,23 @@ a{
     border-radius:7px;
     font-size:14px;
     font-weight:700;
+    transition:.2s;
 }
 
-/* HERO */
+.back-btn:hover{
+    background:#ffc928;
+    transform:translateY(-2px);
+}
+
+/* =========================
+   HERO
+========================= */
 .hero{
-    background:linear-gradient(135deg,#0b1220,#111827);
+    background:
+    radial-gradient(circle at top right,rgba(245,180,0,.12),transparent 35%),
+    linear-gradient(135deg,#0b1220,#111827);
     color:#fff;
-    padding:75px 20px 70px;
+    padding:70px 20px 75px;
     text-align:center;
 }
 
@@ -135,7 +151,9 @@ a{
     transform:translateY(-2px);
 }
 
-/* TRUST */
+/* =========================
+   TRUST
+========================= */
 .trust{
     background:#fff;
     max-width:1050px;
@@ -163,16 +181,18 @@ a{
     margin-top:3px;
 }
 
-/* SECTION */
+/* =========================
+   GENERAL SECTION
+========================= */
 .section{
     max-width:1050px;
-    margin:65px auto;
+    margin:55px auto;
     padding:0 20px;
 }
 
 .section-title{
     text-align:center;
-    margin-bottom:35px;
+    margin-bottom:30px;
 }
 
 .section-title h2{
@@ -189,7 +209,9 @@ a{
     color:#667085;
 }
 
-/* INFO BOX */
+/* =========================
+   INTRO
+========================= */
 .info-box{
     background:#fff;
     border:1px solid #e5e7eb;
@@ -207,51 +229,13 @@ a{
     margin-bottom:0;
 }
 
-/* SERVICE GRID */
-.services{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:18px;
-}
-
-.service-card{
-    background:#fff;
-    border:1px solid #e5e7eb;
-    border-radius:12px;
-    padding:25px;
-    box-shadow:0 6px 20px rgba(15,23,42,.05);
-}
-
-.icon{
-    width:45px;
-    height:45px;
-    border-radius:9px;
-    background:#fff4cc;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:21px;
-    margin-bottom:15px;
-}
-
-.service-card h3{
-    color:#0b1220;
-    margin-bottom:8px;
-    font-size:19px;
-}
-
-.service-card p{
-    color:#667085;
-    font-size:14px;
-}
-
 /* =========================
-   BATTERY BRANDS SLIDER
+   BATTERY BRANDS
+   MOVED UP
 ========================= */
-
 .brand-section{
     background:#fff;
-    padding:45px 0;
+    padding:50px 0;
     overflow:hidden;
     border-top:1px solid #e5e7eb;
     border-bottom:1px solid #e5e7eb;
@@ -260,7 +244,7 @@ a{
 .brand-heading{
     text-align:center;
     padding:0 20px;
-    margin-bottom:30px;
+    margin-bottom:28px;
 }
 
 .brand-heading h2{
@@ -275,6 +259,8 @@ a{
 
 .brand-heading p{
     color:#667085;
+    max-width:650px;
+    margin:auto;
 }
 
 /* SLIDER */
@@ -288,7 +274,7 @@ a{
     display:flex;
     width:max-content;
     gap:18px;
-    animation:slideBrands 28s linear infinite;
+    animation:slideBrands 30s linear infinite;
 }
 
 .brand-slider:hover .brand-track{
@@ -314,10 +300,9 @@ a{
 .brand-box:hover{
     transform:translateY(-4px);
     border-color:#f5b400;
-    box-shadow:0 8px 25px rgba(15,23,42,.12);
+    box-shadow:0 9px 25px rgba(15,23,42,.13);
 }
 
-/* LOGO */
 .brand-logo{
     width:125px;
     height:55px;
@@ -325,7 +310,6 @@ a{
     margin-bottom:9px;
 }
 
-/* BRAND NAME FALLBACK */
 .brand-name{
     font-size:14px;
     font-weight:800;
@@ -333,7 +317,7 @@ a{
     letter-spacing:.4px;
 }
 
-/* SLIDE ANIMATION */
+/* SLIDER ANIMATION */
 @keyframes slideBrands{
     0%{
         transform:translateX(0);
@@ -344,25 +328,60 @@ a{
     }
 }
 
-/* WARRANTY */
+/* =========================
+   WARRANTY
+   MOVED UP
+========================= */
 .warranty-section{
     max-width:1050px;
-    margin:65px auto;
+    margin:50px auto 55px;
     padding:0 20px;
 }
 
 .warranty-box{
-    background:#0b1220;
+    position:relative;
+    overflow:hidden;
+    background:
+    radial-gradient(circle at 90% 10%,rgba(245,180,0,.15),transparent 30%),
+    linear-gradient(135deg,#0b1220,#111827);
     color:#fff;
-    border-radius:14px;
+    border-radius:16px;
     padding:42px 30px;
     text-align:center;
-    box-shadow:0 8px 25px rgba(15,23,42,.12);
+    box-shadow:0 10px 30px rgba(15,23,42,.15);
+    border:1px solid rgba(245,180,0,.18);
+}
+
+.warranty-box::before{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    border:1px solid rgba(245,180,0,.12);
+    border-radius:50%;
+    top:-90px;
+    left:-90px;
+}
+
+.warranty-box::after{
+    content:"";
+    position:absolute;
+    width:130px;
+    height:130px;
+    border:1px solid rgba(245,180,0,.10);
+    border-radius:50%;
+    bottom:-65px;
+    right:-65px;
+}
+
+.warranty-content{
+    position:relative;
+    z-index:2;
 }
 
 .warranty-icon{
-    width:55px;
-    height:55px;
+    width:58px;
+    height:58px;
     margin:0 auto 15px;
     border-radius:50%;
     background:#f5b400;
@@ -370,7 +389,9 @@ a{
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:25px;
+    font-size:26px;
+    font-weight:900;
+    box-shadow:0 5px 20px rgba(245,180,0,.20);
 }
 
 .warranty-box h2{
@@ -397,7 +418,7 @@ a{
 }
 
 .warranty-point{
-    background:#111827;
+    background:rgba(255,255,255,.04);
     border:1px solid rgba(255,255,255,.10);
     padding:11px 17px;
     border-radius:7px;
@@ -410,10 +431,58 @@ a{
     font-weight:bold;
 }
 
-/* CTA */
+/* =========================
+   SERVICES
+========================= */
+.services{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.service-card{
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+    padding:25px;
+    box-shadow:0 6px 20px rgba(15,23,42,.05);
+    transition:.25s;
+}
+
+.service-card:hover{
+    transform:translateY(-3px);
+    border-color:#f5b400;
+}
+
+.icon{
+    width:45px;
+    height:45px;
+    border-radius:9px;
+    background:#fff4cc;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:21px;
+    margin-bottom:15px;
+}
+
+.service-card h3{
+    color:#0b1220;
+    margin-bottom:8px;
+    font-size:19px;
+}
+
+.service-card p{
+    color:#667085;
+    font-size:14px;
+}
+
+/* =========================
+   CTA
+========================= */
 .cta{
     max-width:1050px;
-    margin:65px auto;
+    margin:55px auto;
     padding:0 20px;
 }
 
@@ -448,7 +517,9 @@ a{
     margin-top:8px;
 }
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 .contact{
     background:#fff;
     border-top:1px solid #e5e7eb;
@@ -476,7 +547,9 @@ a{
     font-weight:700;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 .footer{
     background:#0b1220;
     color:#fff;
@@ -500,7 +573,9 @@ a{
     margin:4px 0;
 }
 
-/* FLOATING BUTTONS */
+/* =========================
+   FLOATING BUTTONS
+========================= */
 .floating{
     position:fixed;
     right:16px;
@@ -522,6 +597,7 @@ a{
     color:#fff;
     font-size:20px;
     box-shadow:0 5px 18px rgba(0,0,0,.2);
+    transition:.2s;
 }
 
 .float-call{
@@ -532,7 +608,14 @@ a{
     background:#25d366;
 }
 
-/* MOBILE */
+.float-call:hover,
+.float-whatsapp:hover{
+    transform:scale(1.06);
+}
+
+/* =========================
+   MOBILE
+========================= */
 @media(max-width:700px){
 
     .header{
@@ -540,7 +623,7 @@ a{
     }
 
     .logo{
-        font-size:18px;
+        font-size:17px;
     }
 
     .back-btn{
@@ -579,23 +662,32 @@ a{
     }
 
     .section{
-        margin:50px auto;
+        margin:48px auto;
     }
 
     .section-title h2{
         font-size:25px;
     }
 
-    .services{
-        grid-template-columns:1fr;
-    }
-
     .info-box{
         padding:22px;
     }
 
+    .brand-section{
+        padding:40px 0;
+    }
+
     .brand-heading h2{
         font-size:25px;
+    }
+
+    .brand-heading p{
+        font-size:14px;
+    }
+
+    .brand-track{
+        gap:14px;
+        animation-duration:25s;
     }
 
     .brand-box{
@@ -608,12 +700,24 @@ a{
         height:48px;
     }
 
+    .brand-name{
+        font-size:13px;
+    }
+
+    .warranty-section{
+        margin:45px auto;
+    }
+
     .warranty-box{
         padding:35px 20px;
     }
 
     .warranty-box h2{
         font-size:25px;
+    }
+
+    .warranty-box p{
+        font-size:14px;
     }
 
     .warranty-points{
@@ -624,8 +728,20 @@ a{
         width:100%;
     }
 
+    .services{
+        grid-template-columns:1fr;
+    }
+
     .cta{
-        margin:50px auto;
+        margin:48px auto;
+    }
+
+    .cta-box{
+        padding:35px 20px;
+    }
+
+    .cta-box h2{
+        font-size:25px;
     }
 }
 </style>
@@ -633,7 +749,9 @@ a{
 
 <body>
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 <header class="header">
     <div class="header-inner">
 
@@ -649,7 +767,9 @@ a{
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 <section class="hero">
 
     <div class="hero-content">
@@ -685,7 +805,9 @@ a{
 </section>
 
 
-<!-- TRUST -->
+<!-- =========================
+     TRUST
+========================= -->
 <div class="trust">
 
     <div class="trust-item">
@@ -706,12 +828,207 @@ a{
 </div>
 
 
-<!-- INTRO -->
+<!-- =========================
+     BATTERY BRANDS
+     NOW NEAR TOP
+========================= -->
+<section class="brand-section">
+
+    <div class="brand-heading">
+
+        <h2>
+            Available <span>Battery Brands</span>
+        </h2>
+
+        <p>
+            Quality battery options from recognised automotive battery brands,
+            subject to availability and vehicle requirements.
+        </p>
+
+    </div>
+
+    <div class="brand-slider">
+
+        <div class="brand-track">
+
+            <!-- SET 1 -->
+
+            <div class="brand-box">
+                <img src="fiamm-logo.png" class="brand-logo" alt="FIAMM Battery">
+                <div class="brand-name">FIAMM</div>
+            </div>
+
+            <div class="brand-box">
+                <img src="energizer-logo.png" class="brand-logo" alt="Energizer Battery">
+                <div class="brand-name">ENERGIZER</div>
+            </div>
+
+            <div class="brand-box">
+                <img src="bosch-logo.png" class="brand-logo" alt="Bosch Battery">
+                <div class="brand-name">BOSCH</div>
+            </div>
+
+            <div class="brand-box">
+                <img src="varta-logo.png" class="brand-logo" alt="Varta Battery">
+                <div class="brand-name">VARTA</div>
+            </div>
+
+            <div class="brand-box">
+                <img src="acdelco-logo.png" class="brand-logo" alt="ACDelco Battery">
+                <div class="brand-name">ACDELCO</div>
+            </div>
+
+            <div class="brand-box">
+                <img src="amaron-logo.png" class="brand-logo" alt="Amaron Battery">
+                <div class="brand-name">AMARON</div>
+            </div>
+
+            <div class="brand-box">
+                <img src="sf-sonic-logo.png" class="brand-logo" alt="SF Sonic Battery">
+                <div class="brand-name">SF SONIC</div>
+            </div>
+
+            <div class="brand-box">
+                <img src="exide-logo.png" class="brand-logo" alt="Exide Battery">
+                <div class="brand-name">EXIDE</div>
+            </div>
+
+            <div class="brand-box">
+                <img src="kays-logo.png" class="brand-logo" alt="Kays Battery">
+                <div class="brand-name">KAYS</div>
+            </div>
+
+            <div class="brand-box">
+                <img src="bekon-logo.png" class="brand-logo" alt="Bekon Battery">
+                <div class="brand-name">BEKON</div>
+            </div>
+
+
+            <!-- SET 2 -->
+
+            <div class="brand-box">
+                <img src="fiamm-logo.png" class="brand-logo" alt="FIAMM Battery">
+                <div class="brand-name">FIAMM</div>
+            </div>
+
+            <div class="brand-box">
+                <img src="energizer-logo.png" class="brand-logo" alt="Energizer Battery">
+                <div class="brand-name">ENERGIZER</div>
+            </div>
+
+            <div class="brand-box">
+                <img src="bosch-logo.png" class="brand-logo" alt="Bosch Battery">
+                <div class="brand-name">BOSCH</div>
+            </div>
+
+            <div class="brand-box">
+                <img src="varta-logo.png" class="brand-logo" alt="Varta Battery">
+                <div class="brand-name">VARTA</div>
+            </div>
+
+            <div class="brand-box">
+                <img src="acdelco-logo.png" class="brand-logo" alt="ACDelco Battery">
+                <div class="brand-name">ACDELCO</div>
+            </div>
+
+            <div class="brand-box">
+                <img src="amaron-logo.png" class="brand-logo" alt="Amaron Battery">
+                <div class="brand-name">AMARON</div>
+            </div>
+
+            <div class="brand-box">
+                <img src="sf-sonic-logo.png" class="brand-logo" alt="SF Sonic Battery">
+                <div class="brand-name">SF SONIC</div>
+            </div>
+
+            <div class="brand-box">
+                <img src="exide-logo.png" class="brand-logo" alt="Exide Battery">
+                <div class="brand-name">EXIDE</div>
+            </div>
+
+            <div class="brand-box">
+                <img src="kays-logo.png" class="brand-logo" alt="Kays Battery">
+                <div class="brand-name">KAYS</div>
+            </div>
+
+            <div class="brand-box">
+                <img src="bekon-logo.png" class="brand-logo" alt="Bekon Battery">
+                <div class="brand-name">BEKON</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WARRANTY
+     NOW NEAR TOP
+========================= -->
+<section class="warranty-section">
+
+    <div class="warranty-box">
+
+        <div class="warranty-content">
+
+            <div class="warranty-icon">
+                ✓
+            </div>
+
+            <h2>
+                Up to <span>24 Months Warranty</span>
+            </h2>
+
+            <p>
+                Warranty coverage is available on selected batteries according
+                to the battery brand, model and applicable warranty terms.
+                Please confirm the exact warranty period before purchase.
+            </p>
+
+            <div class="warranty-points">
+
+                <div class="warranty-point">
+                    <span>✓</span> Up to 24 Months Warranty
+                </div>
+
+                <div class="warranty-point">
+                    <span>✓</span> Multiple Battery Brands
+                </div>
+
+                <div class="warranty-point">
+                    <span>✓</span> Professional Installation
+                </div>
+
+                <div class="warranty-point">
+                    <span>✓</span> Mobile Service in Dubai
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INTRO
+========================= -->
 <section class="section">
 
     <div class="section-title">
-        <h2>Professional <span>Battery Replacement</span></h2>
-        <p>Convenient battery replacement without visiting a workshop.</p>
+
+        <h2>
+            Professional <span>Battery Replacement</span>
+        </h2>
+
+        <p>
+            Convenient battery replacement without visiting a workshop.
+        </p>
+
     </div>
 
     <div class="info-box">
@@ -739,12 +1056,21 @@ a{
 </section>
 
 
-<!-- SERVICES -->
+<!-- =========================
+     SERVICES
+========================= -->
 <section class="section">
 
     <div class="section-title">
-        <h2>Our Battery <span>Services</span></h2>
-        <p>Professional mobile battery solutions for your vehicle.</p>
+
+        <h2>
+            Our Battery <span>Services</span>
+        </h2>
+
+        <p>
+            Professional mobile battery solutions for your vehicle.
+        </p>
+
     </div>
 
     <div class="services">
@@ -809,181 +1135,9 @@ a{
 </section>
 
 
-<!-- BATTERY BRANDS -->
-<section class="brand-section">
-
-    <div class="brand-heading">
-
-        <h2>Available <span>Battery Brands</span></h2>
-
-        <p>
-            We offer battery options from recognised automotive battery brands.
-        </p>
-
-    </div>
-
-
-    <div class="brand-slider">
-
-        <div class="brand-track">
-
-            <!-- SET 1 -->
-
-            <div class="brand-box">
-                <img src="fiamm-logo.png" class="brand-logo" alt="FIAMM Battery">
-                <div class="brand-name">FIAMM</div>
-            </div>
-
-            <div class="brand-box">
-                <img src="energizer-logo.png" class="brand-logo" alt="Energizer Battery">
-                <div class="brand-name">ENERGIZER</div>
-            </div>
-
-            <div class="brand-box">
-                <img src="bosch-logo.png" class="brand-logo" alt="Bosch Battery">
-                <div class="brand-name">BOSCH</div>
-            </div>
-
-            <div class="brand-box">
-                <img src="varta-logo.png" class="brand-logo" alt="Varta Battery">
-                <div class="brand-name">VARTA</div>
-            </div>
-
-            <div class="brand-box">
-                <img src="acdelco-logo.png" class="brand-logo" alt="ACDelco Battery">
-                <div class="brand-name">ACDELCO</div>
-            </div>
-
-            <div class="brand-box">
-                <img src="amaron-logo.png" class="brand-logo" alt="Amaron Battery">
-                <div class="brand-name">AMARON</div>
-            </div>
-
-            <div class="brand-box">
-                <img src="sf-sonic-logo.png" class="brand-logo" alt="SF Sonic Battery">
-                <div class="brand-name">SF SONIC</div>
-            </div>
-
-            <div class="brand-box">
-                <img src="exide-logo.png" class="brand-logo" alt="Exide Battery">
-                <div class="brand-name">EXIDE</div>
-            </div>
-
-            <div class="brand-box">
-                <img src="kays-logo.png" class="brand-logo" alt="Kays Battery">
-                <div class="brand-name">KAYS</div>
-            </div>
-
-            <div class="brand-box">
-                <img src="bekon-logo.png" class="brand-logo" alt="Bekon Battery">
-                <div class="brand-name">BEKON</div>
-            </div>
-
-
-            <!-- SET 2 FOR CONTINUOUS SLIDER -->
-
-            <div class="brand-box">
-                <img src="fiamm-logo.png" class="brand-logo" alt="FIAMM Battery">
-                <div class="brand-name">FIAMM</div>
-            </div>
-
-            <div class="brand-box">
-                <img src="energizer-logo.png" class="brand-logo" alt="Energizer Battery">
-                <div class="brand-name">ENERGIZER</div>
-            </div>
-
-            <div class="brand-box">
-                <img src="bosch-logo.png" class="brand-logo" alt="Bosch Battery">
-                <div class="brand-name">BOSCH</div>
-            </div>
-
-            <div class="brand-box">
-                <img src="varta-logo.png" class="brand-logo" alt="Varta Battery">
-                <div class="brand-name">VARTA</div>
-            </div>
-
-            <div class="brand-box">
-                <img src="acdelco-logo.png" class="brand-logo" alt="ACDelco Battery">
-                <div class="brand-name">ACDELCO</div>
-            </div>
-
-            <div class="brand-box">
-                <img src="amaron-logo.png" class="brand-logo" alt="Amaron Battery">
-                <div class="brand-name">AMARON</div>
-            </div>
-
-            <div class="brand-box">
-                <img src="sf-sonic-logo.png" class="brand-logo" alt="SF Sonic Battery">
-                <div class="brand-name">SF SONIC</div>
-            </div>
-
-            <div class="brand-box">
-                <img src="exide-logo.png" class="brand-logo" alt="Exide Battery">
-                <div class="brand-name">EXIDE</div>
-            </div>
-
-            <div class="brand-box">
-                <img src="kays-logo.png" class="brand-logo" alt="Kays Battery">
-                <div class="brand-name">KAYS</div>
-            </div>
-
-            <div class="brand-box">
-                <img src="bekon-logo.png" class="brand-logo" alt="Bekon Battery">
-                <div class="brand-name">BEKON</div>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- WARRANTY -->
-<section class="warranty-section">
-
-    <div class="warranty-box">
-
-        <div class="warranty-icon">
-            ✓
-        </div>
-
-        <h2>
-            Up to <span>24 Months Warranty</span>
-        </h2>
-
-        <p>
-            Warranty coverage is available on selected batteries according
-            to the battery brand, model and applicable warranty terms.
-            Please confirm the exact warranty period before purchase.
-        </p>
-
-        <div class="warranty-points">
-
-            <div class="warranty-point">
-                <span>✓</span> Up to 24 Months Warranty
-            </div>
-
-            <div class="warranty-point">
-                <span>✓</span> Multiple Battery Brands
-            </div>
-
-            <div class="warranty-point">
-                <span>✓</span> Professional Installation
-            </div>
-
-            <div class="warranty-point">
-                <span>✓</span> Mobile Service in Dubai
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- CTA -->
+<!-- =========================
+     CTA
+========================= -->
 <section class="cta">
 
     <div class="cta-box">
@@ -1020,14 +1174,18 @@ a{
 </section>
 
 
-<!-- CONTACT -->
+<!-- =========================
+     CONTACT
+========================= -->
 <section class="contact">
 
     <div class="contact-inner">
 
         <h2>FAST CAR BATTERY</h2>
 
-        <p>24/7 Mobile Car Battery Replacement & Roadside Assistance</p>
+        <p>
+            24/7 Mobile Car Battery Replacement & Roadside Assistance
+        </p>
 
         <p>
             📞
@@ -1043,14 +1201,18 @@ a{
             </a>
         </p>
 
-        <p>📍 Dubai, United Arab Emirates</p>
+        <p>
+            📍 Dubai, United Arab Emirates
+        </p>
 
     </div>
 
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 <footer class="footer">
 
     <div class="footer-logo">
@@ -1068,7 +1230,9 @@ a{
 </footer>
 
 
-<!-- FLOATING BUTTONS -->
+<!-- =========================
+     FLOATING BUTTONS
+========================= -->
 <div class="floating">
 
     <a href="tel:+971524040699"
