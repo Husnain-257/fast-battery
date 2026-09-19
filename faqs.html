@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FAQs | 800PowerBat</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f6f8;
+    color: #18212b;
+}
+
+/* HEADER */
+.header {
+    background: #0b1118;
+    padding: 22px 20px;
+    text-align: center;
+    border-bottom: 3px solid #f5b400;
+}
+
+.logo {
+    color: #f5b400;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    color: #cbd1d8;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* MAIN */
+.faq-container {
+    max-width: 900px;
+    margin: 45px auto;
+    padding: 0 18px;
+}
+
+.faq-title {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #101820;
+    font-size: 34px;
+    font-weight: 800;
+}
+
+.faq-subtitle {
+    text-align: center;
+    color: #6b737c;
+    font-size: 15px;
+    margin-bottom: 35px;
+}
+
+/* FAQ BOX */
+.faq-item {
+    background: #ffffff;
+    margin-bottom: 14px;
+    border-radius: 12px;
+    border: 1px solid #e2e5e8;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: #f5b400;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 20px 22px;
+    border: none;
+    background: #ffffff;
+    color: #151d25;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question span {
+    color: #f5b400;
+    font-size: 24px;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background: #fafafa;
+    transition: max-height 0.35s ease;
+}
+
+.faq-answer p {
+    margin: 0;
+    padding: 0 22px 20px;
+    color: #606a73;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+}
+
+.faq-item.active .faq-question span {
+    transform: rotate(45deg);
+}
+
+/* CTA */
+.contact-box {
+    margin-top: 40px;
+    background: #0b1118;
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    color: white;
+    border: 1px solid #252d35;
+}
+
+.contact-box h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+.contact-box p {
+    color: #c8cdd2;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 13px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.call-btn {
+    background: #f5b400;
+    color: #111;
+}
+
+.whatsapp-btn {
+    background: #ffffff;
+    color: #111;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 45px;
+    background: #080d12;
+    color: #89919a;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+}
+
+.footer strong {
+    color: #f5b400;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .faq-title {
+        font-size: 28px;
+    }
+
+    .faq-question {
+        font-size: 15px;
+        padding: 18px;
+    }
+
+    .faq-answer p {
+        font-size: 13px;
+    }
+
+    .contact-box h2 {
+        font-size: 21px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">800POWERBAT</div>
+    <div class="tagline">Professional Mobile Car Battery Service</div>
+</header>
+
+<main class="faq-container">
+
+    <h1 class="faq-title">Frequently Asked Questions</h1>
+
+    <p class="faq-subtitle">
+        Find quick answers to the most common questions about our mobile car battery services.
+    </p>
+
+    <!-- FAQ 1 -->
+    <div class="faq-item">
+        <button class="faq-question">
+            Do you provide onsite car battery replacement?
+            <span>+</span>
+        </button>
+        <div class="faq-answer">
+            <p>
+                Yes. 800PowerBat provides professional onsite car battery replacement.
+                Our mobile technician comes to your location and replaces your battery at your convenience.
+            </p>
+        </div>
+    </div>
+
+    <!-- FAQ 2 -->
+    <div class="faq-item">
+        <button class="faq-question">
+            Do you provide 24/7 battery assistance?
+            <span>+</span>
+        </button>
+        <div class="faq-answer">
+            <p>
+                Yes. Our mobile battery assistance is available 24/7 for customers who need
+                battery replacement, jump-start assistance or battery-related roadside support.
+            </p>
+        </div>
+    </div>
+
+    <!-- FAQ 3 -->
+    <div class="faq-item">
+        <button class="faq-question">
+            How quickly can your technician reach me?
+            <span>+</span>
+        </button>
+        <div class="faq-answer">
+            <p>
+                Response time depends on your location, traffic and technician availability.
+                We aim to reach customers as quickly as possible.
+            </p>
+        </div>
+    </div>
+
+    <!-- FAQ 4 -->
+    <div class="faq-item">
+        <button class="faq-question">
+            Which car brands do you service?
+            <span>+</span>
+        </button>
+        <div class="faq-answer">
+            <p>
+                We support a wide range of vehicles including German, Japanese, American,
+                British, Italian, French, Korean, Chinese, Swedish, Indian and GCC vehicles.
+            </p>
+        </div>
+    </div>
+
+    <!-- FAQ 5 -->
+    <div class="faq-item">
+        <button class="faq-question">
+            Do you provide car jump-start service?
+            <span>+</span>
+        </button>
+        <div class="faq-answer">
+            <p>
+                Yes. We provide onsite jump-start assistance for vehicles with a weak,
+                discharged or dead battery.
+            </p>
+        </div>
+    </div>
+
+    <!-- FAQ 6 -->
+    <div class="faq-item">
+        <button class="faq-question">
+            Which battery brands do you offer?
+            <span>+</span>
+        </button>
+        <div class="faq-answer">
+            <p>
+                Our available battery brands include Fiamm, Energizer, Bosch, Varta,
+                AC Delco, Amaron, SF Sonic, Exide, Kays and Bekon, subject to vehicle
+                requirements and availability.
+            </p>
+        </div>
+    </div>
+
+    <!-- FAQ 7 -->
+    <div class="faq-item">
+        <button class="faq-question">
+            Can you test my battery before replacing it?
+            <span>+</span>
+        </button>
+        <div class="faq-answer">
+            <p>
+                Yes. Our technician can perform a battery diagnosis and check the battery
+                condition before recommending replacement.
+            </p>
+        </div>
+    </div>
+
+    <!-- FAQ 8 -->
+    <div class="faq-item">
+        <button class="faq-question">
+            Do you replace batteries for luxury and high-performance cars?
+            <span>+</span>
+        </button>
+        <div class="faq-answer">
+            <p>
+                Yes. We provide battery assistance for a wide range of vehicles, including
+                luxury and high-performance cars. Battery specifications are checked according
+                to the vehicle.
+            </p>
+        </div>
+    </div>
+
+    <!-- FAQ 9 -->
+    <div class="faq-item">
+        <button class="faq-question">
+            Do I need to bring my car to a workshop?
+            <span>+</span>
+        </button>
+        <div class="faq-answer">
+            <p>
+                No. For onsite services, our mobile technician comes directly to your
+                location, so you do not normally need to drive the vehicle to a workshop.
+            </p>
+        </div>
+    </div>
+
+    <!-- FAQ 10 -->
+    <div class="faq-item">
+        <button class="faq-question">
+            How can I contact 800PowerBat?
+            <span>+</span>
+        </button>
+        <div class="faq-answer">
+            <p>
+                You can call or WhatsApp us on
+                <strong>+971 52 404 0699</strong> for battery replacement,
+                jump-start and roadside battery assistance.
+            </p>
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="contact-box">
+
+        <h2>Need Battery Assistance?</h2>
+
+        <p>
+            Contact 800PowerBat and our mobile team will assist you with your vehicle battery needs.
+        </p>
+
+        <div class="contact-buttons">
+
+            <a class="contact-btn call-btn"
+               href="tel:+971524040699">
+                Call Now
+            </a>
+
+            <a class="contact-btn whatsapp-btn"
+               href="https://wa.me/971524040699"
+               target="_blank">
+                WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</main>
+
+<footer class="footer">
+    © 2026 <strong>800PowerBat</strong> — Professional Mobile Car Battery Service
+</footer>
+
+<script>
+const questions = document.querySelectorAll(".faq-question");
+
+questions.forEach(question => {
+
+    question.addEventListener("click", () => {
+
+        const currentItem = question.parentElement;
+
+        document.querySelectorAll(".faq-item").forEach(item => {
+            if (item !== currentItem) {
+                item.classList.remove("active");
+            }
+        });
+
+        currentItem.classList.toggle("active");
+
+    });
+
+});
+</script>
+
+</body>
+</html>
